@@ -5,15 +5,18 @@ import LoginFormContainer from "./session_form/LoginFormContainer";
 import SignupFormContainer from "./session_form/SignupFormContainer";
 import { Redirect, Switch, Route } from "react-router-dom";
 import { AuthRoute } from "../util/route_util";
-import Splash from "./splash/splash";
+import Splash from "./Splash";
+import greeting_container from "./greeting/greeting_container";
+// New code below
+import Listings from "./Listings";
 
-// I think I need to set up my router to only show all of the components I'm about to create if I'm logged in, by using routes.
-// I think I need to create bunch of components and then style those components.
 const App = () => (
     <Switch>
-        {/* Just changed from reg route. Anything else I need to do? */}
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
+        <Route path="/logout" component={greeting_container} />
+        {/* New code below */}
+        <Route path = "/listings" component={Listings}/>
         <Route path = "/" component={Splash} />
     </Switch>
 );

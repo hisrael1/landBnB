@@ -1,4 +1,4 @@
-#container {
+#header-and-main-pic-container {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@
     background-color: black;
 }
 
-#name {
+#app-name-header {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
     color: white;
@@ -36,17 +36,17 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
-    margin-top: 10px;
 }
 
 #header {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     margin-left: 85px; 
 }
 
 #hamburger-icon {
+    margin-top: 5px;
     height: 75%;
     width: 15%;
 }

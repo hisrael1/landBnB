@@ -18,6 +18,8 @@ class Menu extends React.Component {
                         <li><Link to={'/login'}>Login</Link></li>
                         <br />
                         <li><Link to={'/signup'}>Sign Up</Link></li>
+                        <br />
+                        <li><Link to={'/logout'}>Logout</Link></li>
                     </p>    
             </div>
         )
