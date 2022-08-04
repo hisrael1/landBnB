@@ -1,21 +1,13 @@
 import React from 'react';
-import Menu from './Menu';
-import Search from './Search';
+import Header from './Header';
 
 
 const Splash = () => {
-    
+
     return (
         <div>
             <div id="header-and-main-pic-container">
-                <div id="header">
-                    <p id='app-name-header'>
-                        Landbnb
-                    </p>
-
-                    <Search />
-                    <Menu />
-                </div>
+                <Header />
 
                 <div id='splash-main-pic-container'>
                     <img src={window.splash_main_pic} id="splash-main-pic"/>
