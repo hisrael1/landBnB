@@ -65,9 +65,9 @@
 
 // Menu
 
-.menu-container:hover .menu-dropdown {
-    display: block;
-}
+// .menu-container:hover .menu-dropdown {
+//     display: block;
+// }
 
 #hamburger-icon {
     margin-top: 5px;
@@ -75,10 +75,23 @@
     width: 15%;
 }
 
+#dropdown :first-child {
+    background-color: white;
+    height: 25px;
+    width: 100px;
+}
+
 .menu-dropdown {
-    display: none;
-    color: aliceblue;
+    // display: none;
+    color: rgb(0, 0, 0);
     position: absolute;
+}
+
+.menu-dropdown :first-child{
+    // display: flex;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    // justify-content: space-between;
 }
 
 // SplashFooter
@@ -151,4 +164,11 @@
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+// dropdown 
+
+// I should look up the styling for the dropdown for airbnb
+#dropdown {
+    color: antiquewhite;
 }
