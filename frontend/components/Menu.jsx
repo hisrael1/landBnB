@@ -1,29 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-class Menu extends React.Component {
-    
-    constructor(props){
-        super(props);
-    }
+const Menu = () => {
 
-    render() {
-
-        return (
-            <div class="menu-container">
-                <img src={window.hamburger_icon} id="hamburger-icon"/>
-                    <p class="menu-dropdown"> 
-                        Menu Options 
-                        <br />
-                        <li><Link to={'/login'}>Login</Link></li>
-                        <br />
-                        <li><Link to={'/signup'}>Sign Up</Link></li>
-                        <br />
-                        <li><Link to={'/logout'}>Logout</Link></li>
-                    </p>    
-            </div>
-        )
-    };
-};
+    return (
+        <div class="menu-container">
+            <img src={window.hamburger_icon} id="hamburger-icon"/>
+                <p class="menu-dropdown"> 
+                    Menu Options 
+                    <br />
+                    <li><Link to={'/login'}>Login</Link></li>
+                    <br />
+                    <li><Link to={'/signup'}>Sign Up</Link></li>
+                    <br />
+                    <li><Link to={'/logout'}>Logout</Link></li>
+                </p>    
+        </div>
+    )
+}
 
 export default Menu;

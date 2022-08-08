@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./components/root";
+import Root from "./components/Root";
 import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
-    //const store = configureStore();
     // for testing purposes
     window.getState = store.getState;
     window.dispatch = store.dispatch;

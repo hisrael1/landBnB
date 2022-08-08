@@ -1,9 +1,8 @@
 import React from 'react';
-import Menu from './Menu';
-// get rid of this from splash
 import { Link } from 'react-router-dom'
 
 const Search = () => {
+    
     return (
         <p id="search">
             <input type="text" id="left-edge-search"/>
