@@ -1,5 +1,3 @@
-// NEWSFLASH: This is not a modal this is a dropdown
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,6 +14,7 @@ const Dropdown = () => {
                 <main><Link to={'/signup'}>Sign Up</Link></main>
                 <br />
                 <main><Link to={'/logout'}>Logout</Link></main>
+                <br />
             </main>    
         </h1>
     )

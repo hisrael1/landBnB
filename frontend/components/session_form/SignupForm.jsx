@@ -30,33 +30,33 @@ class SignupForm extends React.Component {
   render () {
    return (
     <>
-      <h1>{this.props.formType}</h1>
-      <form onSubmit={this.handleSubmit}>
-        <label>Email: 
-          <input type="text" value={this.state.email} onChange={this.update('email')}/>
-        </label>
-        <br />
-        <label>First Name: 
-          <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
-        </label>
-        <br />
-        <label>Last Name: 
-          <input type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
-        </label>
-        <br />
-        <label>Password: 
-          <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        </label>
-        <br />
-        <button>{this.props.formType}</button>
-      </form>
-      <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
-        {
-          this.props.errors ? 
-            this.props.errors.map( error => <p>{error}</p>)
-              :
-            ""
-        }
+      <h1> {this.props.formType} </h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>Email: 
+            <input type="text" value={this.state.email} onChange={this.update('email')}/>
+          </label>
+          <br />
+          <label>First Name: 
+            <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
+          </label>
+          <br />
+          <label>Last Name: 
+            <input type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
+          </label>
+          <br />
+          <label>Password: 
+            <input type="password" value={this.state.password} onChange={this.update('password')}/>
+          </label>
+          <br />
+          <button>{this.props.formType}</button>
+        </form>
+        <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
+          {
+            this.props.errors ? 
+              this.props.errors.map( error => <p>{error}</p>)
+                :
+              ""
+          }
      </>
    )
   }
