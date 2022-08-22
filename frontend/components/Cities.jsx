@@ -12,22 +12,22 @@ const Cities = () => {
             <div id="white-space-below-inspiration"></div>
 
 
-            <div id="city-container" class="cities">
-                <div id='montauk' class="city">
+            <div id="city-container" className="cities">
+                <div id='montauk' className="city">
                     <img src={window.montauk} id="montauk"/>
-                    <p class="cty-text">Montauk</p>
+                    <p className="cty-text">Montauk</p>
                 </div>
-                <div id='lakegeorge' class="city">
+                <div id='lakegeorge' className="city">
                     <img src={window.lakegeorge} id="lakegeorge"/>
-                    <p class="cty-text">Lake George</p>
+                    <p className="cty-text">Lake George</p>
                 </div>
-                <div id='newport' class="city">
+                <div id='newport' className="city">
                     <img src={window.newport} id="newport"/>
-                    <p class="cty-text">Newport</p>
+                    <p className="cty-text">Newport</p>
                 </div>
-                <div id='scranton' class="city">
+                <div id='scranton' className="city">
                     <img src={window.scranton} id="scranton"/>
-                    <p class="cty-text">
+                    <p className="cty-text">
                         Scranton
                     </p>
                 </div>
