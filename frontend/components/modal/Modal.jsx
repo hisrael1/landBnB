@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Modal = () => {
+const Modal = ({modal, closeModal}) => {
 
-    return (
-        <h1>Welcome to my modal</h1>
-    )
+    if (!modal) {
+        return null;
+    }
+    else {
+        return <h1> {modal} </h1>
+    }
 }
 
 export default Modal;
