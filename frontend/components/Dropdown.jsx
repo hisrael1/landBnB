@@ -10,7 +10,6 @@ const Dropdown = () => {
                 Menu Options 
                 {/* look up css from airbnb */}
                 <br />
-                <ModalContainer />
                 <main><Link to={'/login'}>Login</Link></main>
                 <br />
                 <main><Link to={'/signup'}>Sign Up</Link></main>
