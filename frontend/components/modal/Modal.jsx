@@ -6,8 +6,9 @@ const Modal = ({modal, closeModal}) => {
         return null;
     }
     else {
-        return <h1> {modal} </h1>
+        return <h1 className='modal'> {modal} </h1>
     }
 }
 
 export default Modal;
+

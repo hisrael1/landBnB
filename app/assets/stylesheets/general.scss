@@ -63,37 +63,6 @@
     border-radius: 0px 15px 15px 0px;
 }
 
-// Menu
-
-// .menu-container:hover .menu-dropdown {
-//     display: block;
-// }
-
-#hamburger-icon {
-    margin-top: 5px;
-    height: 75%;
-    width: 15%;
-}
-
-#dropdown :first-child {
-    background-color: white;
-    height: 25px;
-    width: 100px;
-}
-
-.menu-dropdown {
-    // display: none;
-    color: rgb(0, 0, 0);
-    position: absolute;
-}
-
-.menu-dropdown :first-child{
-    // display: flex;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    // justify-content: space-between;
-}
-
 // SplashFooter
 
 #white-space-above-cities {
@@ -168,9 +137,55 @@
 
 // dropdown 
 
-// I should look up the styling for the dropdown for airbnb
-#dropdown {
-    color: antiquewhite;
+// Menu
+
+// .menu-container:hover .menu-dropdown {
+//     display: block;
+// }
+
+#hamburger-icon {
+    margin-top: 5px;
+    height: 75%;
+    width: 15%;
 }
+
+#dropdown :first-child {
+    background-color: white;
+    height: 160px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    right: 190px;
+    top: 110px;
+}
+
+.menu-dropdown {
+    // display: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    position: absolute;
+    font-style: normal;
+}
+
+// .menu-dropdown :first-child{
+//     // display: flex;
+//     color: rgb(0, 0, 0);
+//     position: absolute;
+//     // justify-content: space-between;
+// }
+
+// I should look up the styling for the dropdown for airbnb
+// #dropdown {
+//     color: antiquewhite;
+//     position: absolute;
+// }
+
+// modal
+
+.modal {
+    color: aliceblue;
+}
+
+
 
   
