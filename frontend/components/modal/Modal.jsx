@@ -3,10 +3,14 @@ import React from 'react';
 const Modal = ({modal, closeModal}) => {
 
     if (!modal) {
-        return null;
+        return null
     }
     else {
-        return <h1 className='modal'> {modal} </h1>
+        return (
+            <div id='modal-container' onClick={() => closeModal()}>
+                <h1 className='modal'> {modal} </h1>
+            </div>
+        )
     }
 }
 

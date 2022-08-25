@@ -174,17 +174,27 @@
 //     // justify-content: space-between;
 // }
 
-// I should look up the styling for the dropdown for airbnb
-// #dropdown {
-//     color: antiquewhite;
-//     position: absolute;
-// }
 
 // modal
 
-.modal {
-    color: aliceblue;
+#modal-container {
+    position: absolute;
+    background-color: aliceblue;
+    height: 30%;
+    width: 20%;
+    left: 38%;
+    top: 20%;
+    border-radius: 10px;
+    padding: 10px;
 }
+
+// .modal {
+//     color: black;
+//     position: absolute;
+//     background-color: aliceblue;
+//     left: 45%;
+//     top: 20%;
+// }
 
 
 
