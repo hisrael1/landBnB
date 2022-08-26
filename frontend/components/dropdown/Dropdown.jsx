@@ -6,10 +6,10 @@ const Dropdown = ({openModal}) => {
         <h1 id="dropdown">
             <main class="menu-dropdown"> 
                 <br />
-                <main>Login</main>
+                <main onClick={() => openModal("login")}>Login</main>
                 <br />
                 <br />
-                <main onClick={() => openModal("testing")}>Sign Up</main>
+                <main onClick={() => openModal("signup")}>Sign Up</main>
                 <br />
                 <br />
                 <main>Logout</main>
