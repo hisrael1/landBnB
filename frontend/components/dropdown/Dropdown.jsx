@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Dropdown = ({openModal}) => {
+const Dropdown = ({openModal, logout}) => {
 
     return (
         <h1 id="dropdown">
-            <main class="menu-dropdown"> 
+            <main className="menu-dropdown"> 
                 <br />
                 <main onClick={() => openModal("login")}>Login</main>
                 <br />
@@ -12,7 +12,7 @@ const Dropdown = ({openModal}) => {
                 <main onClick={() => openModal("signup")}>Sign Up</main>
                 <br />
                 <br />
-                <main>Logout</main>
+                <main onClick={() => logout()}>Logout</main>
                 <br />
             </main>    
         </h1>

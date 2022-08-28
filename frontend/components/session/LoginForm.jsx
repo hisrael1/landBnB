@@ -33,6 +33,7 @@ class LoginForm extends React.Component {
         password: "password"
       }
       this.props.processForm(user);
+      this.props.closeModal();
   };
   
   render () {
@@ -49,7 +50,7 @@ class LoginForm extends React.Component {
         </label>
         <br />
         <button>{this.props.formType}</button>
-        {/* change this when I get the chance */}
+      {/* change this when I get the chance */}
         <button onClick={this.demoSubmit}>{'Demo'}</button>
       </form>
       <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
@@ -59,7 +60,7 @@ class LoginForm extends React.Component {
               :
             ""
         }
-     </>
+    </>
    )
   }
 }

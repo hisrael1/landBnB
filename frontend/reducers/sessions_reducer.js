@@ -3,13 +3,10 @@ import {
     LOGOUT_CURRENT_USER
 } from '../actions/session_actions';
 
-// null user state
 const _nullUser = Object.freeze({
     id: null
 });
 
-// would I also need to export things like currentUser?
-// keep track of the state of the current user
 const sessionReducer = (state = _nullUser, action) => {
     Object.freeze(state);
     switch (action.type) {
@@ -23,3 +20,4 @@ const sessionReducer = (state = _nullUser, action) => {
 };
 
 export default sessionReducer;
+

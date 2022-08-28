@@ -5,13 +5,13 @@ const Footer = () => {
     return (
         <div id="footer">
             <div>
-                <p class="bold-footer">
+                <p className="bold-footer">
                     About
                 </p>
             </div>
 
             <div>
-                <p class="bold-footer">
+                <p className="bold-footer">
                     Resources
                 </p>
             </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Search = () => {
     
     return (
-        <p id="search">
+        <p id="search" className="search">
             <input type="text" id="left-edge-search"/>
             <input type="date" id="left-mid-search"/>
             <input type="date" id="right-mid-search"/>
