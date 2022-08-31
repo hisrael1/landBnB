@@ -39,19 +39,14 @@ class LoginForm extends React.Component {
   render () {
    return (
     <> 
-      <h1>{this.props.formType}</h1>
+      <h1 className="form-name">{this.props.formType}</h1>
+      <hr className="form-line" ></hr>
+      <h1 className="welcome-session"> Welcome to Landbnb </h1>
       <form onSubmit={this.handleSubmit}>
-        <label>Email: 
-          <input type="text" value={this.state.email} onChange={this.update('email')}/>
-        </label>
-        <br />
-        <label>Password: 
-          <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        </label>
-        <br />
-        <button>{this.props.formType}</button>
-      {/* change this when I get the chance */}
-        <button onClick={this.demoSubmit}>{'Demo'}</button>
+          <input className="form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email"/>
+          <input className="form-input-bottom" type="password" value={this.state.password} onChange={this.update('password')} placeholder="password"/>
+        <button className="form-button">{this.props.formType}</button>
+        <button className="form-button" onClick={this.demoSubmit}>{'Demo'}</button>
       </form>
       <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
         {
