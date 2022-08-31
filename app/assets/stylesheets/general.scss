@@ -135,18 +135,11 @@
     font-weight: bold;
 }
 
-// dropdown 
-
-// Menu
-
-// .menu-container:hover .menu-dropdown {
-//     display: block;
-// }
-
 #hamburger-icon {
     margin-top: 5px;
     height: 75%;
     width: 15%;
+    cursor: pointer;
 }
 
 .menu-dropdown {
@@ -155,12 +148,18 @@
     position: absolute;
     font-style: normal;
     background-color: rgb(255, 255, 255);
-    height: 160px;
     width: 200px;
     border-radius: 10px;
     padding: 20px;
     right: 190px;
     top: 110px;
+    cursor: pointer;
+}
+
+.session-dropdown-option {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -229,6 +228,7 @@
     outline-color: white;
     margin-bottom: 10px;
     border: rgb(240, 240, 240);
+    cursor: pointer;
 }
 
 
