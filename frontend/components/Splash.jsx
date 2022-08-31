@@ -4,7 +4,7 @@ import SplashFooter from './SplashFooter';
 import ModalContainer from './modal/ModalContainer';
 
 
-const Splash = () => {
+const Splash = ({closeModal}) => {
 
     return (
         <div>
