@@ -269,4 +269,25 @@
     cursor: pointer;
 }
 
+// listings
+
+.listings-and-map-container {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listings-outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.map-api {
+    background-color: blue;
+    height: 700px;
+    width: 50%;
+}
+
+
   
