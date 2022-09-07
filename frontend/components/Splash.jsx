@@ -7,14 +7,12 @@ import ModalContainer from './modal/ModalContainer';
 const Splash = ({closeModal}) => {
 
     return (
-        <div>
-            <div id="header-and-main-pic-container">
-                <Header history={history}/>
-                <ModalContainer />               
+        <div id="main-container">
+            <Header history={history}/>
+            <ModalContainer />              
 
-                <div id='splash-main-pic-container'>
-                    <img src={window.splash_main_pic} id="splash-main-pic"/>
-                </div>
+            <div id='splash-main-pic-container'>
+                <img src={window.splash_main_pic} id="splash-main-pic"/>
             </div>
 
             <SplashFooter />

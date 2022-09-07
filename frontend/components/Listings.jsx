@@ -7,21 +7,78 @@ const Listings = props => {
         <div>
 
             <Header />
+
             <div className="listings-and-map-container">
-                <div className="listings-outer-container">
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
-                    <p> Listings Component </p>
+                <div className="listings-index-container">
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
+
+                    <div className="listing-item-container"> 
+                        <img src={window.listing_pic01} className="listing-thumbnail"/>
+                        <p className="listing-item-info"> Listing </p>
+                    </div>
                 </div>
-                <div className="map-api">
-                    Map Api Placeholder
+
+                <div>
+                    <div className="map-api">
+                        Map API Placeholder
+                    </div>
                 </div>
+    
             </div>
+
         </div>
     )
 

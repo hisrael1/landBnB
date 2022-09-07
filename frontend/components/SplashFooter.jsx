@@ -5,10 +5,8 @@ import Footer from './Footer';
 const SplashFooter = () => {
 
     return (
-        <div>
-            <div id="white-space-above-cities"></div>
+        <div id="splash-footer-container">
             <Cities />
-            <div id="white-space-below-cities"></div>
             <Footer />
         </div>
     )
