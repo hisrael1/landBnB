@@ -1,7 +1,12 @@
 import React from "react";
-import Header from "./Header"
+import Header from "./Header";
+import ListingsItem from "./ListingsItem";
 
 const Listings = props => {
+
+    let listingsNames = [
+        "Listing", "Listing", "Listing", "Listing", "Listing", "Listing", "Listing", "Listing"
+    ];
 
     return (
         <div>
@@ -10,65 +15,9 @@ const Listings = props => {
 
             <div className="listings-and-map-container">
                 <div className="listings-index-container">
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
-
-                    <div className="listing-item-container"> 
-                        <img src={window.listing_pic01} className="listing-thumbnail"/>
-                        <p className="listing-item-info"> Listing </p>
-                    </div>
+                    {listingsNames.map((
+                        name => <ListingsItem listingsNames={name}/>
+                    ))}
                 </div>
 
                 <div>
