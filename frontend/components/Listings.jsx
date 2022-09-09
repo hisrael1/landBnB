@@ -5,7 +5,7 @@ import ListingsItem from "./ListingsItem";
 const Listings = props => {
 
     let listingsNames = [
-        "Listing", "Listing", "Listing", "Listing", "Listing", "Listing", "Listing", "Listing"
+        "Spacious Rooftop Apartment in the East Village", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle"
     ];
 
     return (
@@ -22,7 +22,6 @@ const Listings = props => {
 
                 <div>
                     <div className="map-api">
-                        Map API Placeholder
                     </div>
                 </div>
     

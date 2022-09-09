@@ -317,4 +317,32 @@
     border-color: black;
 }
 
+.listing-description {
+    font-size: 18px;
+    color:rgb(41, 41, 41);
+    padding-bottom: 5px;
+}
+
+.listing-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.listing-capacities {
+    color:rgb(41, 41, 41);
+    font-size: 18px;
+}
+
+.ratings-and-price-container {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
   
