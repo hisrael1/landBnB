@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import ListingsItem from "./ListingsItem";
+import ModalContainer from "./modal/ModalContainer";
 
 const Listings = props => {
 
@@ -12,7 +13,7 @@ const Listings = props => {
         <div>
 
             <Header />
-
+            <ModalContainer />
             <div className="listings-and-map-container">
                 <div className="listings-index-container">
                     {listingsNames.map((
