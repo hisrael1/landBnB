@@ -3,7 +3,16 @@ class Api::ListingsController < ApplicationController
         @listing = Listing.new(listing_params)
 
         if @listing.save
-            #might want to use jbuilder instead
+            # consider using jbuilder 
+            render json: @listing
+        else
+            render json: @listing.errors, status: 422
+        end
+    end
+
+    def destroy
+        @listing = Listing.find_by(id: params[:id])
+        if @listing && @listing.destroy
             render json: @listing
         end
     end
