@@ -1,5 +1,6 @@
 class Api::UsersController < ApplicationController
     # this is the sign up form
+
     def create
         @user = User.new(user_params)
 
