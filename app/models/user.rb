@@ -1,14 +1,11 @@
 class User < ApplicationRecord
     
-    #Make sure to validate everything
     validates :email, :first_name, :last_name, :session_token, :password_digest, presence: true
     validates :password, length: { minimum: 6, allow_nil: true }
 
     after_initialize :ensure_session_token
 
     attr_reader :password
-
-    # remember to care care of associations at some point
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
@@ -43,9 +40,8 @@ class User < ApplicationRecord
         self.session_token
     end
 
-    # User has many listings!
-    # has_many :listings,
-    # primary_key: :id,
-    # foreign_key: :host_id,
-    # class_name: :Listing
+    has_many :listings,
+    primary_key: :id,
+    foreign_key: :host_id,
+    class_name: :Listing
 end

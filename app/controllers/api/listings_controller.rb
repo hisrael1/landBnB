@@ -1,4 +1,10 @@
 class Api::ListingsController < ApplicationController
+    
+    def index 
+        @listings = Listing.all
+        render json: @listings
+    end
+    
     def create
         @listing = Listing.new(listing_params)
 
@@ -14,6 +20,24 @@ class Api::ListingsController < ApplicationController
         @listing = Listing.find_by(id: params[:id])
         if @listing && @listing.destroy
             render json: @listing
+        end
+    end
+
+    def show
+        @listing = Listing.find_by(id: params[:id])
+        if @listing
+            render json: @listing
+        else
+            render json: @listing.errors
+        end
+    end
+
+    def update
+        @listing = Listing.find_by(id: params[:id])
+        if @listing && @listing.update(listing_params)
+            render json: @listing
+        else
+            render json: @listing.errors
         end
     end
 
