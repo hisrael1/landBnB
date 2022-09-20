@@ -19,14 +19,16 @@ class Listings extends React.Component {
             "Spacious Rooftop Apartment in the East Village", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle"
         ];
 
+        let listings = Object.keys(this.props.listings).map((key) => [Number(key), this.props.listings[key]]);
+
         return (
             <div>
                 <Header />
                 <ModalContainer />
                 <div className="listings-and-map-container">
                     <div className="listings-index-container">
-                        {listingsNames.map((
-                            name => <ListingsItem listingsNames={name}/>
+                        {listings.map((
+                            listing => <ListingsItem key={listing[0]} listing={listing[1]}/>
                         ))}
                     </div>
 
