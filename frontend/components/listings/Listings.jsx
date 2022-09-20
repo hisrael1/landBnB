@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header";
 import ListingsItem from "./ListingsItem";
 import ModalContainer from "../modal/ModalContainer";
+import Footer from "../Footer";
 import { render } from "react-dom";
 
 class Listings extends React.Component {
@@ -14,21 +15,14 @@ class Listings extends React.Component {
     }
 
     render() {
-
-        let listingsNames = [
-            "Spacious Rooftop Apartment in the East Village", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle", "ListingTitle"
-        ];
-
-        let listings = Object.keys(this.props.listings).map((key) => [Number(key), this.props.listings[key]]);
-
         return (
             <div>
                 <Header />
                 <ModalContainer />
                 <div className="listings-and-map-container">
                     <div className="listings-index-container">
-                        {listings.map((
-                            listing => <ListingsItem key={listing[0]} listing={listing[1]}/>
+                        {this.props.listings.map((
+                            listing => <ListingsItem key={listing.id} listing={listing}/>
                         ))}
                     </div>
 
@@ -38,6 +32,8 @@ class Listings extends React.Component {
                     </div>
         
                 </div>
+
+                <Footer />
 
             </div>
         )

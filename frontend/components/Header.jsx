@@ -12,7 +12,7 @@ const Header = () => {
             </div>
 
             <Search history={history}/>
-            <Menu />
+            <Menu history={history}/>
         </div>
     )
 }

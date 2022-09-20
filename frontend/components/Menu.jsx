@@ -12,7 +12,7 @@ class Menu extends React.Component {
             <div className="menu-container" onClick={ () => {this.setState({ renderDropdown: !this.state.renderDropdown }) } }>
                 <img src={window.hamburger_icon} id="hamburger-icon"/>
                     {this.state.renderDropdown ?
-                        <DropdownContainer />
+                        <DropdownContainer history={history}/>
                         :
                         null
                     }

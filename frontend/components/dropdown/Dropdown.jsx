@@ -1,21 +1,23 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-const Dropdown = ({session, openModal, logout}) => {
+const Dropdown = ({session, openModal, logout, history}) => {
 
     if (!session.id) {
         return (
             <div className="menu-dropdown"> 
-                <div className="session-dropdown-option" onClick={() => openModal("login")}>Login</div>
-                <div className="session-dropdown-option" onClick={() => openModal("signup")}>Sign Up</div>
+                <p className="session-dropdown-option" onClick={() => openModal("login")}>Login</p>
+                <p className="session-dropdown-option" onClick={() => openModal("signup")}>Sign Up</p>
             </div>    
         )
     } else {
         return (
             <div className="menu-dropdown"> 
-                <div className="session-dropdown-option" onClick={() => logout()}>Logout</div>
+                <p className="session-dropdown-option" onClick={() => logout()}>Logout</p>
+                <p className="session-dropdown-option" onClick={() => history.push('/users/show')}>Profile</p>
             </div>    
         )
     }
 }
 
-export default Dropdown;
+export default withRouter(Dropdown);

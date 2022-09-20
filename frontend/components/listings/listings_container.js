@@ -4,7 +4,7 @@ import { indexListings } from "../../actions/listing_actions";
 import Listings from "./Listings";
 
 const mapStateToProps = state => ({
-    listings: state.entities.listings
+    listings: Object.values(state.entities.listings)
 })
 
 const mapDispatchToProps = dispatch => ({
