@@ -5,14 +5,14 @@ import { Redirect, Switch, Route } from "react-router-dom";
 import { AuthRoute } from "../util/route_util";
 import Splash from "./Splash";
 import ListingsContainer from "./listings/listings_container";
-import User from "./User";
+import UserContainer from "./session/UserContainer";
 
 const App = () => (
     <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route path = "/listings" component={ListingsContainer}/>
-        <Route path = "/users/show/" component={User}/>
+        <Route path = "/users/show/" component={UserContainer}/>
         <Route path = "/" component={Splash} />
     </Switch>
 );

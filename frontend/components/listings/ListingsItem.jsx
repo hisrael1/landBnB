@@ -2,7 +2,6 @@ import React from 'react';
 
 const ListingsItem = ({listing}) => {
     const {title, num_baths, num_beds, price_per_night} = listing;
-    // 
 
     return (
         <div className="listing-item-container"> 

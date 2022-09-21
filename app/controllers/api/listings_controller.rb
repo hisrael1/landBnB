@@ -9,7 +9,6 @@ class Api::ListingsController < ApplicationController
         @listing = Listing.new(listing_params)
 
         if @listing.save
-            # consider using jbuilder 
             render json: @listing
         else
             render json: @listing.errors, status: 422

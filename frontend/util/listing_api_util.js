@@ -3,4 +3,6 @@ export const fetchListings = () => (
         method: "GET",
         url: '/api/listings',
     })
-);
+)
+
+

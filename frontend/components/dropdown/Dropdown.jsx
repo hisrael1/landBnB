@@ -13,7 +13,7 @@ const Dropdown = ({session, openModal, logout, history}) => {
     } else {
         return (
             <div className="menu-dropdown"> 
-                <p className="session-dropdown-option" onClick={() => logout()}>Logout</p>
+                <p className="session-dropdown-option" onClick={() => {logout(); history.push('/')}}>Logout</p>
                 <p className="session-dropdown-option" onClick={() => history.push('/users/show')}>Profile</p>
             </div>    
         )

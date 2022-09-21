@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
-const User = () => {
+const User = ({user}) => {
     return (
         <div>
             <div className="user-header"> <Header /> </div>
@@ -10,7 +10,7 @@ const User = () => {
             <div className="user-show-container">
                 <div className="user-identity">
                     <img src={window.blank_user_profile} id="blank_user_profile" />
-                    <p className="hello-user"> Hello, User </p>
+                    <p className="hello-user"> Hello, {user.first_name} {user.last_name} </p>
 
                     <div>
                         <img src={window.shield_checkmark} className="shield-checkmark" />
@@ -27,7 +27,7 @@ const User = () => {
                 </div>                
                 
                 <div className="user-info-container">
-                    <p id="user-info-hi"> Hi, I'm User </p>
+                    <p id="user-info-hi"> Hi, I'm {user.first_name} {user.last_name} </p>
                     <p id="user-info-about"> About </p>
                     <div className="user-info-border"></div>
                     <p id="user-listings-header">&#9830; 2 Listings </p>

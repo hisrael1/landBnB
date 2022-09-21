@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-
 import { indexListings } from "../../actions/listing_actions";
 import Listings from "./Listings";
 
