@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import User from "./User";
+import NewListing from "./NewListing";
 
 const mapStateToProps = state => ({
     user: state.entities.users[state.session.id]
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 export default connect(
     mapStateToProps,
     null
-)(User);
+)(NewListing);

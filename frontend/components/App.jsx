@@ -6,6 +6,8 @@ import { AuthRoute } from "../util/route_util";
 import Splash from "./Splash";
 import ListingsContainer from "./listings/listings_container";
 import UserContainer from "./session/UserContainer";
+// import NewListing from "./listings/NewListing";
+import NewListingContainer from "./listings/NewListingContainer";
 
 const App = () => (
     <Switch>
@@ -13,6 +15,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route path = "/listings" component={ListingsContainer}/>
         <Route path = "/users/show/" component={UserContainer}/>
+        <Route path = "/listing/new/" component={NewListingContainer}/>
         <Route path = "/" component={Splash} />
     </Switch>
 );
