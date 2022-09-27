@@ -1,5 +1,5 @@
 import React from 'react';
-import DropdownContainer from './dropdown/DropdownContainer';
+import DropdownContainer from '../dropdown/DropdownContainer';
 
 class Menu extends React.Component {
     constructor(props) {

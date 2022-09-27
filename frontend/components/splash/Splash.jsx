@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import SplashFooter from './SplashFooter';
-import ModalContainer from './modal/ModalContainer';
+import ModalContainer from '../modal/ModalContainer';
 
 
 const Splash = ({closeModal}) => {

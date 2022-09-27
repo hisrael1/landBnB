@@ -1,6 +1,8 @@
 import React from 'react';
-import Header from "../Header";
-import UserIdentity from '../session/UserIdentity';
+import Header from "../splash/Header";
+import UserIdentity from '../user/UserIdentity';
+import NewListingForm from './NewListingForm';
+
 
 const NewListing = ({user}) => {
     return (
@@ -10,19 +12,8 @@ const NewListing = ({user}) => {
             <div className="identity-and-new-form-container">
                 <UserIdentity user={user} />
 
-                <div className="new-listing-container">
-                    <form className="new-listing-form">
-                        <div className="new-listing-add-listing"> Add Listing </div>
-                        
-                        Title <input className='new-listing-input'/>
-                        Description <input className='new-listing-input'/>
-                        Address <input className='new-listing-input'/>
-                        Price <input className='new-listing-input'/>
-                    </form>
-                </div>
+                <NewListingForm user={user}/>                
             </div>
-
-
         </div>
     )
 }

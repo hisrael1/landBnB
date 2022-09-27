@@ -300,6 +300,7 @@
     padding-bottom: 20px;
     border-bottom: 1px solid rgb(80, 80, 80);
     margin: 20px 20px 0px 40px;
+    cursor: pointer;
 }
 
 .listing-thumbnail {
@@ -464,25 +465,31 @@
     margin-left: 100px;
     display: flex;
     justify-content: center;
-}
-
-.new-listing-form > * {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 300px;
-    height: 40px;
-    font-size: 22px;
+    width: 800px;
 }
 
 .new-listing-form {
     margin-top: 100px;
     border: solid rgb(180, 180, 180);
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 100px;
     font-size: 22px;
     margin-bottom: 400px;
+}
+
+.new-listing-form > * {
+    display: block;
+    margin-bottom: 5px;
+    width: 450px;
+    height: 25px;
+    font-size: 18px;
+}
+
+.new-listing-border {
+    border-bottom: solid lightgrey 1px;
+    margin-bottom: 10px;
+    height: 10px;
 }
 
 .new-listing-input {
@@ -495,12 +502,31 @@
 
 .new-listing-add-listing {
     font-size: 32px;
+    font-weight: bold;
     text-align: center;
     color: rgb(233, 41, 92);
     margin-top: -60px;
     margin-bottom: 40px;
 }
 
+.new-listing-submit {
+    background-color: rgb(233, 41, 92);
+    color: white;
+    font-size: 26px;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 40px;
+}
+
+// show listing
+
+.show-listing-title-info-container {
+    margin: 50px 0px 0px 100px;
+}
+
+.show-listing-title {
+    font-size: 32px;
+}
 
 
 

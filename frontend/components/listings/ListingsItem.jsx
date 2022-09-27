@@ -1,15 +1,17 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-const ListingsItem = ({listing}) => {
-    const {title, num_baths, num_beds, price_per_night} = listing;
+const ListingsItem = (props) => {
+    const history = props.history;
+    const { title, num_baths, num_beds, price_per_night, id } = props.listing;
 
     return (
-        <div className="listing-item-container"> 
+        <div className="listing-item-container" onClick={(e) => history.push(`/listing/${id}`)}>
             <img src={window.listing_pic01} className="listing-thumbnail"/>
-            <div className="listing-item-info"> 
+            <div className="listing-item-info">
                 <p className="listing-description"> Apartment in New York City </p>
                 <p className="listing-title"> {title} </p>
-                <div className="listing-capacities"> 
+                <div className="listing-capacities">
                     {num_beds} Beds <span className="bullet-symbol">&#183; </span> 3 Guests <span className="bullet-symbol">&#183; </span> {num_baths} Baths
                 </div>
                 
@@ -22,4 +24,4 @@ const ListingsItem = ({listing}) => {
     )
 }
 
-export default ListingsItem;
+export default withRouter(ListingsItem);

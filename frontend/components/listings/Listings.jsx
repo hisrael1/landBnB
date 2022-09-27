@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../Header";
+import Header from "../splash/Header";
 import ListingsItem from "./ListingsItem";
 import ModalContainer from "../modal/ModalContainer";
-import Footer from "../Footer";
+import Footer from "../splash/Footer";
 import { render } from "react-dom";
 
 class Listings extends React.Component {
@@ -22,7 +22,7 @@ class Listings extends React.Component {
                 <div className="listings-and-map-container">
                     <div className="listings-index-container">
                         {this.props.listings.map((
-                            listing => <ListingsItem key={listing.id} listing={listing}/>
+                            listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
                         ))}
                     </div>
 

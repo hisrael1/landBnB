@@ -7,6 +7,9 @@ const listingsReducer = (state = {}, action) => {
                 nextState[listing.id] = listing;
             })
             return nextState;
+        case "RECEIVE_LISTING":
+            nextState[action.listing.id] = action.listing;
+            return nextState;
         default:
             return state;
     }
