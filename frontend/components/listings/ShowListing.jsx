@@ -5,11 +5,11 @@ class ShowListing extends React.Component {
     constructor(props) {
         super(props);
 
-        this.listingId = parseInt(this.props.match.params.id);
     }
 
     componentDidMount() {
-        this.props.getListing(this.listingId);
+        const listingId = parseInt(this.props.match.params.id)
+        this.props.getListing(listingId);
     }
 
     render() {
