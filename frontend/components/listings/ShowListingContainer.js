@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import ShowListing from "./ShowListing";
 import { receiveListing } from "../../actions/listing_actions";
 
-const mapStateToProps = (state) => ({
-    listing: state.entities.listings
+const mapStateToProps = (state, ownProps) => ({
+    listing: state.entities.listings[ownProps.match.params.id]
 })
 
 const mapDispatchToProps = dispatch => ({
