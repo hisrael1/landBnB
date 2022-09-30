@@ -8,7 +8,7 @@ const Splash = ({closeModal}) => {
 
     return (
         <div id="main-container">
-            <Header history={history}/>
+            <Header history={history}/> 
             <ModalContainer />              
 
             <div id='splash-main-pic-container'>

@@ -521,14 +521,195 @@
 // show listing
 
 .show-listing-title-info-container {
-    margin: 50px 0px 0px 100px;
+    margin: 30px 0px 0px 100px;
 }
 
 .show-listing-title {
-    font-size: 32px;
+    display: block;
+    font-size: 36px;
+    font-weight: 550;
 }
 
+.show-listing-reviews-location-container {
+    margin-top: 10px;
+}
 
+.show-listing-reviews-container {
+    font-size: 22px;
+}
 
+.show-listing-reviews {
+    text-decoration: underline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
 
-  
+.show-listing-photos-container {
+    display: block;
+    margin-top: 30px;
+    // border: solid grey 1px;
+    width: 1400px;
+    height: 400px;
+    // border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.show-listing-photo-1 {
+    width: 694px;
+    height: 396px;
+    margin: 3px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.show-listing-right-photos-container {
+    width: 700px;
+    height: 400px;
+}
+
+.show-listing-right-photos {
+    width: 700px;
+    height: 200px;
+}
+
+.show-listing-right-photos-container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+}
+
+.show-listing-right-photos > * {
+    height: 195px;
+    width: 347px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.show-listing-hosted-by {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.show-listing-capacity-info > * {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.show-listing-description-and-booking-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.show-listing-description {
+    width: 700px;
+}
+
+.show-listing-booking-container {
+    position: sticky;
+    bottom: 0px;
+    margin-top: -70px;
+    margin-bottom: 100px;
+    width: 450px;
+    height: 380px;
+    border: solid rgb(192, 192, 192) 1px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+.booking-price-and-reviews {
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.booking-price-container {
+    margin: 40px;
+}
+
+.booking-price {
+    font-size: 32px;
+    display: inline;
+}
+
+.booking-reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+
+.booking-reviews {
+    text-decoration: underline;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.booking-check-in-out-guest-container {
+    height: 150px;
+}
+
+.booking-check-in-out-container {
+    height: 65px;
+    width: 380px;
+    display: flex;
+    margin: -10px auto 0px auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.booking-check-in {
+    margin-left: auto;
+    height: 65px;
+    width: 190px;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.booking-check-out {
+    margin-right: auto;
+    height: 65px;
+    width: 190px;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.booking-num-guests-container {
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
+}
+
+.booking-num-guests {
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.booking-button-container {
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
+}
+
+.booking-button-container > * {
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
+}
+
+.booking-button {
+    margin-top: 30px;
+    background-color: rgb(231, 42, 89);
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
