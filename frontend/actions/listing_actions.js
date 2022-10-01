@@ -1,5 +1,5 @@
 import { fetchListings } from "../util/listing_api_util";
-// import { createListing } from "../util/listing_api_util";
+import { createListing } from "../util/listing_api_util";
 import { fetchListing } from "../util/listing_api_util";
 
 
@@ -15,16 +15,16 @@ export const indexListings = () => dispatch => (
     )
 )
 
-// export const createNewListing = (listing) => ({
-//     type: "RECEIVE_LISTING",
-//     listing
-// })
+export const createNewListing = (listing) => ({
+    type: "RECEIVE_LISTING",
+    listing
+})
 
-// export const newListing = (listing) => dispatch => (
-//     createListing(listing).then(
-//         listing => (dispatch(createNewListing(listing)))
-//     )
-// )
+export const newListing = (listing) => dispatch => (
+    createListing(listing).then(
+        listing => (dispatch(createNewListing(listing)))
+    )
+)
 
 
 export const showListing = (listing) => ({

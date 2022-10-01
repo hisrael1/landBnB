@@ -5,13 +5,13 @@ export const fetchListings = () => (
     })
 )
 
-// export const createListing = (listing) => (
-//     $.ajax({
-//         method: "POST",
-//         url: `/api/listings/`,
-//         data: { listing }
-//     })
-// )
+export const createListing = (listing) => (
+    $.ajax({
+        method: "POST",
+        url: `/api/listings/`,
+        data: { listing }
+    })
+)
 
 
 export const fetchListing = (listingId) => (

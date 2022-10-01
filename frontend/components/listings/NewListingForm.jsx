@@ -1,16 +1,16 @@
 import React from 'react';
 
-
 class NewListingForm extends React.Component {
     constructor(props) {
         super(props);
-        const { user } = props;
-        this.state = {title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", num_guests: "", price: ""}
+        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: ""}
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
         e.preventDefault();
+        // const currentValue = parseInt(e.target.value) ? parseInt(e.target.value) : e.target.value
         const currentValue = e.target.value;
         const name = e.target.name
         this.setState({[name]: currentValue});
@@ -18,7 +18,9 @@ class NewListingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault;
-        alert("SUCCESS");
+        const listing = this.state;
+        const newListingResponse = this.props.createNewListing(listing);
+        console.log(newListingResponse);
     }
     
     
@@ -44,9 +46,9 @@ class NewListingForm extends React.Component {
                     <div className="new-listing-border"></div>
                     Number of Bedrooms <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.num_beds} name="num_beds"/>
                     <div className="new-listing-border"></div>
-                    Max Guests <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.num_guests} name="num_guests"/>
+                    Max Guests <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.max_num_guests} name="max_num_guests"/>
                     <div className="new-listing-border"></div>
-                    Price <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.price} name="price"/>
+                    Price <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.price_per_night} name="price_per_night"/>
                     <input onClick={this.handleSubmit} className='new-listing-submit' type="submit"/>
                 </div>
             </div>

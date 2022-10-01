@@ -4,7 +4,7 @@ import UserIdentity from '../user/UserIdentity';
 import NewListingForm from './NewListingForm';
 
 
-const NewListing = ({user}) => {
+const NewListing = ({user, createNewListing}) => {
     return (
         <div>
             <Header className="user-header"/>
@@ -12,7 +12,7 @@ const NewListing = ({user}) => {
             <div className="identity-and-new-form-container">
                 <UserIdentity user={user} />
 
-                <NewListingForm user={user}/>                
+                <NewListingForm user={user} createNewListing={createNewListing}/>                
             </div>
         </div>
     )
