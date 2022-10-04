@@ -10,7 +10,6 @@ class NewListingForm extends React.Component {
 
     handleChange(e) {
         e.preventDefault();
-        // const currentValue = parseInt(e.target.value) ? parseInt(e.target.value) : e.target.value
         const currentValue = e.target.value;
         const name = e.target.name
         this.setState({[name]: currentValue});
@@ -19,8 +18,9 @@ class NewListingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault;
         const listing = this.state;
-        const newListingResponse = this.props.createNewListing(listing);
-        console.log(newListingResponse);
+        if (this.props.createNewListing(listing)) {
+            this.setState({host_id: this.props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: ""});
+        }
     }
     
     

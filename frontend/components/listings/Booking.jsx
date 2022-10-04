@@ -16,7 +16,7 @@ class Booking extends React.Component {
                         <div>
                             <span>&#9733; 5.0 </span>
                             <span>&#183;</span>
-                            <span className='booking-reviews'>4 reviews</span>
+                            <span className='booking-reviews'>reviews</span>
                         </div>
                     </div>
                 </div>
@@ -37,6 +37,10 @@ class Booking extends React.Component {
                             <option>4 guests</option>
                             <option>5 guests</option>
                             <option>6 guests</option>
+                            <option>7 guests</option>
+                            <option>8 guests</option>
+                            <option>9 guests</option>
+                            <option>10 guests</option>
                         </select>
                     </div>
 

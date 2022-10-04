@@ -15,19 +15,17 @@ class Api::ListingsController < ApplicationController
         end
     end
 
-    def destroy
-        @listing = Listing.find_by(id: params[:id])
-        if @listing && @listing.destroy
-            render json: @listing
-        end
-    end
-
     def show
         @listing = Listing.find_by(id: params[:id])
         if @listing
             render json: @listing
-        else
-            render json: @listing.errors
+        end
+    end
+
+    def destroy
+        @listing = Listing.find_by(id: params[:id])
+        if @listing && @listing.destroy
+            render json: @listing
         end
     end
 
