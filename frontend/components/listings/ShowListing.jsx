@@ -11,19 +11,11 @@ class ShowListing extends React.Component {
     componentDidMount() {
         const listingId = parseInt(this.props.match.params.id);
         this.props.getListing(listingId);
-        // comment this out below
-        if (this.props.listing){
-            this.props.getUser(this.props.listing.host_id);
-        }
     }
 
     render() {
-        const listing = this.props.listing;
-        let user
-        if (listing){
-            // this.props.getUser(this.props.listing.host_id);
-            user = this.props.users[listing.host_id];
-        }
+
+        const listing = this.props.listing ? this.props.listing: null;
 
         return (
             <div>
@@ -58,7 +50,8 @@ class ShowListing extends React.Component {
 
                     <div >
                         <div className='show-listing-hosted-by'>
-                            Hosted by {user ? user.first_name : null}
+                            Hosted By Demo User
+                            {/* Hosted by {this.props.users[listing.host_id].first_name ? this.props.users[listing.host_id].first_name : null} */}
                         </div>
                         <div className="show-listing-capacity-info">
                             <span>{listing ? listing.max_num_guests : null} guests</span>

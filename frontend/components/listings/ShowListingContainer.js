@@ -5,8 +5,6 @@ import { receiveListing } from "../../actions/listing_actions";
 import { getUser } from "../../actions/user_actions";
 
 const mapStateToProps = (state, ownProps) => ({
-    // I'm really just keying into the listings state which is already fully loaded before this.
-    // But shouldn't getListing() load the single listing?
     listing: state.entities.listings[ownProps.match.params.id],
     users: state.entities.users
 })
