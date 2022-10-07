@@ -16,6 +16,7 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state)
     this.props.processForm(user);
+    this.props.closeModal();
   }
 
   update(field) {
@@ -45,7 +46,7 @@ class LoginForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
           <input className="form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email"/>
           <input className="form-input-bottom" type="password" value={this.state.password} onChange={this.update('password')} placeholder="password"/>
-        <button className="form-button">{this.props.formType}</button>
+        <button className="form-button" onClick={this.handleSubmit}>{this.props.formType}</button>
         <button className="form-button" onClick={this.demoSubmit}>{'Demo'}</button>
       </form>
       <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
