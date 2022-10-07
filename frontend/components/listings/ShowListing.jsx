@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../splash/Header';
 import Footer from '../splash/Footer'
 import Booking from './Booking';
@@ -13,9 +13,19 @@ class ShowListing extends React.Component {
         this.props.getListing(listingId);
     }
 
-    render() {
+    componentDidUpdate() {
+        if (this.props.listing && !this.props.users[this.props.listing.host_id]) {
+            this.props.getUser(this.props.listing.host_id);
+        }
+    }
 
+    render() {
         const listing = this.props.listing ? this.props.listing: null;
+
+        let user;
+        if (listing && this.props.users[listing.host_id]) {
+            user = this.props.users[listing.host_id];
+        }
 
         return (
             <div>
@@ -50,8 +60,7 @@ class ShowListing extends React.Component {
 
                     <div >
                         <div className='show-listing-hosted-by'>
-                            Hosted By Demo User
-                            {/* Hosted by {this.props.users[listing.host_id].first_name ? this.props.users[listing.host_id].first_name : null} */}
+                            Hosted By {user ? user.first_name : null } {user ? user.last_name : null }
                         </div>
                         <div className="show-listing-capacity-info">
                             <span>{listing ? listing.max_num_guests : null} guests</span>
