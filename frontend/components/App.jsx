@@ -13,7 +13,8 @@ const App = () => (
     <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
-        <Route path = "/listings" component={ListingsContainer}/>
+        {/* <Route path = "/listings/:query" component={ListingsContainer}/> */}
+        <Route path = "/listings/" component={ListingsContainer}/>
         <Route path = "/users/show/" component={UserContainer}/>
         <Route path = "/listing/new/" exact component={NewListingContainer}/>
         <Route path = "/listing/:id/" component={ShowListingContainer}/>        
