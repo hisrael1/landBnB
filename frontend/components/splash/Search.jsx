@@ -8,6 +8,8 @@ class Search extends React.Component {
 
     render() {
 
+        // I think I'm gonna need to send params in this.props.history.push
+        
         return (
             <div id="search" className="search">
                 <input type="text" className="left-edge-search" placeholder="Location"/>

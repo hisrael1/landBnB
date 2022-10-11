@@ -8,20 +8,31 @@ import { render } from "react-dom";
 class Listings extends React.Component {
     constructor(props) {
         super(props);
+
+
+        this.state = {listings: this.props.listings.filter(listing => listing.state.includes("New York"))};
     }
 
     componentDidMount() {
         this.props.indexListings();
     }
 
+    componentDidUpdate(prevProps) {
+        this.setState({listings: this.props.listings.filter(listing => listing.state.includes("New York"))})
+    }
+
     render() {
+
         return (
             <div>
                 <Header />
                 <ModalContainer />
                 <div className="listings-and-map-container">
                     <div className="listings-index-container">
-                        {this.props.listings.map((
+                        {/* {this.props.listings.map((
+                            listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
+                        ))} */}
+                        {this.state.listings.map((
                             listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
                         ))}
                     </div>
