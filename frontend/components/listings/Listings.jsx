@@ -5,21 +5,26 @@ import ModalContainer from "../modal/ModalContainer";
 import Footer from "../splash/Footer";
 import { render } from "react-dom";
 
+
 class Listings extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {listings: this.props.listings.filter(listing => listing.state.includes("New York"))};
+        this.props.indexListings();
+
+        if (props.history.location.search) {
+            const queryString = require('query-string');
+            const parsed = queryString.parse(this.props.location.search);
+            console.log(parsed);
+            this.state = {listings: props.listings.filter(listing => listing.city.includes(parsed.city))};
+        } else {
+            this.state = {listings: props.listings};
+        }
+        
     }
 
     componentDidMount() {
         this.props.indexListings();
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.listings != prevProps.listings) {
-            this.setState({listings: this.props.listings.filter(listing => listing.state.includes("NY"))})
-        }
     }
 
     render() {
