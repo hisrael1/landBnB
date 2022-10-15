@@ -19,11 +19,11 @@ class Search extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault;
+        e.preventDefault();
         const searchUrl = new URLSearchParams(this.state).toString();
+        console.log(searchUrl)
         this.props.history.push({
-            pathname: `/listings/`,
-            search: `${searchUrl}`
+            pathname: `/listings/${searchUrl}`,
         })
     }
 

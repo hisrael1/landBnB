@@ -2,7 +2,6 @@ import { fetchListings } from "../util/listing_api_util";
 import { createListing } from "../util/listing_api_util";
 import { fetchListing } from "../util/listing_api_util";
 
-
 export const receiveListings = (listings) => ({
     type: "RECEIVE_LISTINGS",
     listings
