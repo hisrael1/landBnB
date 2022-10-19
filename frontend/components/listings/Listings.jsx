@@ -12,6 +12,8 @@ class Listings extends React.Component {
         this.state = {listings: props.listings};
     }
 
+    // set up photos on s3
+
     componentDidMount() {
         this.props.indexListings();
     }
