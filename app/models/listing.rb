@@ -8,4 +8,6 @@ class Listing < ApplicationRecord
     primary_key: :id,
     foreign_key: :host_id,
     class_name: :User
+
+    has_many_attached :photos, dependent: :destroy
 end
