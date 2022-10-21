@@ -3,9 +3,19 @@ import React from 'react';
 class NewListingForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: ""}
+        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageUrl: "", imageFile: ""}
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () => this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
+        }
     }
 
     handleChange(e) {
@@ -19,12 +29,10 @@ class NewListingForm extends React.Component {
         e.preventDefault;
         const listing = this.state;
         if (this.props.createNewListing(listing)) {
-            this.setState({host_id: this.props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: ""});
+            this.setState({host_id: this.props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageUrl: "", imageFile: ""});
         }
     }
     
-    
-
     render () {
         return (
             <div className="new-listing-container">

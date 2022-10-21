@@ -7,7 +7,6 @@ export const receiveListings = (listings) => ({
     listings
 })
 
-
 export const indexListings = () => dispatch => (
     fetchListings().then(
         listings => (dispatch(receiveListings(listings)))
@@ -24,7 +23,6 @@ export const newListing = (listing) => dispatch => (
         listing => (dispatch(createNewListing(listing)))
     )
 )
-
 
 export const showListing = (listing) => ({
     type: "RECEIVE_LISTING",

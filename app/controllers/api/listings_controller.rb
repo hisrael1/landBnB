@@ -2,9 +2,11 @@ class Api::ListingsController < ApplicationController
     
     def index 
         @listings = Listing.all
-        render json: @listings
+        if @listings
+            render :index
+        end
     end
-    
+
     def create
         @listing = Listing.new(listing_params)
 
@@ -18,7 +20,7 @@ class Api::ListingsController < ApplicationController
     def show
         @listing = Listing.find_by(id: params[:id])
         if @listing
-            render json: @listing
+            render :show
         end
     end
 
