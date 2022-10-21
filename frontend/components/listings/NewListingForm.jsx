@@ -3,25 +3,16 @@ import React from 'react';
 class NewListingForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageUrl: "", imageFile: ""}
+        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageFile: null}
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
-        const reader = new FileReader();
-        const file = e.currentTarget.files[0];
-        reader.onloadend = () => this.setState({ imageUrl: reader.result, imageFile: file });
-
-        if (file) {
-            reader.readAsDataURL(file);
-        } else {
-            this.setState({ imageUrl: "", imageFile: null });
-        }
+        this.handleFile = this.handleFile.bind(this);
     }
 
     handleChange(e) {
         e.preventDefault();
         const currentValue = e.target.value;
-        const name = e.target.name
+        const name = e.target.name;
         this.setState({[name]: currentValue});
     }
 
@@ -29,11 +20,17 @@ class NewListingForm extends React.Component {
         e.preventDefault;
         const listing = this.state;
         if (this.props.createNewListing(listing)) {
-            this.setState({host_id: this.props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageUrl: "", imageFile: ""});
+            this.setState({host_id: this.props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", imageFile: null});
         }
+    }
+
+    handleFile(e) {
+        this.setState({ imageFile: e.currentTarget.files[0] })
     }
     
     render () {
+
+        console.log(this.state)
         return (
             <div className="new-listing-container">
                 <div className="new-listing-form">
@@ -57,6 +54,9 @@ class NewListingForm extends React.Component {
                     Max Guests <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.max_num_guests} name="max_num_guests"/>
                     <div className="new-listing-border"></div>
                     Price <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.price_per_night} name="price_per_night"/>
+                    <div className="new-listing-border"></div>
+                    Upload Photos <input id="upload-listing-photos" type="file" onChange={this.handleFile} name="imageFile"/>
+                    <div className="new-listing-border"></div>
                     <input onClick={this.handleSubmit} className='new-listing-submit' type="submit"/>
                 </div>
             </div>
