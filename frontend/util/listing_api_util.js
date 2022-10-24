@@ -13,7 +13,6 @@ export const createListing = (listing) => (
     })
 )
 
-
 export const fetchListing = (listingId) => (
     $.ajax({
         method: "GET",
