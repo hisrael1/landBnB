@@ -4,7 +4,7 @@ import SignupFormContainer from "./session/SignupFormContainer";
 import { Redirect, Switch, Route } from "react-router-dom";
 import { AuthRoute } from "../util/route_util";
 import Splash from "./splash/Splash";
-import ListingsContainer from "./listings/listings_container";
+import ListingsContainer from "./listings/ListingsContainer";
 import UserContainer from "./user/UserContainer";
 import NewListingContainer from "./listings/NewListingContainer";
 import ShowListingContainer from "./listings/ShowListingContainer";

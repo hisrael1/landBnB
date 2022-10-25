@@ -11,6 +11,7 @@ class ShowListing extends React.Component {
     componentDidMount() {
         const listingId = parseInt(this.props.match.params.id);
         this.props.getListing(listingId);
+        window.scrollTo(0, 0);
     }
 
     componentDidUpdate() {

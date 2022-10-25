@@ -5,7 +5,7 @@ import ModalContainer from "../modal/ModalContainer";
 import Footer from "../splash/Footer";
 
 
-class Listings extends React.Component {
+class ListingsIndex extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,6 +22,7 @@ class Listings extends React.Component {
                 const queryString = require('query-string');
                 const parsed = queryString.parse(this.props.match.params.query);
                 const listings = [...this.props.listings];
+                const lowerCaseListings = listings.map(word => word.toLowerCase);
                 this.setState({listings: listings.filter(listing => listing.city.includes(parsed.city))});
             } else {
                 const listings = [...this.props.listings];
@@ -57,4 +58,4 @@ class Listings extends React.Component {
     }
 };
 
-export default Listings;
+export default ListingsIndex;

@@ -9,6 +9,7 @@
     <%= javascript_include_tag 'application' %>
 
     <script type="text/javascript">
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
       window.splash_main_pic = "<%= image_url('splash-main-pic.png') %>";
       window.airbnb_icon = "<%= image_url('airbnb-icon.png') %>";
       window.hamburger_icon = "<%= image_url('hamburger-icon.jpg') %>";
@@ -19,8 +20,7 @@
       window.listing_pic01 = "<%= image_url('home-picture01.jpg') %>";
       window.blank_user_profile = "<%= image_url('blank_user_profile') %>";
       window.shield_checkmark = "<%= image_url('shield-checkmark.png')  %>";
-    </script>
-     
+    </script>    
       
   </head>
 
