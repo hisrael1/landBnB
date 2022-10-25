@@ -4,12 +4,13 @@ import { withRouter } from 'react-router-dom';
 const ListingsItem = (props) => {
     const history = props.history;
     const { title, city, num_baths, num_beds, price_per_night, id, photoUrls } = props.listing;
+    if (!photoUrls[0]) {
+        photoUrls[0] = window.listing_pic01;
+    }
 
     return (
         <div className="listing-item-container" onClick={(e) => history.push(`/listing/${id}`)}>
-            <img src={window.listing_pic01} className="listing-thumbnail"/>
-            {photoUrls ? <img src={photoUrls[0]} className="listing-thumbnail"/> : <img src={window.listing_pic01} className="listing-thumbnail"/>}
-            
+            <img src={photoUrls[0]} className="listing-thumbnail"/>
             <div className="listing-item-info">
                 <p className="listing-description"> Apartment in {city} </p>
                 <p className="listing-title"> {title} </p>

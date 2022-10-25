@@ -3,7 +3,7 @@ import React from 'react';
 class NewListingForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", photos: []}
+        this.state = {host_id: props.user.id, title: "", description: "", address: "", city: "", state: "", zipcode: "", num_baths: "", num_beds: "", max_num_guests: "", price_per_night: "", photos: [], photoPreview: []}
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
@@ -42,16 +42,24 @@ class NewListingForm extends React.Component {
             data: formData,
             contentType: false,
             processData: false
-        }).then(response => console.log(response.message), response => console.log(response.responseJSON));
+        }).then(response => {console.log(response); this.props.history.push(`/listing/${response.id}`)}, response => console.log(response.responseJSON));
       }
 
     handleFile(e) {
-        const photos = this.state.photos.concat(Object.values(e.target.files));
-        this.setState({ photos: photos });
+        const photoPreview = this.state.photoPreview ? [...this.state.photoPreview] : [];
+        Object.values(e.target.files).forEach(photo => photoPreview.push(URL.createObjectURL(photo)));
+        if (this.state.photos.length < 5) {
+            const photos = this.state.photos.concat(Object.values(e.target.files));
+            this.setState({ photos: photos, photoPreview: photoPreview });
+        }
     }
     
     render () {
-        console.log(this.state)
+        const preview = this.state ? this.state.photoPreview.map((preview,idx) => 
+            <div key={idx}>
+                <img src={preview} className="photo-upload-preview"/>
+            </div>) : null
+
         return (
             <div className="new-listing-container">
                 <form className="new-listing-form">
@@ -77,6 +85,12 @@ class NewListingForm extends React.Component {
                     Price <input className='new-listing-input' type="number" onChange={this.handleChange} value={this.state.price_per_night} name="price_per_night"/>
                     <div className="new-listing-border"></div>
                     Upload Photos (5) <input id="upload-listing-photos" type="file" multiple onChange={this.handleFile} name="photos"/>
+                    <div className="new-listing-border"></div>
+
+                    <div id="photo-upload-preview-container">
+                        {this.state ? preview : null}
+                    </div>
+                    
                     <div className="new-listing-border"></div>
                     <input onClick={this.handleSubmit} className='new-listing-submit' type="submit"/>
                 </form>

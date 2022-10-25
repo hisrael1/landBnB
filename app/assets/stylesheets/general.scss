@@ -721,3 +721,15 @@
     font-size: 24px;
     font-weight: bold;
 }
+
+#photo-upload-preview-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.photo-upload-preview {
+    height: 60px;
+    width: 80px;
+    margin-right: 10px;
+}

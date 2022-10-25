@@ -27,6 +27,17 @@ class ShowListing extends React.Component {
             user = this.props.users[listing.host_id];
         }
 
+        let photos = [];
+        if (this.props.listing) {
+            for (let i = 0; i < 5; i++) {
+                if (this.props.listing.photoUrls[i]) {
+                    photos[i] = this.props.listing.photoUrls[i];
+                } else {
+                    photos[i] = window.listing_pic01;
+                }
+            }
+        }
+
         return (
             <div>
                 <Header />
@@ -45,15 +56,16 @@ class ShowListing extends React.Component {
                     </div>
 
                     <div className='show-listing-photos-container'>
-                        <img src={window.listing_pic01} className='show-listing-photo-1' />
+                        {this.props.listing ? <img src={photos[0]} className='show-listing-photo-1'/> : null }
                         <div className="show-listing-right-photos-container">
                             <div className="show-listing-right-photos">
-                                <img src={window.listing_pic01} className='show-listing-photo-2'/>
-                                <img src={window.listing_pic01} className='show-listing-photo-3'/>
+                                {this.props.listing ? <img src={photos[1]} className='show-listing-photo-2'/> : null }
+
+                                {this.props.listing ? <img src={photos[2]} className='show-listing-photo-3'/> : null }
                             </div>
                             <div className="show-listing-right-photos">
-                                <img src={window.listing_pic01} className='show-listing-photo-4'/>
-                                <img src={window.listing_pic01} className='show-listing-photo-5'/>
+                                {this.props.listing ? <img src={photos[3]} className='show-listing-photo-4'/> : null }
+                                {this.props.listing ? <img src={photos[4]} className='show-listing-photo-5'/> : null }
                             </div>
                         </div>
                     </div>
