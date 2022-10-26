@@ -1,6 +1,6 @@
 class Listing < ApplicationRecord
 
-    # Validate host id?
+    # Validate host id + lng and lat?
     validates :title, :description, :address, :city, :state, :zipcode, :num_beds, :num_baths, :max_num_guests, :price_per_night, presence: true
     validates :address, uniqueness: true
 

@@ -3,6 +3,7 @@ import Header from "../splash/Header";
 import ListingsItem from "./ListingsItem";
 import ModalContainer from "../modal/ModalContainer";
 import Footer from "../splash/Footer";
+import ListingsMap from "./ListingsMap";
 
 
 class ListingsIndex extends React.Component {
@@ -22,7 +23,6 @@ class ListingsIndex extends React.Component {
                 const queryString = require('query-string');
                 const parsed = queryString.parse(this.props.match.params.query);
                 const listings = [...this.props.listings];
-                const lowerCaseListings = listings.map(word => word.toLowerCase);
                 this.setState({listings: listings.filter(listing => listing.city.includes(parsed.city))});
             } else {
                 const listings = [...this.props.listings];
@@ -44,10 +44,11 @@ class ListingsIndex extends React.Component {
                         ))}
                     </div>
 
-                    <div>
-                        <div className="map-api">
-                        </div>
+                    <div id="sticky-map">
+                        <ListingsMap />
                     </div>
+                    
+                    
         
                 </div>
 
