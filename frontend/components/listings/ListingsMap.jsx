@@ -17,18 +17,29 @@ class ListingsMap extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props != prevProps && !!this.props.listings.length) {
-            this.props.listings.map(listing => {
+        // debugger
+        // console.log(this.props != prevProps && !!this.props.listings.length)
+        if (this.props != prevProps) {
+            if (!!this.props.listings) {
+                this.props.listings.map(listing => {
+                    if (!!listing.lat && !!listing.lng) {
+                        this.MarkerManager.updateMarkers(listing);    
+                    }
+                })
+            } else if (!!this.props.listing) {
+                const listing = this.props.listing;
                 if (!!listing.lat && !!listing.lng) {
                     this.MarkerManager.updateMarkers(listing);    
                 }
-            })
+            }       
         }
     }
 
     render() {
         return (
-            <div id="map-container" ref={ map => this.mapNode = map }></div>
+            <div>
+                {this.props.showMap ? <div id="show-map-container" ref={ map => this.mapNode = map }></div> : <div id="map-container" ref={ map => this.mapNode = map }></div>}
+            </div>
         )
     }
 }

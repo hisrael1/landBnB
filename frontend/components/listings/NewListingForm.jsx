@@ -18,7 +18,7 @@ class NewListingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
+        // DON'T FORGET TO CONVERT ADDRESS TO LAT LNG
         const formData = new FormData();
         formData.append('listing[title]', this.state.title);
         formData.append('listing[description]', this.state.description);
