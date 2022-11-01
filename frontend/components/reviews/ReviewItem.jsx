@@ -24,4 +24,7 @@ const ReviewsItem = (props) => {
     )
 }
 
+// each listing has many reviews.
+// each host has many reviews
+
 export default ReviewsItem;
