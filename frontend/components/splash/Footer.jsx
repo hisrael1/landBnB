@@ -5,15 +5,13 @@ const Footer = () => {
     return (
         <div id="footer">
             <div>
-                <p className="bold-footer">
+                <div className="bold-footer">
                     About
-                </p>
-            </div>
-
-            <div>
-                <p className="bold-footer">
-                    Resources
-                </p>
+                </div>
+                <div className="personal-links">
+                    <a href="https://github.com/hisrael1">Github</a>
+                    <a href="https://www.linkedin.com/in/harrison-israel/">LinkedIn</a>
+                </div>                
             </div>
         </div>
     )

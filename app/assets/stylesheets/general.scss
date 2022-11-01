@@ -164,7 +164,7 @@
 // Footer
 
 #footer {
-    height: 300px;
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: space-around;
     overflow: auto;
@@ -174,10 +174,17 @@
     border-width: 1px;
 }
 
-#footer > * {
-    margin-top: 20px;
-    font-size: 18px;
+.bold-footer {
+    font-size: 24px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.personal-links > * {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+    text-decoration: underline;
 }
 
 #hamburger-icon {
@@ -295,7 +302,6 @@
 }
 
 #show-map-container {
-    margin-top: -50px;
     width: 100%;
     height: 800px;
 }
@@ -641,7 +647,7 @@
     position: sticky;
     bottom: 0px;
     margin-top: -70px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     width: 450px;
     height: 380px;
     border: solid rgb(192, 192, 192) 1px;
@@ -661,6 +667,7 @@
     font-size: 32px;
     display: block;
     height: 100px;
+    margin-bottom: -30px;
 }
 
 .booking-price-and-reviews {
@@ -766,4 +773,118 @@
     height: 60px;
     width: 80px;
     margin-right: 10px;
+}
+
+// reviews
+
+#reviews-index-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.reviews-underline {
+    width: 88%;
+    border-top: solid rgb(217, 217, 217) 1px;
+    margin: 0px 100px 0px 100px;
+}
+
+.reviews-bottom-underline {
+    width: 88%;
+    border-top: solid rgb(217, 217, 217) 1px;
+    margin: 30px 100px 0px 100px;
+}
+
+#reviews-ratings-container {
+    // border: solid rgb(255, 0, 0) 1px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+#reviews-ratings {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#reviews-container {
+    display: flex;
+    justify-content: center;
+}
+
+#reviews-container > * {
+    // border: solid rgb(46, 172, 218) 1px;
+    width: 688px;
+}
+
+.reviews-item-container {
+    // border: solid rgb(218, 63, 46) 1px;
+    height: 200px;
+    width: 688px;
+    margin: 20px 0px 20px 0px;
+}
+
+.profile-and-date-container {
+    // border: solid rgb(46, 218, 158) 1px;
+    height: 75px;
+    display: flex;
+}
+
+.reviewer-and-date {
+    margin: 15px 0px 0px 5px;
+}
+
+.reviewer-and-date > * {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.review-text {
+    height: 125px;
+    width: 600px;
+    margin-right: 50px;
+    // border: solid rgb(255, 121, 53) 1px;
+    font-size: 24px;
+}
+
+.review-profile-pic {
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#review-attribute-container {
+    // border: solid rgb(255, 121, 53) 1px;
+    display: flex;
+    height: 150px;
+    margin: 0px 0px 0px 100px;
+}
+
+#review-attribute-container-left {
+    // border: solid rgb(14, 143, 80) 1px;
+    width: 688px;
+}
+
+#review-attribute-container-right {
+    // border: solid rgb(229, 1, 103) 1px;
+    width: 688px;
+}
+
+.review-attribute-item-container {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 100px 20px 0px;
+}
+
+.review-attribute {
+    display: inline;
 }

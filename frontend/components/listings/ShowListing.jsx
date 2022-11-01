@@ -3,6 +3,7 @@ import Header from '../splash/Header';
 import Footer from '../splash/Footer'
 import Booking from './Booking';
 import ListingsMap from './ListingsMap';
+import ReviewsIndex from '../reviews/ReviewsIndex';
 
 class ShowListing extends React.Component {
     constructor(props) {
@@ -98,13 +99,14 @@ class ShowListing extends React.Component {
                     </div>
 
                 </div>
+
+                <div className="reviews-underline"></div>
+
+                <ReviewsIndex />
                 
                 <div id="show-listing-map">
                     <div id="show-listing-map-text">Where You'll Be</div>
                     <ListingsMap listing={listing} showMap={true}/>
-                </div>
-                <div>
-                    Reviews
                 </div>
                 <Footer />
             </div>
