@@ -3,11 +3,18 @@ import Header from './Header';
 import SplashFooter from './SplashFooter';
 import ModalContainer from '../modal/ModalContainer';
 
+class Splash extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-const Splash = ({closeModal}) => {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
-    return (
-        <div id="main-container">
+    render() {
+        return (
+            <div id="main-container">
             <Header history={history}/> 
             <ModalContainer />              
 
@@ -16,8 +23,9 @@ const Splash = ({closeModal}) => {
             </div>
 
             <SplashFooter />
-        </div>
-    )
+        </div>    
+        )
+    }
 }
 
 export default Splash;

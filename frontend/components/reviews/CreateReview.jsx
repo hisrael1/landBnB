@@ -8,6 +8,8 @@ class CreateReview extends React.Component {
         
         if (!this.props.currentUser.id) {
             this.props.history.push("/")
+            alert("User must be logged in to create a review!")
+            
         }
 
         this.state = {

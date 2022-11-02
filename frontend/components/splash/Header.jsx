@@ -1,13 +1,14 @@
 import React from 'react';
 import Menu from './Menu';
 import Search from './Search';
+import { withRouter } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
     
     return (
         <div id="header">
-            <div id='app-name-header'>
-                <img className="airbnb-icon" src={window.airbnb_icon} />
+            <div id='app-name-header' onClick={() => props.history.push("/")}>
+                <img className="airbnb-icon" src={window.airbnb_icon}/>
                 Landbnb
             </div>
 
@@ -17,4 +18,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default withRouter(Header);

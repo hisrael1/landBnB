@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../splash/Header';
 import Footer from '../splash/Footer'
-import Booking from './Booking';
+import Booking from '../booking/Booking.jsx';
 import ListingsMap from './ListingsMap';
 import ReviewsIndex from '../reviews/ReviewsIndex';
 

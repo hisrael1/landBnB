@@ -15,6 +15,7 @@ const Dropdown = ({session, openModal, logout, history}) => {
             <div className="menu-dropdown"> 
                 <p className="session-dropdown-option" onClick={() => {logout(); history.push('/')}}>Logout</p>
                 <p className="session-dropdown-option" onClick={() => history.push('/users/show')}>Profile</p>
+                <p className="session-dropdown-option" onClick={() => {history.push('/user/:id/bookings')}}>Trips</p>
             </div>    
         )
     }
