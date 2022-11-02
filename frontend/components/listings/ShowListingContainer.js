@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux";
 import ShowListing from "./ShowListing";
 import { receiveListing } from "../../actions/listing_actions";

@@ -797,7 +797,6 @@
 }
 
 #reviews-ratings-container {
-    // border: solid rgb(255, 0, 0) 1px;
     height: 100px;
     margin-left: 100px;
 }
@@ -811,6 +810,7 @@
     text-decoration: underline;
     font-size: 24px;
     margin: 10px;
+    cursor: pointer;
 }
 
 #reviews-container {
@@ -820,19 +820,16 @@
 }
 
 #reviews-container > * {
-    // border: solid rgb(46, 172, 218) 1px;
     width: 688px;
 }
 
 .reviews-item-container {
-    // border: solid rgb(218, 63, 46) 1px;
     height: 200px;
     width: 688px;
     margin: 20px 0px 20px 0px;
 }
 
 .profile-and-date-container {
-    // border: solid rgb(46, 218, 158) 1px;
     height: 75px;
     display: flex;
 }
@@ -850,7 +847,6 @@
     height: 125px;
     width: 600px;
     margin-right: 50px;
-    // border: solid rgb(255, 121, 53) 1px;
     font-size: 24px;
 }
 
@@ -862,19 +858,16 @@
 }
 
 #review-attribute-container {
-    // border: solid rgb(255, 121, 53) 1px;
     display: flex;
     height: 150px;
     margin: 0px 0px 0px 100px;
 }
 
 #review-attribute-container-left {
-    // border: solid rgb(14, 143, 80) 1px;
     width: 688px;
 }
 
 #review-attribute-container-right {
-    // border: solid rgb(229, 1, 103) 1px;
     width: 688px;
 }
 
@@ -888,4 +881,90 @@
 
 .review-attribute {
     display: inline;
+}
+
+#create-review-prompt {
+    padding-top: 30px;
+    font-size: 54px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#create-review-top-underline {
+    width: 42rem;
+    margin-left: 450px;
+    margin-top: 30px;
+    border-top: solid rgb(217, 217, 217) 1px;
+}
+
+
+.create-review-attribute-container {
+    margin-top: 3rem;
+}
+
+.create-review-attribute {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 33rem 0rem 33rem;
+}
+
+.review-ratings {
+    height: 40px;
+    width: 80px;
+    border-radius: 15px;
+    color: rgb(225, 25, 82);
+    font-size: 28px;
+    font-weight: bold;
+    border-color: rgb(255, 255, 255);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#review-text-input-container {
+    font-size: 32px;
+    margin: 5rem 25rem 0rem 26rem;
+}
+
+#review-text-input-container > * {
+    margin-bottom: 15px;
+}
+
+#review-lighter-text {
+    color: rgb(198, 198, 198);
+    font-size: 24px;
+}
+
+#review-text-input {
+    height: 10rem;
+    width: 45rem;
+    border-radius: 5px;
+}
+
+#create-review-submit {
+    width: 120px;
+    height: 50px;
+    background-image: linear-gradient(to right, rgb(255, 0, 81) , rgb(195, 0, 85));
+    margin: 2rem 11rem 5rem 0rem;
+    border: rgb(240, 240, 240);
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#review-back-button {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    margin: 2rem 0rem 5rem 10rem;
+}
+
+#submit-and-back-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

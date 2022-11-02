@@ -8,6 +8,8 @@ import ListingsContainer from "./listings/ListingsContainer";
 import UserContainer from "./user/UserContainer";
 import NewListingContainer from "./listings/NewListingContainer";
 import ShowListingContainer from "./listings/ShowListingContainer";
+import CreateReviewContainer from "./reviews/CreateReviewContainer";
+
 
 const App = () => (
     <Switch>
@@ -17,7 +19,9 @@ const App = () => (
         <Route path = "/listings/:query" component={ListingsContainer} />
         <Route path = "/users/show/" component={UserContainer}/>
         <Route path = "/listing/new/" exact component={NewListingContainer}/>
+        <Route path = "/listing/:id/review/new/" component={CreateReviewContainer}/> 
         <Route path = "/listing/:id/" component={ShowListingContainer}/>        
+               
     </Switch>
 );
 

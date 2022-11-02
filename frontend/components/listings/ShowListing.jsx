@@ -102,7 +102,7 @@ class ShowListing extends React.Component {
 
                 <div className="reviews-underline"></div>
 
-                <ReviewsIndex />
+                <ReviewsIndex listing={listing} history={this.props.history}/>
                 
                 <div id="show-listing-map">
                     <div id="show-listing-map-text">Where You'll Be</div>
