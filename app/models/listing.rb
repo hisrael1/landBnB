@@ -14,5 +14,10 @@ class Listing < ApplicationRecord
     foreign_key: :listing_id,
     class_name: :Review
 
+    has_many :bookings,
+    primary_key: :id,
+    foreign_key: :listing_id,
+    class_name: :Booking
+
     has_many_attached :photos, dependent: :destroy
 end

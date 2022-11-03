@@ -13,6 +13,7 @@ class ShowListing extends React.Component {
     componentDidMount() {
         const listingId = parseInt(this.props.match.params.id);
         this.props.getListing(listingId);
+        this.props.getBookings();
         window.scrollTo(0, 0);
     }
 
@@ -40,6 +41,18 @@ class ShowListing extends React.Component {
                 }
             }
         }
+        
+        const bookings = [];
+        if (this.props.bookings && this.props.listing) {
+            this.props.bookings.forEach(
+                booking => {
+                    if (booking.listing_id == this.props.listing.id) {
+                        bookings.push(booking)
+                    }
+                }
+            )
+        }
+        
 
         return (
             <div>
@@ -94,13 +107,16 @@ class ShowListing extends React.Component {
                         </div>
 
                         <div className='show-listing-booking-container'>
-                            <Booking listing={listing}/>
+                            <Booking history={history} listing={listing} bookings={bookings} newBooking={this.props.newBooking} user_id={this.props.user_id}/>                            
                         </div>
+                        
                     </div>
 
                 </div>
 
                 <div className="reviews-underline"></div>
+
+                
 
                 <ReviewsIndex listing={listing} history={this.props.history}/>
                 

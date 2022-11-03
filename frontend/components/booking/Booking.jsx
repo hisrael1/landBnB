@@ -3,9 +3,35 @@ import React from 'react';
 class Booking extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {check_in_date: "", check_out_date: "", num_guests: 1, guest_id: this.props.user_id, listing_id: null}
+        this.onChange = this.onChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props != prevProps && this.props.listing) {
+            this.setState({listing_id: this.props.listing.id})
+        }
+    }
+
+    onChange(e) {
+        e.preventDefault();
+        const name = e.target.name;
+        let value = e.target.value;
+        if (name == "num_guests") {
+            value = parseInt(value)
+        }
+        this.setState({[name]: value});
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.newBooking(this.state);
     }
 
     render() {
+        console.log(this.state);
         return (
             <div className='booking-container'>
                 <div className='booking-price-and-reviews'>
@@ -23,29 +49,30 @@ class Booking extends React.Component {
 
                 <form className="booking-check-in-out-guest-container">
                     <div className="booking-check-in-out-container">
-                        <input className='booking-check-in' type="date">
+                        <input className='booking-check-in' name="check_in_date" type="date" value={this.props.check_in_date} onChange={this.onChange}>
                         </input>
 
-                        <input className='booking-check-out' type="date">
+
+                        <input className='booking-check-out' name="check_out_date" type="date" value={this.props.check_out_date} onChange={this.onChange}>
                         </input>
                     </div>
                     <div className='booking-num-guests-container'>
-                        <select className='booking-num-guests'>
-                            <option>1 guest</option>
-                            <option>2 guests</option>
-                            <option>3 guests</option>
-                            <option>4 guests</option>
-                            <option>5 guests</option>
-                            <option>6 guests</option>
-                            <option>7 guests</option>
-                            <option>8 guests</option>
-                            <option>9 guests</option>
-                            <option>10 guests</option>
+                        <select className='booking-num-guests' name="num_guests" value={this.props.num_guests} onChange={this.onChange}>
+                            <option value="1">1 guest</option>
+                            <option value="2">2 guests</option>
+                            <option value="3">3 guests</option>
+                            <option value="4">4 guests</option>
+                            <option value="5">5 guests</option>
+                            <option value="6">6 guests</option>
+                            <option value="7">7 guests</option>
+                            <option value="8">8 guests</option>
+                            <option value="9">9 guests</option>
+                            <option value="10">10 guests</option>
                         </select>
                     </div>
 
                     <div className="booking-button-container">
-                        <button className="booking-button" type="submit"> Reserve </button>
+                        <button className="booking-button" type="submit" onClick={this.handleSubmit}> Reserve </button>
                     </div>
                 </form>
             </div>
