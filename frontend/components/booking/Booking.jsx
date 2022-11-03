@@ -31,7 +31,23 @@ class Booking extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+        let bookingValid = true;
+        if (this.state.check_in_date && this.state.check_out_date) {
+            this.props.bookings.forEach(
+                booking => {
+                    if (this.state.check_in_date >= booking.check_in_date && this.state.check_in_date < booking.check_out_date) {
+                        bookingValid = false;
+                    } else if (this.state.check_out_date > booking.check_in_date && this.state.check_out_date <= booking.check_out_date) {
+                        bookingValid = false;
+                    } else if (booking.check_in_date >= this.state.check_in_date && booking.check_in_date < this.state.check_out_date) {
+                        bookingValid = false;
+                    } else if (booking.check_out_date > this.state.check_in_date && booking.check_out_date <= this.state.check_out_date) {
+                        bookingValid = false;
+                    }
+                }
+            )
+        }
+
         return (
             <div className='booking-container'>
                 <div className='booking-price-and-reviews'>
@@ -72,7 +88,12 @@ class Booking extends React.Component {
                     </div>
 
                     <div className="booking-button-container">
-                        <button className="booking-button" type="submit" onClick={this.handleSubmit}> Reserve </button>
+                        {bookingValid ? 
+                            <button className="booking-button" type="submit" onClick={this.handleSubmit}> Reserve </button>
+                            :
+                            <button className="booking-button-false" type="button"> Dates unavailable </button>
+                        }
+                        
                     </div>
                 </form>
             </div>
