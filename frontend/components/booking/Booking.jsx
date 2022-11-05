@@ -28,6 +28,7 @@ class Booking extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.newBooking(this.state);
+        this.props.history.push("/");
     }
 
     render() {
@@ -39,9 +40,9 @@ class Booking extends React.Component {
                         bookingValid = false;
                     } else if (this.state.check_out_date > booking.check_in_date && this.state.check_out_date <= booking.check_out_date) {
                         bookingValid = false;
-                    } else if (booking.check_in_date >= this.state.check_in_date && booking.check_in_date < this.state.check_out_date) {
+                    } else if (this.state.check_in_date <= booking.check_in_date && this.state.check_out_date >= booking.check_out_date) {
                         bookingValid = false;
-                    } else if (booking.check_out_date > this.state.check_in_date && booking.check_out_date <= this.state.check_out_date) {
+                    } else if (this.state.check_out_date <= this.state.check_in_date) {
                         bookingValid = false;
                     }
                 }

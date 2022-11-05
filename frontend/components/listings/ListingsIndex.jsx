@@ -14,6 +14,7 @@ class ListingsIndex extends React.Component {
 
     componentDidMount() {
         this.props.indexListings();
+        this.props.getBookings();
     }
 
     componentDidUpdate(prevProps) {
@@ -21,8 +22,44 @@ class ListingsIndex extends React.Component {
             if (this.props.match.params.query) {
                 const queryString = require('query-string');
                 const parsed = queryString.parse(this.props.match.params.query);
-                const listings = [...this.props.listings];
-                this.setState({listings: listings.filter(listing => listing.city.includes(parsed.city))});
+                let listings = [...this.props.listings];
+                listings = listings.filter(
+                    listing => listing.city.includes(parsed.city)).filter(
+                        listing => listing.max_num_guests >= parsed.max_num_guests
+                    );
+
+                if (listings.length > 0) {
+                    debugger
+                }
+                // let bookedListings = [];
+                // if (listings) {
+                //     debugger
+                //     listings.forEach(listing => {
+                //         debugger
+                //         this.props.bookings.forEach(booking => {
+                //             debugger
+                //             let bookingValid = true;
+                //             if (listing.check_in_date >= booking.check_in_date && listing.check_in_date < booking.check_out_date) {
+                //                 bookingValid = false;
+                //             } else if (listing.check_out_date > booking.check_in_date && listing.check_out_date <= booking.check_out_date) {
+                //                 bookingValid = false;
+                //             } else if (listing.check_in_date <= booking.check_in_date && listing.check_out_date >= booking.check_out_date) {
+                //                 bookingValid = false;
+                //             }
+                //             if (bookingValid = true) {
+                //                 bookedListings.push(listing)
+                //             }
+                //         })
+                //     })
+                // }
+
+                // debugger
+
+
+                console.log(parsed.check_in_date)
+                console.log(parsed.check_out_date)
+
+                this.setState({listings: listings});
             } else {
                 const listings = [...this.props.listings];
                 this.setState({listings: listings});
@@ -31,6 +68,9 @@ class ListingsIndex extends React.Component {
     }
 
     render() {
+        // if (this.props.bookings) {
+        //     debugger
+        // }
         return (
             <div>
                 <Header />

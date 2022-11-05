@@ -109,6 +109,18 @@
     cursor: pointer;
 }
 
+#false-search-icon-container {
+    top: 15px;
+    background-color:rgb(83, 83, 83);
+    padding: 10px;
+    border-radius: 50px;
+    height: 1em;
+    width: 1em;
+    grid-column: 2;
+    grid-row: 3;
+    cursor: pointer;
+}
+
 #search-submit {
     background: transparent;
     border: none !important;

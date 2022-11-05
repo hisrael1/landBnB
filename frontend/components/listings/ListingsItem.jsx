@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 const ListingsItem = (props) => {
     const history = props.history;
-    const { title, city, num_baths, num_beds, price_per_night, id, photoUrls } = props.listing;
+    const { title, city, num_baths, num_beds, max_num_guests, price_per_night, id, photoUrls } = props.listing;
     if (!photoUrls[0]) {
         photoUrls[0] = window.listing_pic01;
     }
@@ -15,7 +15,7 @@ const ListingsItem = (props) => {
                 <p className="listing-description"> Apartment in {city} </p>
                 <p className="listing-title"> {title} </p>
                 <div className="listing-capacities">
-                    {num_beds} Beds <span className="bullet-symbol">&#183; </span> 3 Guests <span className="bullet-symbol">&#183; </span> {num_baths} Baths
+                    {num_beds} Beds <span className="bullet-symbol">&#183; </span> {max_num_guests} Guests <span className="bullet-symbol">&#183; </span> {num_baths} Baths
                 </div>
                 
                 <div className="ratings-and-price-container">
