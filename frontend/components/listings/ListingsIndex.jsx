@@ -10,6 +10,7 @@ class ListingsIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {listings: []};
+        this.findAvailableListings = this.findAvailableListings.bind(this);
     }
 
     componentDidMount() {
@@ -22,42 +23,22 @@ class ListingsIndex extends React.Component {
             if (this.props.match.params.query) {
                 const queryString = require('query-string');
                 const parsed = queryString.parse(this.props.match.params.query);
+                
+                // filter by city and num_guests
                 let listings = [...this.props.listings];
                 listings = listings.filter(
                     listing => listing.city.includes(parsed.city)).filter(
                         listing => listing.max_num_guests >= parsed.max_num_guests
                     );
 
-                if (listings.length > 0) {
-                    debugger
+                // filter by booking dates
+                let availableListings = [];
+                if (listings.length > 0 && parsed.check_in_date && parsed.check_out_date) {
+                    availableListings = this.findAvailableListings(listings, this.props.bookings, parsed.check_in_date, parsed.check_out_date)
+                    
+                    listings = listings.filter(
+                        listing => availableListings.includes(listing))
                 }
-                // let bookedListings = [];
-                // if (listings) {
-                //     debugger
-                //     listings.forEach(listing => {
-                //         debugger
-                //         this.props.bookings.forEach(booking => {
-                //             debugger
-                //             let bookingValid = true;
-                //             if (listing.check_in_date >= booking.check_in_date && listing.check_in_date < booking.check_out_date) {
-                //                 bookingValid = false;
-                //             } else if (listing.check_out_date > booking.check_in_date && listing.check_out_date <= booking.check_out_date) {
-                //                 bookingValid = false;
-                //             } else if (listing.check_in_date <= booking.check_in_date && listing.check_out_date >= booking.check_out_date) {
-                //                 bookingValid = false;
-                //             }
-                //             if (bookingValid = true) {
-                //                 bookedListings.push(listing)
-                //             }
-                //         })
-                //     })
-                // }
-
-                // debugger
-
-
-                console.log(parsed.check_in_date)
-                console.log(parsed.check_out_date)
 
                 this.setState({listings: listings});
             } else {
@@ -67,10 +48,29 @@ class ListingsIndex extends React.Component {
         }
     }
 
+    findAvailableListings(listings, bookings, check_in_date, check_out_date) {
+        let availableListings = [];
+        listings.forEach(listing => {
+            let isAvailable = true;
+            const listingBookings = bookings.filter(booking => booking.listing_id == listing.id);
+            listingBookings.forEach(booking => {
+                if (check_in_date >= booking.check_in_date && check_in_date < booking.check_out_date) {
+                    isAvailable = false;
+                } else if (check_out_date > booking.check_in_date && check_out_date <= booking.check_out_date) {
+                    isAvailable = false;
+                } else if (check_in_date <= booking.check_in_date && check_out_date >= booking.check_out_date) {
+                    isAvailable = false;
+                } 
+            })
+            if (!!isAvailable) {
+                availableListings.push(listing);
+            }
+        })
+        return availableListings
+    }
+
     render() {
-        // if (this.props.bookings) {
-        //     debugger
-        // }
+    
         return (
             <div>
                 <Header />
@@ -84,9 +84,7 @@ class ListingsIndex extends React.Component {
 
                     <div id="sticky-map">
                         <ListingsMap listings={Object.values(this.state.listings)}/>
-                    </div>
-                    
-                    
+                    </div>           
         
                 </div>
 

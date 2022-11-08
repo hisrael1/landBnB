@@ -18,7 +18,23 @@ class NewListingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // DON'T FORGET TO CONVERT ADDRESS TO LAT LNG
+
+        var geocoder = new google.maps.Geocoder();
+        var address = `${this.state.address} ${this.state.city} ${this.state.state}`
+        alert(address);
+
+        geocoder.geocode( { 'address': address}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                const latitude = results[0].geometry.location.lat();
+                const longitude = results[0].geometry.location.lng();
+                alert(latitude);
+                alert(longitude);
+                formData.append('listing[lat]', latitude);
+                formData.append('listing[lng]', longitude);
+            } 
+        })
+
+                
         const formData = new FormData();
         formData.append('listing[title]', this.state.title);
         formData.append('listing[description]', this.state.description);
@@ -31,19 +47,26 @@ class NewListingForm extends React.Component {
         formData.append('listing[num_beds]', this.state.num_beds);
         formData.append('listing[num_baths]', this.state.num_baths);
         formData.append('listing[price_per_night]', this.state.price_per_night);
+        
 
         for (let i = 0; i < this.state.photos.length; i++) {
             formData.append("listing[photos][]", this.state.photos[i]);
         }
 
-        $.ajax({
-            url: '/api/listings',
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false
-        }).then(response => {console.log(response); this.props.history.push(`/listing/${response.id}`)}, response => console.log(response.responseJSON));
-      }
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
+        }
+          
+        delay(1000).then(() => 
+            $.ajax({
+                url: '/api/listings',
+                method: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false    
+            }).then(response => {console.log(response); this.props.history.push(`/listing/${response.id}`)}, response => console.log(response.responseJSON))
+        );
+    }
 
     handleFile(e) {
         const photoPreview = this.state.photoPreview ? [...this.state.photoPreview] : [];

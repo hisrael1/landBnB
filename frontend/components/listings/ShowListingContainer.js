@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import ShowListing from "./ShowListing";
 import { receiveListing } from "../../actions/listing_actions";
 import { getUser } from "../../actions/user_actions";
-
 import { indexBookings } from "../../actions/booking_actions";
 import { newBooking } from "../../actions/booking_actions";
 

@@ -34,6 +34,9 @@ class Booking extends React.Component {
     render() {
         let bookingValid = true;
         if (this.state.check_in_date && this.state.check_out_date) {
+            if (this.state.check_out_date <= this.state.check_in_date) {
+                bookingValid = false;
+            }
             this.props.bookings.forEach(
                 booking => {
                     if (this.state.check_in_date >= booking.check_in_date && this.state.check_in_date < booking.check_out_date) {
@@ -42,9 +45,7 @@ class Booking extends React.Component {
                         bookingValid = false;
                     } else if (this.state.check_in_date <= booking.check_in_date && this.state.check_out_date >= booking.check_out_date) {
                         bookingValid = false;
-                    } else if (this.state.check_out_date <= this.state.check_in_date) {
-                        bookingValid = false;
-                    }
+                    } 
                 }
             )
         }
