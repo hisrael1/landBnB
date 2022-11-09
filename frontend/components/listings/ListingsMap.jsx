@@ -27,7 +27,7 @@ class ListingsMap extends React.Component {
             this.initializeMap();
             this.MarkerManager = new MarkerManager(this.map);
             if (!!this.props.listings) {
-                this.props.listings.map(listing => {
+                this.props.listings.map((listing) => {
                     if (!!listing.lat && !!listing.lng) {
                         this.MarkerManager.updateMarkers(listing);    
                     }
@@ -37,7 +37,7 @@ class ListingsMap extends React.Component {
                 if (!!listing.lat && !!listing.lng) {
                     this.MarkerManager.updateMarkers(listing);    
                 }
-            }       
+            }
         }
     }
 

@@ -6,6 +6,8 @@ class MarkerManager {
 
     updateMarkers(listing) {
         const marker = new google.maps.Marker({
+            id: listing.id,
+            zIndex: listing.id,
             position: { lat: listing.lat, lng: listing.lng },
             title: listing.title,
             label: {
