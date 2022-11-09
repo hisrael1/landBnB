@@ -21,6 +21,9 @@ class MarkerManager {
             }         
         });
         marker.setMap(this.map);
+        google.maps.event.addDomListener(marker, 'click', () => {
+            window.location.href = `http://localhost:3000/#/listing/${listing.id}`;
+        });
     }
 }
 
