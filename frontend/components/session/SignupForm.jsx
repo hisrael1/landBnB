@@ -17,8 +17,15 @@ class SignupForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const user = Object.assign({}, this.state)
-    this.props.processForm(user);
-    this.props.closeModal();
+    this.props.processForm(user).then((res) => this.props.closeModal(), err => {
+      this.setState({
+        email: "",
+        password: "",
+        first_name: "",
+        last_name: ""
+      })
+      alert("Invalid Credentials")
+    })
   }
 
   update(field) {
@@ -42,10 +49,11 @@ class SignupForm extends React.Component {
   render () {
    return (
     <>
+      <div className="x-button" onClick={() => this.props.closeModal()}>&#10006;</div>
       <h1 className="form-name">{this.props.formType}</h1>
       <hr className="form-line" ></hr>
-      <h1 className="welcome-session"> Welcome to Landbnb </h1>
-        <form onSubmit={this.handleSubmit}>
+        <form id="session-form-container" onSubmit={this.handleSubmit}>
+            <h1 className="welcome-session"> Welcome to Landbnb </h1>
             <input className="form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email"/>
             <input className="form-input" type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="first name"/>
             <input className="form-input" type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="last name"/>
@@ -53,13 +61,6 @@ class SignupForm extends React.Component {
           <button className="form-button" onClick={this.handleSubmit}>{this.props.formType}</button>
           <button className="form-button" onClick={this.demoSubmit}>{'Demo'}</button>
         </form>
-        <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
-          {
-            this.props.errors ? 
-              this.props.errors.map( error => <p>{error}</p>)
-                :
-              ""
-          }
      </>
    )
   }

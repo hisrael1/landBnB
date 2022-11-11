@@ -21,14 +21,11 @@ class NewListingForm extends React.Component {
 
         var geocoder = new google.maps.Geocoder();
         var address = `${this.state.address} ${this.state.city} ${this.state.state}`
-        // alert(address);
 
         geocoder.geocode( { 'address': address}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 const latitude = results[0].geometry.location.lat();
                 const longitude = results[0].geometry.location.lng();
-                // alert(latitude);
-                // alert(longitude);
                 formData.append('listing[lat]', latitude);
                 formData.append('listing[lng]', longitude);
             } 

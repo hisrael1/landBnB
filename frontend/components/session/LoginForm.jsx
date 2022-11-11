@@ -14,9 +14,14 @@ class LoginForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    const user = Object.assign({}, this.state)
-    this.props.processForm(user);
-    this.props.closeModal();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user).then((res) => this.props.closeModal(), err => {
+      this.setState({
+        email: "",
+        password: ""
+      })
+      alert("Invalid Credentials")
+    })
   }
 
   update(field) {
@@ -33,29 +38,24 @@ class LoginForm extends React.Component {
         email: "user@demo.com",
         password: "password"
       }
-      this.props.processForm(user);
+      this.props.processForm(user)
       this.props.closeModal();
   };
   
   render () {
+
    return (
     <> 
+      <div className="x-button" onClick={() => this.props.closeModal()}>&#10006;</div>
       <h1 className="form-name">{this.props.formType}</h1>
       <hr className="form-line" ></hr>
-      <h1 className="welcome-session"> Welcome to Landbnb </h1>
-      <form onSubmit={this.handleSubmit}>
+      <form id="session-form-container" onSubmit={this.handleSubmit}>
+        <h1 className="welcome-session"> Welcome to Landbnb </h1>
           <input className="form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email"/>
           <input className="form-input-bottom" type="password" value={this.state.password} onChange={this.update('password')} placeholder="password"/>
         <button className="form-button" onClick={this.handleSubmit}>{this.props.formType}</button>
         <button className="form-button" onClick={this.demoSubmit}>{'Demo'}</button>
       </form>
-      <Link to={`/${this.props.formType === "login" ? "signup" : "login"}`}></Link>
-        {
-          this.props.errors ? 
-            this.props.errors.map( error => <p>{error}</p>)
-              :
-            ""
-        }
     </>
    )
   }

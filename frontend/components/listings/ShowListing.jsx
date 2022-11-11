@@ -4,6 +4,7 @@ import Footer from '../splash/Footer'
 import Booking from '../booking/Booking.jsx';
 import ListingsMap from './ListingsMap';
 import ReviewsIndex from '../reviews/ReviewsIndex';
+import ModalContainer from '../modal/ModalContainer';
 
 class ShowListing extends React.Component {
     constructor(props) {
@@ -57,6 +58,7 @@ class ShowListing extends React.Component {
         return (
             <div>
                 <Header />
+                <ModalContainer />
                 <div className="show-listing-title-info-container">
                     <p className="show-listing-title">
                         {listing ? listing.title : null}
@@ -111,7 +113,6 @@ class ShowListing extends React.Component {
                         </div>
                         
                     </div>
-
                 </div>
 
                 <div className="reviews-underline"></div>
