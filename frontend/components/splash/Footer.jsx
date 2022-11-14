@@ -5,12 +5,10 @@ const Footer = () => {
     return (
         <div id="footer">
             <div>
-                <div className="bold-footer">
-                    About
-                </div>
                 <div className="personal-links">
-                    <a href="https://github.com/hisrael1">Github</a>
-                    <a href="https://www.linkedin.com/in/harrison-israel/">LinkedIn</a>
+                    <div id="developed-by"> Developed By Harrison Israel </div>
+                    <a href="https://github.com/hisrael1"> <img className="footer-img" src={window.github}/> </a>
+                    <a href="https://www.linkedin.com/in/harrison-israel/"> <img className="footer-img" src={window.linkedin}/> </a>
                 </div>                
             </div>
         </div>

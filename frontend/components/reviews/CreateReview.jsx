@@ -53,6 +53,12 @@ class CreateReview extends React.Component {
 
 
     render() {
+
+        let submit = "create-review-submit";
+        if (this.state.body.length > 250) {
+            submit = "create-review-submit-gray";
+        }
+
         return (
             <div>
                 <Header />
@@ -143,7 +149,11 @@ class CreateReview extends React.Component {
 
                     <div id="submit-and-back-container">
                         <button id="review-back-button"> Back </button>
-                        <input type="submit" id="create-review-submit"/>
+                        {submit == "create-review-submit" ? 
+                            <input type="submit" id={submit}/>
+                        :
+                            <button type="button" id={submit}>Submit</button>
+                        }
                     </div>
                     
                 </form>

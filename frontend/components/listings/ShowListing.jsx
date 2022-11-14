@@ -76,12 +76,12 @@ class ShowListing extends React.Component {
                     <div className='show-listing-photos-container'>
                         {this.props.listing ? <img src={photos[0]} className='show-listing-photo-1'/> : null }
                         <div className="show-listing-right-photos-container">
-                            <div className="show-listing-right-photos">
+                            <div className="show-listing-right-photos-1">
                                 {this.props.listing ? <img src={photos[1]} className='show-listing-photo-2'/> : null }
 
                                 {this.props.listing ? <img src={photos[2]} className='show-listing-photo-3'/> : null }
                             </div>
-                            <div className="show-listing-right-photos">
+                            <div className="show-listing-right-photos-2">
                                 {this.props.listing ? <img src={photos[3]} className='show-listing-photo-4'/> : null }
                                 {this.props.listing ? <img src={photos[4]} className='show-listing-photo-5'/> : null }
                             </div>
@@ -100,13 +100,60 @@ class ShowListing extends React.Component {
                     </div>
 
                     <div className='show-listing-description-and-booking-container'>
-                        <div className='show-listing-description'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Metus vulputate eu scelerisque felis imperdiet. Aenean euismod 
-                            elementum nisi quis eleifend. Justo laoreet sit amet cursus sit amet. Amet est placerat in
-                            egestas erat imperdiet sed. Feugiat in ante metus dictum. Urna et pharetra pharetra massa massa
-                            ultricies mi quis hendrerit. Morbi quis commodo odio aenean sed adipiscing.
+                        <div>
+                            <div className='show-listing-description'>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Metus vulputate eu scelerisque felis imperdiet. Aenean euismod 
+                                elementum nisi quis eleifend. Justo laoreet sit amet cursus sit amet. Amet est placerat in
+                                egestas erat imperdiet sed. Feugiat in ante metus dictum. Urna et pharetra pharetra massa massa
+                                ultricies mi quis hendrerit. Morbi quis commodo odio aenean sed adipiscing.
+                            </div>
+
+                            <div id="aircover-container">
+                                <div id="aircover-container-underline"></div>                            
+                                <img id="aircover" src={window.aircover} />
+                                Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.    
+                                <div id="aircover-container-underline"></div>
+                            </div>
+
+                            <div id="amenities-header">What this place offers</div>
+                            <div id="amenities-container">    
+                                <div>
+                                    <div className="amenity-item-container">
+                                        <img src={window.tv} className="amenity-item"/>
+                                        <p>Tv</p>
+                                    </div>
+                                    <div className="amenity-item-container">
+                                        <img src={window.kitchen} className="amenity-item"/>
+                                        <p>Kitchen</p>
+                                    </div>
+                                    <div className="amenity-item-container">
+                                        <img src={window.wifi} className="amenity-item"/>
+                                        <p>Fast wifi – 300 Mbps</p>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div className="amenity-item-container">
+                                        <img src={window.smokealarm} className="amenity-item"/>
+                                        <p>Smoke Alarm</p>
+                                    </div>
+                                    
+                                    <div className="amenity-item-container">
+                                        <img src={window.dishwasher} className="amenity-item"/>
+                                        Dishwasher
+                                    </div>
+                                    <div className="amenity-item-container">
+                                        <img src={window.bathtubshower} className="amenity-item"/>
+                                        Bathtub Shower
+                                    </div>
+                                    
+                                    
+                                </div>                    
+                            </div>
+
                         </div>
+                        
 
                         <div className='show-listing-booking-container'>
                             <Booking history={history} listing={listing} bookings={bookings} newBooking={this.props.newBooking} user_id={this.props.user_id}/>                            

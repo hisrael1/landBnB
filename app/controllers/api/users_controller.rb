@@ -19,6 +19,16 @@ class Api::UsersController < ApplicationController
         end 
     end
 
+     
+    def update
+        @user = User.find_by(id: params[:id])
+        if @user && @user.update(photo: params[:photo])
+            render "api/users/show"
+        else
+            render json: @user.errors
+        end
+    end
+
     private
 
     def user_params

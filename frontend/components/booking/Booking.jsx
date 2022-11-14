@@ -4,9 +4,16 @@ class Booking extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {check_in_date: "", check_out_date: "", num_guests: 1, guest_id: this.props.user_id, listing_id: null}
+        this.state = {check_in_date: "", check_out_date: "", num_guests: 1, guest_id: this.props.user_id, listing_id: null, positionType: "booking-container-sticky"}
         this.onChange = this.onChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.listenScrollEvent = this.listenScrollEvent.bind(this);
+        this.isBookingValid = this.isBookingValid.bind(this);
+        // this.bookingLength = this.bookingLength.bind(this);
+    }
+    
+    componentDidMount() {
+        window.addEventListener('scroll', this.listenScrollEvent)
     }
 
     componentDidUpdate(prevProps) {
@@ -14,6 +21,41 @@ class Booking extends React.Component {
             this.setState({listing_id: this.props.listing.id})
         }
     }
+
+    listenScrollEvent(e) {
+        if (window.scrollY < 380) {
+            this.setState({positionType: "booking-container-sticky"})
+        } else if (window.scrollY > 500) {
+            this.setState({positionType: "booking-container-sticky-lower"})
+        } else {
+            this.setState({positionType: "booking-container-fixed"})
+        }
+    }
+
+    isBookingValid() {
+        let bookingValid = true;
+        if (this.state.check_in_date && this.state.check_out_date) {
+            if (this.state.check_out_date <= this.state.check_in_date) {
+                return false;
+            }
+            this.props.bookings.forEach(
+                booking => {
+                    if (this.state.check_in_date >= booking.check_in_date && this.state.check_in_date < booking.check_out_date) {
+                        bookingValid = false
+                    } else if (this.state.check_out_date > booking.check_in_date && this.state.check_out_date <= booking.check_out_date) {
+                        bookingValid = false
+                    } else if (this.state.check_in_date <= booking.check_in_date && this.state.check_out_date >= booking.check_out_date) {
+                        bookingValid = false
+                    } 
+                }
+            )
+            return bookingValid
+        }
+    }
+
+    // bookingLength() {
+    //     return ((Date.parse(this.state.check_out_date) - Date.parse(this.state.check_in_date)) / (86400000) ) + 1
+    // }
 
     onChange(e) {
         e.preventDefault();
@@ -27,31 +69,21 @@ class Booking extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        delete this.state.positionType;
         this.props.newBooking(this.state);
         this.props.history.push("/");
     }
 
     render() {
         let bookingValid = true;
+        // let bookingLength;
         if (this.state.check_in_date && this.state.check_out_date) {
-            if (this.state.check_out_date <= this.state.check_in_date) {
-                bookingValid = false;
-            }
-            this.props.bookings.forEach(
-                booking => {
-                    if (this.state.check_in_date >= booking.check_in_date && this.state.check_in_date < booking.check_out_date) {
-                        bookingValid = false;
-                    } else if (this.state.check_out_date > booking.check_in_date && this.state.check_out_date <= booking.check_out_date) {
-                        bookingValid = false;
-                    } else if (this.state.check_in_date <= booking.check_in_date && this.state.check_out_date >= booking.check_out_date) {
-                        bookingValid = false;
-                    } 
-                }
-            )
+            bookingValid = this.isBookingValid();
+            // bookingLength = this.bookingLength()
         }
 
         return (
-            <div className='booking-container'>
+                <div className={this.state.positionType}>
                 <div className='booking-price-and-reviews'>
                     <div className='booking-price-container'>
                         <p className="booking-price">${this.props.listing ? this.props.listing.price_per_night : null} / </p> <span>night</span>
@@ -87,6 +119,10 @@ class Booking extends React.Component {
                             <option value="9">9 guests</option>
                             <option value="10">10 guests</option>
                         </select>
+                    </div>
+
+                    <div>
+                        {/* {bookingLength ? bookingLength : null} */}
                     </div>
 
                     <div className="booking-button-container">
