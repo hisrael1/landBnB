@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :listings, only: [:index, :create, :show, :update, :destroy]
     resources :reviews, only: [:index, :create, :show, :destroy]
     resources :bookings, only: [:index, :create, :show, :destroy]
-  end  
+  end
+  get '*path', to: "static_pages#frontend_index"
 end

@@ -9,7 +9,6 @@ class Booking extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.listenScrollEvent = this.listenScrollEvent.bind(this);
         this.isBookingValid = this.isBookingValid.bind(this);
-        // this.bookingLength = this.bookingLength.bind(this);
     }
     
     componentDidMount() {
@@ -23,9 +22,9 @@ class Booking extends React.Component {
     }
 
     listenScrollEvent(e) {
-        if (window.scrollY < 380) {
+        if (window.scrollY < 500) {
             this.setState({positionType: "booking-container-sticky"})
-        } else if (window.scrollY > 500) {
+        } else if (window.scrollY > 850) {
             this.setState({positionType: "booking-container-sticky-lower"})
         } else {
             this.setState({positionType: "booking-container-fixed"})
@@ -53,10 +52,6 @@ class Booking extends React.Component {
         }
     }
 
-    // bookingLength() {
-    //     return ((Date.parse(this.state.check_out_date) - Date.parse(this.state.check_in_date)) / (86400000) ) + 1
-    // }
-
     onChange(e) {
         e.preventDefault();
         const name = e.target.name;
@@ -76,10 +71,8 @@ class Booking extends React.Component {
 
     render() {
         let bookingValid = true;
-        // let bookingLength;
         if (this.state.check_in_date && this.state.check_out_date) {
             bookingValid = this.isBookingValid();
-            // bookingLength = this.bookingLength()
         }
 
         return (
@@ -119,10 +112,6 @@ class Booking extends React.Component {
                             <option value="9">9 guests</option>
                             <option value="10">10 guests</option>
                         </select>
-                    </div>
-
-                    <div>
-                        {/* {bookingLength ? bookingLength : null} */}
                     </div>
 
                     <div className="booking-button-container">
