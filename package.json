@@ -14,7 +14,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rails s",
-    "build": "npm install && webpack --mode=production",
+    "build": "RAILS_ENV=production rails assets:precompile && npm install && webpack --mode=production",
     "postinstall": "webpack"
   },
   "repository": {
