@@ -61,7 +61,7 @@ class NewListingForm extends React.Component {
                 data: formData,
                 contentType: false,
                 processData: false    
-            }).then(response => {console.log(response); this.props.history.push(`/listing/${response.id}`)}, response => console.log(response.responseJSON))
+            }).then(response => {this.props.history.push(`/listing/${response.id}`)})
         );
     }
 

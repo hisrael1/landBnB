@@ -26,8 +26,7 @@ class UserIdentity extends React.Component {
             contentType: false,
             processData: false    
         }).then(
-            response => {console.log(response); alert("Upload Successful. Refresh page to view.")},
-            response => console.log(response.responseJSON)
+            response => {alert("Upload Successful. Refresh page to view.")}
         )
     }
 

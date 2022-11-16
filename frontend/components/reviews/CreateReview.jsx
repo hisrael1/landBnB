@@ -33,7 +33,6 @@ class CreateReview extends React.Component {
         const value = parseInt(e.currentTarget.value);
         const name = e.currentTarget.name;
         this.setState({[name]: value});
-        console.log(this.state);
     }
 
     handleText(e) {
@@ -41,7 +40,6 @@ class CreateReview extends React.Component {
         const value = e.currentTarget.value;
         const name = e.currentTarget.name;
         this.setState({[name]: value});
-        console.log(this.state);
     }
 
     handleSubmit(e) {
