@@ -13,8 +13,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rails s",
-    "build": "npm run build && bundle install && rails db:migrate db:seed",
+    "start": "webpack --watch --mode=development",
     "postinstall": "webpack"
   },
   "repository": {
