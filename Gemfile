@@ -14,7 +14,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 
 # New
-# gem "terser", "~> 1.1"
+gem "terser", "~> 1.1"
+gem 'sassc-rails'
 
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
