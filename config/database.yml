@@ -74,12 +74,12 @@ test:
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-# production:
-#   <<: *default
-#   database: LandBnB_production
-#   username: LandBnB
-#   password: <%= ENV['LANDBNB_DATABASE_PASSWORD'] %>
-
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: LandBnB_production
+  username: LandBnB
+  password: <%= ENV['LANDBNB_DATABASE_PASSWORD'] %>
