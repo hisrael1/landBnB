@@ -207,7 +207,6 @@
     justify-content: space-around;
     overflow: auto;
     position: relative;
-    // background-color: rgb(240, 240, 240);
     background-color: rgb(255, 70, 88); 
     border-top: solid rgb(200, 200, 200);
     border-width: 1px;
@@ -817,11 +816,6 @@
     width: 800px;
 }
 
-// #react-calendar-container{
-//     width: 400px;
-//     height: 400px;
-// }
-
 #amenities-container {
     width: 700px;
     display: flex;
@@ -1291,7 +1285,6 @@
 .reservation-info-container > * {
     height: 50%;
     width: 100%;
-    // border: solid rgb(255, 31, 57) 1px;
 }
 
 #reservation-city-and-host > * {
