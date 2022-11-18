@@ -170,7 +170,7 @@ class ShowListing extends React.Component {
                 
                 <div id="show-listing-map">
                     <div id="show-listing-map-text">Where You'll Be</div>
-                    {/* <ListingsMap listing={listing} showMap={true}/> */}
+                    <ListingsMap listing={listing} showMap={true}/>
                 </div>
                 <Footer />
             </div>
