@@ -55,6 +55,5 @@
     "@types/react-datepicker": "^4.8.0",
     "@types/react-dom": "^18.0.3",
     "@types/react-router-dom": "^5.3.3",
-    "webpack-cli": "^4.10.0"
   }
 }
