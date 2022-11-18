@@ -25,6 +25,7 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   # config.assets.js_compressor = Uglifier.new(harmony: true)
   config.assets.js_compressor = :terser
+  # should it say scss somewhere?
   config.assets.css_compressor = :sass
 
 
