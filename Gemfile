@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 
 # New
 # gem "terser", "~> 1.1"
-gem 'sassc-rails'
+# gem 'sassc-rails'
 
 gem "terser", "~> 1.1"
 # gem 'uglifier', '>= 1.3.0'
