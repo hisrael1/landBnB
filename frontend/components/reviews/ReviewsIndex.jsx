@@ -53,7 +53,7 @@ const ReviewsIndex = (props) => {
                     {reviewsText.map((text, idx) => {           
                         return (
                             idx % 2 == 0 ?
-                                <ReviewsItem reviewText={text}/>
+                                <ReviewsItem reviewText={text} key={idx}/>
                             :
                             null
                         )
@@ -65,7 +65,7 @@ const ReviewsIndex = (props) => {
                             idx % 2 == 0 ?
                             null
                             :
-                            <ReviewsItem reviewText={text}/> 
+                            <ReviewsItem reviewText={text} key={idx}/> 
                         )
                     })}
                 </div>
