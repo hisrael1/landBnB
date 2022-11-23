@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
-    #CELLL
-    #. vs []
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
 
     helper_method :current_user, :logged_in?
     # think more about what this is doing
