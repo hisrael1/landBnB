@@ -5,7 +5,7 @@ const UserInfo = (props) => {
 
     return (
         <div className="user-info-container">
-            <p id="user-info-hi"> Hi, I'm {user.first_name} {user.last_name} </p>
+            {user ? <p id="user-info-hi"> Hi, I'm {user.first_name} {user.last_name} </p> : null}
             <p id="user-info-about"> About </p>
             <div className="user-info-border"></div>
             <p id="user-listings-header">&#9830; 2 Listings</p>

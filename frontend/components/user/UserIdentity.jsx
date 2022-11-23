@@ -32,7 +32,7 @@ class UserIdentity extends React.Component {
 
     render() {
         const { user } = this.props;
-        if (!user.photoUrl) {
+        if (user && !Object.keys(user).includes("photoUrl")) {
             user.photoUrl = window.blank_user_profile
         }
 
@@ -42,8 +42,8 @@ class UserIdentity extends React.Component {
 
         return (
             <div className="user-identity">
-                <img src={user.photoUrl} id="blank_user_profile" />
-                <p className="hello-user"> Hello, {user.first_name} {user.last_name} </p>
+                {user ? <img src={user.photoUrl} id="blank_user_profile" /> : null}
+                {user ? <p className="hello-user"> Hello, {user.first_name} {user.last_name} </p> : null}
     
             <div id="profile-photo-upload-container">
                 <label id="profile-photo-upload" htmlFor="file-upload" className="custom-file-upload">
