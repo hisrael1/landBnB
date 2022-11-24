@@ -1,5 +1,4 @@
 class Api::ListingsController < ApplicationController
-    
     def index 
         @listings = Listing.all
         if @listings
@@ -44,5 +43,4 @@ class Api::ListingsController < ApplicationController
     def listing_params
         params.require(:listing).permit(:title, :description, :host_id, :address, :city, :state, :lat, :lng, :zipcode, :num_beds, :num_baths, :max_num_guests, :price_per_night, photos: [])
     end
-
 end
