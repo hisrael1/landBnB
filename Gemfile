@@ -36,9 +36,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails'
 
-# checking if this will do the trick
-gem 'rails_12factor'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
