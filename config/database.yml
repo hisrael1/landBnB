@@ -78,8 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: LandBnB_production
+#   username: LandBnB
+#   password: <%= ENV['LANDBNB_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: LandBnB_production
-  username: LandBnB
+  database: landbnb_production
+  username: landbnb
   password: <%= ENV['LANDBNB_DATABASE_PASSWORD'] %>
