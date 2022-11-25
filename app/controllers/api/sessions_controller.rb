@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
         # @
         # Utilize the built in params hash to access the user inputs
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
-        if @user && @user.save
+        if @user
             log_in!(@user)
             render "api/users/show"
         else
