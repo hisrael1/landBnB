@@ -83,7 +83,8 @@ class ListingsIndex extends React.Component {
                     </div>
 
                     <div id="sticky-map">
-                        <ListingsMap listings={Object.values(this.state.listings)} history={this.props.history} />
+                        Map?
+                        {/* <ListingsMap listings={Object.values(this.state.listings)} history={this.props.history} /> */}
                     </div>           
         
                 </div>
