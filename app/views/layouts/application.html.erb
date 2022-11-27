@@ -8,8 +8,10 @@
     
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
 
     <script type="text/javascript">
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
       window.splash_main_pic = "<%= image_url('splash-main-pic.png') %>";
       window.airbnb_icon = "<%= image_url('airbnb-land.png') %>";
       window.hamburger_icon = "<%= image_url('menu-icon-blk.png') %>";
