@@ -12,7 +12,9 @@
     position: static;
     top: 0%;
     margin-left: 25px;
+    // margin-left: 2rem;
     margin-right: 25px;
+    // margin-right: 2rem;
     margin-top: 1px;
     margin-bottom: 1px;
     display: flex;
@@ -394,8 +396,11 @@
 }
 
 #map-container {
-    width: 714px;
-    height: 655px;
+    // width: 714px;
+    // width: 100%;
+    // height: 655px;
+    height: 41rem;
+    // height: 85%;
 }
 
 #show-map-container {
