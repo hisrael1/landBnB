@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # User.destroy_all
-# User.create(first_name: "Demo", last_name: "User", email: "user@demo.com", password: "password")
+User.create(first_name: "Demo", last_name: "User", email: "user@demo.com", password: "password")
 
 # Listing.destroy_all
 Listing.create({
