@@ -14,8 +14,8 @@ import Trips from "./booking/Trips";
 
 const App = () => (
     <Switch>
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
+        {/* <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} /> */}
         <Route exact path = "/" component={Splash} />
         <Route path = "/listings/:query" component={ListingsContainer} />
         <Route path = "/users/show/" component={UserContainer}/>
