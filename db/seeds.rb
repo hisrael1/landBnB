@@ -85,33 +85,49 @@ listing3.photos.attach(io: File.open('app/assets/images/montauk3.jpg'), filename
 listing3.photos.attach(io: File.open('app/assets/images/montauk4.webp'), filename: 'montauk4.webp')
 listing3.photos.attach(io: File.open('app/assets/images/montauk5.jpg'), filename: 'montauk5.jpg')
 
+listing4 = Listing.create({
+    title: "Relaxing 2 Bedroom in Newport Rhode Island",
+    description:
+        "Keyless entry, arrive and let yourself in easily. The house is 2 streets from the downtown area and an easy 15 min walk to the Beach. 
+        There is also 1 Parking Pass waiting for you. Late check out may be available if you are waiting for a late flight to 
+        take you home.  You'll love my place because of the water views, the location, the outdoors space, and the ambiance. ",
+    host_id: 1,
+    address: "120 Ruggles Ave",
+    city: "Newport",
+    state: "Rhode Island",
+    zipcode: 2840,
+    num_beds: 2,
+    num_baths: 2,
+    max_num_guests: 2,
+    price_per_night: 324,
+    lat: 41.46740320000001,
+    lng: -71.31328839999999
+})
 
+listing4.photos.attach(io: File.open('app/assets/images/newport1.webp'), filename: 'newport1.webp')
+listing4.photos.attach(io: File.open('app/assets/images/newport2.jpg'), filename: 'newport2.jpg')
+listing4.photos.attach(io: File.open('app/assets/images/newport3.webp'), filename: 'newport3.webp')
+listing4.photos.attach(io: File.open('app/assets/images/newport5.png'), filename: 'newport5.png')
+listing4.photos.attach(io: File.open('app/assets/images/newport6.jpg'), filename: 'newport6.jpg')
 
+listing5 = Listing.create({
+    title: "Spacious Brooklyn Studio",
+    description: "Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum ",
+    host_id: 1,
+    address: "555 Manhattan Avenue",
+    city: "Green Point",
+    state: "New York",
+    zipcode: 11234,
+    num_beds: 4,
+    num_baths: 2,
+    max_num_guests: 4,
+    price_per_night: 300,
+    lat: 40.72216,
+    lng: -73.94992
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-# listing7 = Listing.create({
-#     title: "Spacious Brooklyn Studio",
-#     description: "Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum Loren Ipsum ",
-#     host_id: 1,
-#     address: "555 Manhattan Avenue",
-#     city: "Green Point",
-#     state: "New York",
-#     zipcode: 11234,
-#     num_beds: 4,
-#     num_baths: 2,
-#     max_num_guests: 4,
-#     price_per_night: 300,
-#     lat: 40.72216,
-#     lng: -73.94992
-# })
+listing5.photos.attach(io: File.open('app/assets/images/brooklyn1.webp'), filename: 'brooklyn1.webp')
+listing5.photos.attach(io: File.open('app/assets/images/brooklyn2.jpg'), filename: 'brooklyn2.jpg')
+listing5.photos.attach(io: File.open('app/assets/images/brooklyn3.jpg'), filename: 'brooklyn3.jpg')
+listing5.photos.attach(io: File.open('app/assets/images/brooklyn4.jpg'), filename: 'brooklyn4.jpg')
+listing5.photos.attach(io: File.open('app/assets/images/brooklyn5.jpg'), filename: 'brooklyn5.jpg')
