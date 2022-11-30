@@ -66,7 +66,7 @@ listing3 = Listing.create({
     description:
         "Get ready to say hello to crashing waves and picturesque blue backdrops right outside your window. Located within 5 minutes 
         of Ditch Plains beach and a 10 minute drive into town, you can't go wrong here. Book this rental and have the stay of a lifetime.",
-    host_id: 15,
+    host_id: 1,
     address: "10 Otis Rd",
     city: "Montauk",
     state: "New York",
