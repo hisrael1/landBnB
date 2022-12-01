@@ -397,7 +397,7 @@
 
 #map-container {
     // width: 714px;
-    // width: 100%;
+    width: 100%;
     // height: 655px;
     height: 41rem;
     // height: 85%;
@@ -439,6 +439,7 @@
 }
 
 .listing-thumbnail {
+    // width: 250px;
     width: 250px;
     height: 175px;
     border-radius: 10px;
@@ -446,7 +447,8 @@
 
 .listing-item-info {
     display: block;
-    width: 525px;
+    // width: 525px;
+    width: 30rem;
     padding: 10px;
     margin-left: 10px;
 }
