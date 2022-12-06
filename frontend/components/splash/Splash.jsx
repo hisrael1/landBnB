@@ -15,15 +15,15 @@ class Splash extends React.Component {
     render() {
         return (
             <div id="main-container">
-            <Header history={history}/> 
-            <ModalContainer />              
+                <Header history={history}/> 
+                <ModalContainer />              
 
-            <div id='splash-main-pic-container'>
-                <img src={window.splash_main_pic} id="splash-main-pic"/>
-            </div>
+                <div id='splash-main-pic-container'>
+                    <img src={window.splash_main_pic} id="splash-main-pic"/>
+                </div>
 
-            <SplashFooter />
-        </div>    
+                <SplashFooter />
+            </div>    
         )
     }
 }

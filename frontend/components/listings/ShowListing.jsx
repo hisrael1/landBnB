@@ -59,6 +59,7 @@ class ShowListing extends React.Component {
             <div>
                 <Header />
                 <ModalContainer />
+                <div id="show-listing-container">
                 <div className="show-listing-title-info-container">
                     <p className="show-listing-title">
                         {listing ? listing.title : null}
@@ -160,6 +161,7 @@ class ShowListing extends React.Component {
                         </div>
                         
                     </div>
+                </div>
                 </div>
 
                 <div className="reviews-underline"></div>

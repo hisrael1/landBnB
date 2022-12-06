@@ -9,6 +9,7 @@ class Booking extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.listenScrollEvent = this.listenScrollEvent.bind(this);
         this.isBookingValid = this.isBookingValid.bind(this);
+        this.getScrollPercent = this.getScrollPercent.bind(this);
     }
     
     componentDidMount() {
@@ -21,13 +22,19 @@ class Booking extends React.Component {
         }
     }
 
+    getScrollPercent() {
+        const h = document.documentElement;
+        const b = document.body;
+        const st = 'scrollTop';
+        const sh = 'scrollHeight';
+        return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+    }
+
     listenScrollEvent(e) {
-        if (window.scrollY < 500) {
+        if (this.getScrollPercent() < 31.7) {
             this.setState({positionType: "booking-container-sticky"})
-        } else if (window.scrollY > 850) {
-            this.setState({positionType: "booking-container-sticky-lower"})
         } else {
-            this.setState({positionType: "booking-container-fixed"})
+            this.setState({positionType: "booking-container-relative"})
         }
     }
 
