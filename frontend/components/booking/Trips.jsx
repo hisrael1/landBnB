@@ -14,18 +14,19 @@ class Trips extends React.Component {
         return (
             <div>
                 <Header />
-                <div id="trips-container">
-                    <div id="trips-headline">Trips</div>
+                <div id="trips-outer-container">
+                    <div id="trips-container">
+                        <div id="trips-headline">Trips</div>
 
-                    <div class="upcoming-trips">Upcoming Reservations</div>
+                        <div class="upcoming-trips">Upcoming Reservations</div>
 
-                    {reservations.map(() => <TripsItem />)}
+                        {reservations.map(() => <TripsItem />)}
 
-                    <div class="upcoming-trips">Past Bookings</div>
+                        <div class="upcoming-trips">Past Bookings</div>
 
-                    {reservations.map(() => <TripsItem />)}
+                        {reservations.map(() => <TripsItem />)}
+                    </div>
                 </div>
-
                 <Footer />
                 
             </div>
