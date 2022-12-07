@@ -75,19 +75,19 @@ class ListingsIndex extends React.Component {
             <div>
                 <Header />
                 <ModalContainer />
-                <div className="listings-and-map-container">
-                    <div className="listings-index-container">
-                        {this.state.listings ? this.state.listings.map((
-                            listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
-                        )) : null}
+                <div id="listings-and-map-outer-container">
+                    <div className="listings-and-map-container">
+                        <div className="listings-index-container">
+                            {this.state.listings ? this.state.listings.map((
+                                listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
+                            )) : null}
+                        </div>           
                     </div>
 
                     <div id="sticky-map">
-                        <ListingsMap listings={Object.values(this.state.listings)} history={this.props.history} id="divvy"/>
-                    </div>           
-        
+                        <ListingsMap listings={Object.values(this.state.listings)} history={this.props.history}/>
+                    </div>
                 </div>
-
                 <Footer />
 
             </div>

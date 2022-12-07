@@ -60,102 +60,103 @@ class CreateReview extends React.Component {
         return (
             <div>
                 <Header />
-                <div id="create-review-prompt">
-                    How was your stay at this place?
-                </div>
-                
-                <div id="create-review-top-underline"></div>
-
-                <form className="create-review-attribute-container" onSubmit={this.handleSubmit}>
-                    <div className="create-review-attribute">
-                        Overall Rating
-                        <select className="review-ratings" name="rating" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                            
-                        </select>
-                    </div>
-                    <div className="create-review-attribute">
-                        Cleanliness
-                        <select className="review-ratings" name="cleanliness" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>
-                    <div className="create-review-attribute">
-                        Check-In
-                        <select className="review-ratings" name="check_in" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>                    
-                    <div className="create-review-attribute">
-                        Accuracy
-                        <select className="review-ratings" name="accuracy" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>
-                    <div className="create-review-attribute">
-                        Location
-                        <select className="review-ratings" name="location" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>
-                    <div className="create-review-attribute">
-                        Communication
-                        <select className="review-ratings" name="communication" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>                    
-                    <div className="create-review-attribute">
-                        Value
-                        <select className="review-ratings" name="value" onChange={this.handleRating}>
-                            <option value="5"><span> &#9733;</span> 5 </option>
-                            <option value="4"><span> &#9733;</span> 4 </option>
-                            <option value="3"><span> &#9733;</span> 3 </option>
-                            <option value="2"><span> &#9733;</span> 2 </option>
-                            <option value="1"><span> &#9733;</span> 1 </option>
-                        </select>
-                    </div>
-
-                    <div id="review-text-input-container">
-                        <p>Write a public review</p>
-                        <p id="review-lighter-text">Tell future travelers what they can expect at this place.</p>
-                        <textarea id="review-text-input" name="body" value={this.state.body} onChange={this.handleText}></textarea>
-                    </div>
-
-                    <div id="submit-and-back-container">
-                        <button id="review-back-button"> Back </button>
-                        {submit == "create-review-submit" ? 
-                            <input type="submit" id={submit}/>
-                        :
-                            <button type="button" id={submit}>Submit</button>
-                        }
+                <div id="create-reviews-outer-container">
+                    <div id="create-review-prompt">
+                        How was your stay at this place?
                     </div>
                     
-                </form>
+                    <div id="create-review-top-underline"></div>
 
+                    <form className="create-review-attribute-container" onSubmit={this.handleSubmit}>
+                        <div className="create-review-attribute">
+                            Overall Rating
+                            <select className="review-ratings" name="rating" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                                
+                            </select>
+                        </div>
+                        <div className="create-review-attribute">
+                            Cleanliness
+                            <select className="review-ratings" name="cleanliness" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>
+                        <div className="create-review-attribute">
+                            Check-In
+                            <select className="review-ratings" name="check_in" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>                    
+                        <div className="create-review-attribute">
+                            Accuracy
+                            <select className="review-ratings" name="accuracy" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>
+                        <div className="create-review-attribute">
+                            Location
+                            <select className="review-ratings" name="location" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>
+                        <div className="create-review-attribute">
+                            Communication
+                            <select className="review-ratings" name="communication" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>                    
+                        <div className="create-review-attribute">
+                            Value
+                            <select className="review-ratings" name="value" onChange={this.handleRating}>
+                                <option value="5"><span> &#9733;</span> 5 </option>
+                                <option value="4"><span> &#9733;</span> 4 </option>
+                                <option value="3"><span> &#9733;</span> 3 </option>
+                                <option value="2"><span> &#9733;</span> 2 </option>
+                                <option value="1"><span> &#9733;</span> 1 </option>
+                            </select>
+                        </div>
+
+                        <div id="review-text-input-container">
+                            <p>Write a public review</p>
+                            <p id="review-lighter-text">Tell future travelers what they can expect at this place.</p>
+                            <textarea id="review-text-input" name="body" value={this.state.body} onChange={this.handleText}></textarea>
+                        </div>
+
+                        <div id="submit-and-back-container">
+                            <button id="review-back-button"> Back </button>
+                            {submit == "create-review-submit" ? 
+                                <input type="submit" id={submit}/>
+                            :
+                                <button type="button" id={submit}>Submit</button>
+                            }
+                        </div>
+                        
+                    </form>
+                </div>
                 <Footer />               
             </div>
         )

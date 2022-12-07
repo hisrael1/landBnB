@@ -170,9 +170,11 @@ class ShowListing extends React.Component {
 
                 <ReviewsIndex listing={listing} history={this.props.history}/>
                 
-                <div id="show-listing-map">
-                    <div id="show-listing-map-text">Where You'll Be</div>
-                    <ListingsMap listing={listing} showMap={true}/>
+                <div id="show-listing-map-outer-container">
+                    <div id="show-listing-map">
+                        <div id="show-listing-map-text">Where You'll Be</div>
+                        <ListingsMap listing={listing} showMap={true}/>
+                    </div>
                 </div>
                 <Footer />
             </div>

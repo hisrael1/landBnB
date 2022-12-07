@@ -11,8 +11,8 @@ const ReviewsIndex = (props) => {
     ];
     
     return (
+        <div id="reviews-outer-container"> 
         <div id="reviews-index-container"> 
-        <div id="reviews-upper-container">
             <div id="reviews-ratings-container">
                 <p id="reviews-ratings">&#9733; 4.8 <span>&#183;</span> 4 reviews </p>
                 <p className="underline" onClick={() => props.history.push(`/listing/${props.listing.id}/review/new`)}>Write a review</p>
@@ -49,7 +49,7 @@ const ReviewsIndex = (props) => {
                     </div>
             </div>
 
-            </div>
+            
 
             <div id="reviews-container">
                 <div id="reviews-container-left">
@@ -76,6 +76,7 @@ const ReviewsIndex = (props) => {
             
 
             <div className="reviews-bottom-underline"></div>
+        </div>
         </div>
     )
 }
