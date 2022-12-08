@@ -238,7 +238,7 @@ user5 = User.create({email: "mlambo@binghamton.edu", first_name: "Michael", last
 user5.photo.attach(io: File.open('app/assets/images/lambert_headshot.jpg'), filename: 'lambert_headshot.jpg')
 
 # Heroku seeds
-Review.destroy_all
+# Review.destroy_all
 Review.create({listing_id: 13, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 Review.create({listing_id: 13, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 Review.create({listing_id: 13, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
