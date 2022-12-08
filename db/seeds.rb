@@ -214,7 +214,7 @@ Booking.create({
     check_in_date: "2023-3-20",
     check_out_date: "2023-3-25",
     num_guests: 4,
-    guest_id: 15,
+    guest_id: 1,
     listing_id: 13
 })
 
