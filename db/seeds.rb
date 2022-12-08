@@ -136,45 +136,48 @@
 
 
 
-# Booking.create({
-#     check_in_date: "2022-10-04",
-#     check_out_date: "2022-01-09",
-#     num_guests: 3,
-#     guest_id: 15,
-#     listing_id: 13
-# })
+Booking.create({
+    check_in_date: "2022-10-04",
+    check_out_date: "2022-01-09",
+    num_guests: 3,
+    guest_id: 15,
+    listing_id: 13
+})
 
-# Booking.create({
-#     check_in_date: "2022-11-03",
-#     check_out_date: "2022-11-06",
-#     num_guests: 3,
-#     guest_id: 15,
-#     listing_id: 47
-# })
+Booking.create({
+    check_in_date: "2022-11-03",
+    check_out_date: "2022-11-06",
+    num_guests: 3,
+    guest_id: 15,
+    listing_id: 47
+})
 
-# Booking.create({
-#     check_in_date: "2022-11-11",
-#     check_out_date: "2022-11-15",
-#     num_guests: 3,
-#     guest_id: 15,
-#     listing_id: 45
-# })
+Booking.create({
+    check_in_date: "2022-11-11",
+    check_out_date: "2022-11-15",
+    num_guests: 3,
+    guest_id: 15,
+    listing_id: 45
+})
 
-# Booking.create({
-#     check_in_date: "2022-11-20",
-#     check_out_date: "2022-11-22",
-#     num_guests: 3,
-#     guest_id: 15,
-#     listing_id: 44
-# })
+Booking.create({
+    check_in_date: "2022-11-20",
+    check_out_date: "2022-11-22",
+    num_guests: 3,
+    guest_id: 15,
+    listing_id: 44
+})
 
-# Booking.create({
-#     check_in_date: "2023-3-20",
-#     check_out_date: "2023-3-25",
-#     num_guests: 4,
-#     guest_id: 15,
-#     listing_id: 47
-# })
+Booking.create({
+    check_in_date: "2023-3-20",
+    check_out_date: "2023-3-25",
+    num_guests: 4,
+    guest_id: 15,
+    listing_id: 47
+})
 
-
+# Review.create({listing_id: 13, guest_id: 15, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 15, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 15, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 15, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
