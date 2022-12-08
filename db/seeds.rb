@@ -215,7 +215,7 @@ Booking.create({
     check_out_date: "2023-3-25",
     num_guests: 4,
     guest_id: 15,
-    listing_id: 47
+    listing_id: 13
 })
 
 # Review.create({listing_id: 13, guest_id: 15, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
