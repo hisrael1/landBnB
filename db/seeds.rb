@@ -177,7 +177,7 @@
 # })
 
 # Heroku seeds
-
+Booking.destroy_all
 Booking.create({
     check_in_date: "2022-10-04",
     check_out_date: "2022-01-09",
