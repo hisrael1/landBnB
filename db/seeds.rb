@@ -134,13 +134,55 @@
 # listing5.photos.attach(io: File.open('app/assets/images/brooklyn5.jpg'), filename: 'brooklyn5.jpg')
 
 
+# Local seeds
 
+# Booking.create({
+#     check_in_date: "2022-10-04",
+#     check_out_date: "2022-01-09",
+#     num_guests: 3,
+#     guest_id: 15,
+#     listing_id: 13
+# })
+
+# Booking.create({
+#     check_in_date: "2022-11-03",
+#     check_out_date: "2022-11-06",
+#     num_guests: 3,
+#     guest_id: 15,
+#     listing_id: 47
+# })
+
+# Booking.create({
+#     check_in_date: "2022-11-11",
+#     check_out_date: "2022-11-15",
+#     num_guests: 3,
+#     guest_id: 15,
+#     listing_id: 45
+# })
+
+# Booking.create({
+#     check_in_date: "2022-11-20",
+#     check_out_date: "2022-11-22",
+#     num_guests: 3,
+#     guest_id: 15,
+#     listing_id: 44
+# })
+
+# Booking.create({
+#     check_in_date: "2023-3-20",
+#     check_out_date: "2023-3-25",
+#     num_guests: 4,
+#     guest_id: 15,
+#     listing_id: 47
+# })
+
+# Heroku seeds
 
 Booking.create({
     check_in_date: "2022-10-04",
     check_out_date: "2022-01-09",
     num_guests: 3,
-    guest_id: 15,
+    guest_id: 1,
     listing_id: 13
 })
 
@@ -148,24 +190,24 @@ Booking.create({
     check_in_date: "2022-11-03",
     check_out_date: "2022-11-06",
     num_guests: 3,
-    guest_id: 15,
-    listing_id: 47
+    guest_id: 1,
+    listing_id: 17
 })
 
 Booking.create({
     check_in_date: "2022-11-11",
     check_out_date: "2022-11-15",
     num_guests: 3,
-    guest_id: 15,
-    listing_id: 45
+    guest_id: 1,
+    listing_id: 15
 })
 
 Booking.create({
     check_in_date: "2022-11-20",
     check_out_date: "2022-11-22",
     num_guests: 3,
-    guest_id: 15,
-    listing_id: 44
+    guest_id: 1,
+    listing_id: 16
 })
 
 Booking.create({
