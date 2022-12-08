@@ -14,7 +14,8 @@ class Trips extends React.Component {
     }
 
     render() {
-
+        
+        this.props.bookings.reverse();
         return (
             <div>
                 <Header />
