@@ -9,10 +9,18 @@ class ListingsMap extends React.Component {
     }
 
     initializeMap() {
-        const mapOptions = {
-            center: { lat: 40.7359, lng: -73.9911 }, 
-            zoom: 13
-          };
+        let mapOptions;
+        if (!this.props.listing) {
+            mapOptions = {
+                center: { lat: 35.000, lng: -78.000 }, 
+                zoom: 5
+              };
+        } else {
+            mapOptions = {
+                center: { lat: this.props.listing.lat, lng: this.props.listing.lng }, 
+                zoom: 13
+              };
+        }
       
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);

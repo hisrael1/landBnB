@@ -8,8 +8,12 @@ class Trips extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.getListings();
+        this.props.getBookings();
+    }
+
     render() {
-        const reservations = [1, 1, 1];
 
         return (
             <div>
@@ -18,13 +22,25 @@ class Trips extends React.Component {
                     <div id="trips-container">
                         <div id="trips-headline">Trips</div>
 
-                        <div class="upcoming-trips">Upcoming Reservations</div>
+                        <div className="upcoming-trips">Upcoming Reservations</div>
 
-                        {reservations.map(() => <TripsItem />)}
+                        {this.props.bookings.map(
+                            booking => {
+                                if (Date.parse(booking.check_in_date) > Date.parse(new Date)) {
+                                    return <TripsItem booking={booking} listing={this.props.listings[booking.listing_id]}/>
+                                }
+                            }
+                        )}
 
-                        <div class="upcoming-trips">Past Bookings</div>
+                        <div className="upcoming-trips">Past Bookings</div>
+                        {this.props.bookings.map(
+                            booking => {
+                                if (Date.parse(booking.check_in_date) <= Date.parse(new Date)) {
+                                    return <TripsItem booking={booking} listing={this.props.listings[booking.listing_id]}/>
+                                }
+                            }
+                        )}
 
-                        {reservations.map(() => <TripsItem />)}
                     </div>
                 </div>
                 <Footer />

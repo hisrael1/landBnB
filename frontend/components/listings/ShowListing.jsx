@@ -103,11 +103,7 @@ class ShowListing extends React.Component {
                     <div className='show-listing-description-and-booking-container'>
                         <div>
                             <div className='show-listing-description'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Metus vulputate eu scelerisque felis imperdiet. Aenean euismod 
-                                elementum nisi quis eleifend. Justo laoreet sit amet cursus sit amet. Amet est placerat in
-                                egestas erat imperdiet sed. Feugiat in ante metus dictum. Urna et pharetra pharetra massa massa
-                                ultricies mi quis hendrerit. Morbi quis commodo odio aenean sed adipiscing.
+                                {listing ? listing.description : null}
                             </div>
 
                             <div id="aircover-container">

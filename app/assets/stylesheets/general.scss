@@ -414,7 +414,7 @@
 
 #sticky-map {
     position: sticky;
-    top: 11%;
+    top: 8%;
     width: 714px;
     height: 120vh;
 }
@@ -501,6 +501,7 @@
 .user-show-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .user-identity {
@@ -679,6 +680,7 @@
 
 .identity-and-new-form-container {
     display: flex;
+    justify-content: center;
 }
 
 .new-listing-add-listing {
@@ -1293,6 +1295,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    cursor: pointer;
 }
 
 .reservation-img-container {
@@ -1326,7 +1329,7 @@
 }
 
 .reservation-host {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 #trips-underline {
@@ -1343,7 +1346,8 @@
 }
 
 #reservation-dates {
-    width: 25%;
+    padding-top: 10px;
+    width: 30%;
     font-size: 22px;
     color: rgb(60, 60, 60);
     font-family: 'Montserrat', sans-serif;
@@ -1351,7 +1355,7 @@
 }
 
 #reservation-address {
-    width: 35%;
+    width: 400px;
     font-size: 22px;
     color: rgb(60, 60, 60);
     font-family: 'Montserrat', sans-serif;

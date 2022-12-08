@@ -1,6 +1,10 @@
 class Api::BookingsController < ApplicationController
-    def index 
-        @bookings = Booking.all
+    def index
+        if params[:guest_id] != "null"
+            @bookings = Booking.where(guest_id: params[:guest_id])
+        else
+            @bookings = Booking.all
+        end
         if @bookings
             render json: @bookings
         end
