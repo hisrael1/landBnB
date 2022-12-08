@@ -1,24 +1,30 @@
 import React from 'react';
 
-const ReviewsItem = (props) => {
+const ReviewsItem = (props) => {  
 
-    
+    if (props.user) {
+        if (!Object.keys(props.user).includes("photoUrl")) {
+            props.user.photoUrl = window.blank_user_profile;
+        }
+    }
+
     return (
         <div className="reviews-item-container">
             <div className="profile-and-date-container">
-                <img src={window.blank_user_profile} className="review-profile-pic"></img>
+                {props.user 
+                    ?
+                <img src={props.user.photoUrl} className="review-profile-pic"></img>
+                    :
+                    null
+                }
                 <div className="reviewer-and-date">
-                    <p> Harry Israel </p>
+                    <p> {props.user ? props.user.first_name : null} </p>
                     <p> Oct 2022 </p>
                 </div>
                 
             </div>
             <div className="review-text"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip
+                {props.review.body}
             </div>
         </div>
     )

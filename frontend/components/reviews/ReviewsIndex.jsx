@@ -3,6 +3,15 @@ import ReviewsItem from './ReviewItem';
 
 const ReviewsIndex = (props) => {
 
+    // if (props.users.length > 0) {
+        // debugger
+    // }
+
+    // let users;
+    // if (!!props.users) {
+    //     users = props.users.filter(user => user.id == [props.review.guest_id])
+    // }
+
     const reviewsText = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip",
@@ -53,22 +62,22 @@ const ReviewsIndex = (props) => {
 
             <div id="reviews-container">
                 <div id="reviews-container-left">
-                    {reviewsText.map((text, idx) => {           
+                    {props.reviews.map((review, idx) => {    
                         return (
                             idx % 2 == 0 ?
-                                <ReviewsItem reviewText={text} key={idx}/>
+                                <ReviewsItem user={props.users[review.guest_id]} review={review} key={idx}/>
                             :
-                            null
+                                null
                         )
                     })}
                 </div>
                 <div id="reviews-container-right">
-                    {reviewsText.map((text, idx) => {           
+                    {props.reviews.map((review, idx) => {    
                         return (
                             idx % 2 == 0 ?
-                            null
+                                null
                             :
-                            <ReviewsItem reviewText={text} key={idx}/> 
+                                <ReviewsItem user={props.users[review.guest_id]} review={review} key={idx}/>
                         )
                     })}
                 </div>

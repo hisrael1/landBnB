@@ -15,6 +15,8 @@ class ShowListing extends React.Component {
         const listingId = parseInt(this.props.match.params.id);
         this.props.getListing(listingId);
         this.props.getBookings();
+        this.props.getReviews();
+        this.props.getUsers();
         window.scrollTo(0, 0);
     }
 
@@ -25,6 +27,8 @@ class ShowListing extends React.Component {
     }
 
     render() {
+        const reviews = this.props.reviews ? this.props.reviews.filter(review => review.listing_id == 13) : null;
+
         const listing = this.props.listing ? this.props.listing: null;
 
         let user;
@@ -153,7 +157,7 @@ class ShowListing extends React.Component {
                         
 
                         <div className='show-listing-booking-container'>
-                            <Booking history={history} listing={listing} bookings={bookings} newBooking={this.props.newBooking} user_id={this.props.user_id}/>                            
+                            <Booking history={history} listing={listing} bookings={bookings} newBooking={this.props.newBooking} user_id={this.props.user_id}/>
                         </div>
                         
                     </div>
@@ -164,7 +168,7 @@ class ShowListing extends React.Component {
 
                 
 
-                <ReviewsIndex listing={listing} history={this.props.history}/>
+                <ReviewsIndex users={this.props.users} reviews={reviews} listing={listing} history={this.props.history}/>
                 
                 <div id="show-listing-map-outer-container">
                     <div id="show-listing-map">
