@@ -12,7 +12,7 @@ const UserInfo = (props) => {
             <button id="user-add-listing" onClick={() => history.push('/listing/new')}> Add Listing </button>
             {/* Clicking this should render all the users listings */}
             <div className="user-info-border"></div>
-            <p id="user-listings-header">&#9733; 3 Reviews </p>
+            <p id="user-listings-header">&#9733; 0 Reviews </p>
             {/* Clicking this should render all the users reviews */}
         </div>
     )
