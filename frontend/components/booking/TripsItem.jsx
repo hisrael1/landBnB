@@ -26,7 +26,7 @@ const TripsItem = (props) => {
                     
                 </div>
             </div>
-            {listing ? <img class="reservation-img-container" src={listing.photoUrls[0]}></img> : null}
+            {listing ? <img className="reservation-img-container" src={listing.photoUrls[0]}></img> : null}
 
         </div>
     )

@@ -14,8 +14,6 @@ class Trips extends React.Component {
     }
 
     render() {
-        
-        this.props.bookings.reverse();
         return (
             <div>
                 <Header />
@@ -34,7 +32,7 @@ class Trips extends React.Component {
                         )}
 
                         <div className="upcoming-trips">Past Bookings</div>
-                        {this.props.bookings.map(
+                        {this.props.bookings.slice(0).reverse().map(
                             booking => {
                                 if (Date.parse(booking.check_in_date) <= Date.parse(new Date)) {
                                     return <TripsItem booking={booking} listing={this.props.listings[booking.listing_id]}/>

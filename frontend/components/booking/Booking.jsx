@@ -71,9 +71,8 @@ class Booking extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        delete this.state.positionType;
         this.props.newBooking(this.state);
-        this.props.history.push("/");
+        this.setState({check_in_date: "", check_out_date: "", num_guests: 1, guest_id: this.props.user_id, listing_id: null})
     }
 
     render() {
@@ -99,11 +98,10 @@ class Booking extends React.Component {
 
                 <form className="booking-check-in-out-guest-container">
                     <div className="booking-check-in-out-container">
-                        <input className='booking-check-in' name="check_in_date" type="date" value={this.props.check_in_date} onChange={this.onChange}>
+                        <input className='booking-check-in' name="check_in_date" type="date" value={this.state.check_in_date} onChange={this.onChange}>
                         </input>
 
-
-                        <input className='booking-check-out' name="check_out_date" type="date" value={this.props.check_out_date} onChange={this.onChange}>
+                        <input className='booking-check-out' name="check_out_date" type="date" value={this.state.check_out_date} onChange={this.onChange}>
                         </input>
                     </div>
                     <div className='booking-num-guests-container'>
