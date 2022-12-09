@@ -9,13 +9,14 @@ import ListingsMap from "./ListingsMap";
 class ListingsIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {listings: []};
+        this.state = {listings: [], fullyLoaded: "no"};
         this.findAvailableListings = this.findAvailableListings.bind(this);
     }
 
     componentDidMount() {
         this.props.indexListings();
         this.props.getBookings();
+        window.scrollTo(0, 0);
     }
 
     componentDidUpdate(prevProps) {
@@ -39,12 +40,13 @@ class ListingsIndex extends React.Component {
                     listings = listings.filter(
                         listing => availableListings.includes(listing))
                 }
-
                 this.setState({listings: listings});
             } else {
                 const listings = [...this.props.listings];
                 this.setState({listings: listings});
             }
+        } else if (this.state.fullyLoaded == "no") {
+            this.setState({fullyLoaded: "yes"});
         }
     }
 
@@ -70,6 +72,17 @@ class ListingsIndex extends React.Component {
     }
 
     render() {
+
+        let noListingsFound = null;
+
+        if (this.state.fullyLoaded == "yes" && this.state.listings.length == 0) {
+            noListingsFound = 
+                <div id="no-listings-found">&#128269; No listings found please try again
+                    <p id="all-listings-link" onClick={(e) => this.props.history.push(`/listings/city=&max_num_guests=0&check_in_date=&check_out_date=`)}>
+                        Click Here to See Listings in All Cities
+                    </p>
+                </div> 
+        }
     
         return (
             <div>
@@ -80,10 +93,10 @@ class ListingsIndex extends React.Component {
                         <div className="listings-index-container">
                             {this.state.listings ? this.state.listings.map((
                                 listing => <ListingsItem key={listing.id} listing={listing} history={this.props.history}/>
-                            )) : null}
-                        </div>           
+                            )) : null }
+                        </div>
+                        {noListingsFound ? noListingsFound : null}
                     </div>
-
                     <div id="sticky-map">
                         <ListingsMap listings={Object.values(this.state.listings)} history={this.props.history}/>
                     </div>

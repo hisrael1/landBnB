@@ -2,11 +2,11 @@ import React from 'react';
 import Cities from './Cities';
 import Footer from './Footer';
 
-const SplashFooter = () => {
+const SplashFooter = (props) => {
 
     return (
         <div id="splash-footer-container">
-            <Cities />
+            <Cities history={props.history}/>
             <Footer />
         </div>
     )

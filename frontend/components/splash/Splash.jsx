@@ -22,7 +22,7 @@ class Splash extends React.Component {
                     <img src={window.splash_main_pic} id="splash-main-pic"/>
                 </div>
 
-                <SplashFooter />
+                <SplashFooter history={history}/>
             </div>    
         )
     }
