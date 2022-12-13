@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	zoom: 80%;
+	zoom: 40%;
 }
 ol, ul {
 	list-style: none;
@@ -47,3 +47,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.app-only-desktop {
+	display: none;
+}
+@media only screen and (min-width: 1260px) {
+	// .app-only-desktop {
+	//     display: block;
+	// 	text-align: center;
+	// 	font-size: 48px;
+	// 	font-weight: bold;
+	// }
+	// body {
+	// 	display: block;
+	// 	line-height: 1;
+	// 	zoom: 80%;
+	// }
+	body {
+		line-height: 1;
+		zoom: 80%;
+	}
+}
+// 	  text-align: center;
+// 	  font-size: 48px;
+// 	  font-weight: bold;
+// 	}
+//   }

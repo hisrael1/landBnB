@@ -11,8 +11,8 @@
     top: 0%;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
-    margin-top: .0625rem;
-    margin-bottom: .0625rem;
+    margin-top: 1px;
+    margin-bottom: 1px;
     display: flex;
     justify-content: center;
     resize: 50%;
@@ -31,50 +31,50 @@
 
 #header {
     background-color: rgb(0, 0, 0);
-    box-shadow: 0rem 0rem .3125rem 0rem rgba(0,0,0,.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
     position: sticky;
-    top: 0rem;
+    top: 0px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px 20px 20px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     z-index: 999;
 }
 
 #header-white {
     background-color: rgb(255, 255, 255);
-    border-bottom: .0625rem lightgray solid;
-    box-shadow: 0rem 0rem .3125rem 0rem rgba(0,0,0,.2);
+    border-bottom: 1px lightgray solid;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
     position: sticky;
-    top: 0rem;
+    top: 0px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px 20px 20px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     z-index: 999;
 }
 
 #app-name-header {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.75rem;
+    font-size: 28px;
     color: rgb(255, 70, 88); 
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-left: 32px;
+    margin-left: 2rem;
 }
 
 .airbnb-icon {
-    width: 40px;
-    height: 40px;   
-    margin-right: 4.8px;
+    width: 2.5rem;
+    height: 2.5rem;   
+    margin-right: .3rem;
     color: black;
     background-color: black;
 }
 
 .airbnb-icon-white {
-    width: 40px;
-    height: 40px;
-    margin-right: 4.8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .3rem;
     background-color: rgb(255, 255, 255);
 }
 
@@ -85,47 +85,47 @@
 }
 
 .search > * {
-    height: 60px;
+    height: 3.75rem;
     background-color: white;
     font-size: medium;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border: .0625rem lightgray solid;
-    box-shadow: 0rem 0rem .3125rem 0rem rgba(0,0,0,.2);
+    border: 1px lightgray solid;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
 }
 
 .mid-search {
-    padding: .0625rem;
+    padding: 1px;
 }
 
 .left-edge-search {
-    padding-left: 1.25rem;
-    border-radius: 3.125rem 0rem 0rem 3.125rem;
+    padding-left: 20px;
+    border-radius: 50px 0px 0px 50px;
 }
 
 .right-edge-search {
-    padding-left: .3125rem;
+    padding-left: 5px;
     border-right: 1em;
     border-right-color: rgb(161, 161, 161);
-    margin-right: .0625rem;
+    margin-right: 1px;
 }
 
 #search-icon-outer-container {
     background-color: white;
-    border-right: .0625rem lightgray solid;
-    height: 3.875rem;
-    width: 3.75rem;
-    border-radius: 0rem 3.125rem 3.125rem 0rem;
-    margin-left: -0.0625rem;
+    border-right: 1px lightgray solid;
+    height: 62px;
+    width: 60px;
+    border-radius: 0px 50px 50px 0px;
+    margin-left: -1px;
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 #search-icon-container {
-    top: .9375rem;
+    top: 15px;
     background-color:rgb(255, 60, 85);
-    padding: .625rem;
-    border-radius: 3.125rem;
+    padding: 10px;
+    border-radius: 50px;
     height: 1em;
     width: 1em;
     grid-column: 2;
@@ -134,10 +134,10 @@
 }
 
 #false-search-icon-container {
-    top: .9375rem;
+    top: 15px;
     background-color:rgb(83, 83, 83);
-    padding: .625rem;
-    border-radius: 3.125rem;
+    padding: 10px;
+    border-radius: 50px;
     height: 1em;
     width: 1em;
     grid-column: 2;
@@ -161,59 +161,59 @@
 
 #inspiration {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.25rem;
+    font-size: 36px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    margin: 9.375rem 0rem 5rem 6.875rem;
+    margin: 150px 0px 80px 110px;
 }
 
 #city-container {
     display: flex;
     justify-content: space-around;
-    margin: 0rem 4.375rem 9.375rem 4.375rem;
+    margin: 0px 70px 150px 70px;
 }
 
 .cities > * > * {
-    height: 10.625rem;
-    width: 16.25rem;
-    border-top-left-radius: .75rem;
-    border-top-right-radius: .75rem;
+    height: 170px;
+    width: 260px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .city {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.75rem;
+    font-size: 28px;
     color: rgb(255, 255, 255);
     cursor: pointer;
     background-color: rgb(255, 59, 59);
-    border-radius: .75rem;
-    height: 20rem;
-    width: 16.25rem;
+    border-radius: 12px;
+    height: 320px;
+    width: 260px;
 }
 
 .cty-text {
     position: relative;
-    margin-left: 1.25rem;
-    margin-top: .625rem;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 // Footer
 
 #footer {
-    padding: 1.25rem 0rem 1.25rem 0rem;
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: space-around;
     overflow: auto;
     position: relative;
     background-color: rgb(255, 70, 88); 
     border-top: solid rgb(200, 200, 200);
-    border-width: .0625rem;
+    border-width: 1px;
 }
 
 .bold-footer {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -224,68 +224,68 @@
 }
 .personal-links > * {
     display: flex;
-    font-size: 1.625rem;
+    font-size: 26px;
     font-family: 'Montserrat', sans-serif;
-    margin: -0.3125rem 3.125rem -0.3125rem 3.125rem;
+    margin: -5px 50px -5px 50px;
 }
 
 #developed-by {
-    margin-top: .3125rem;
+    margin-top: 5px;
 }
 
 .footer-img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 40px;
+    height: 40px;
 }
 
 #hamburger-icon {
-    margin-top: .625rem;
-    margin-left: .625rem;
-    margin-right: .25rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 4px;
     height: 60%;
     width: 30%;
     cursor: pointer;
 }
 
 #menu-profile-icon {
-    padding-top: .3125rem;
-    margin-bottom: -0.3125rem;
-    margin-left: .3125rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    padding-top: 5px;
+    margin-bottom: -5px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
 }
 
 .menu-container {
-    right: 0rem;
-    margin-top: 4px;
-    margin-right: 32px;
-    border: .0625rem rgb(92, 92, 92) solid;
+    right: 0px;
+    margin-top: .25rem;
+    margin-right: 2rem;
+    border: 1px rgb(92, 92, 92) solid;
     background-color: rgb(248, 248, 248);
-    border-radius: 2.5rem;
-    width: 6.25rem;
-    height: 3.125rem;
+    border-radius: 40px;
+    width: 100px;
+    height: 50px;
 }
 
 .menu-dropdown {
     color: rgb(0, 0, 0);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
     font-style: normal; 
     background-color: rgb(255, 255, 255);
-    box-shadow: 0rem 0rem .3125rem 0rem rgba(0,0,0,.2);
-    width: 12.5rem;
-    border-radius: .625rem;
-    padding: 1.25rem;
-    right: 48px;
-    top: 6.875rem;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    right: 3rem;
+    top: 110px;
     cursor: pointer;
 }
 
 .session-dropdown-option {
-    margin-top: .625rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -308,72 +308,72 @@
     width: 36%;
     left: 33%;
     top: 16%;
-    border-radius: .9375rem;
-    padding: .625rem;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 #session-form-container{
-    margin-left: 48px;
-    margin-right: 48px;
-    margin-bottom: 24px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .form-name {
     text-align: center;
-    font-size: 1.625rem;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
 }
 
 .x-button {
     color: rgb(70, 70, 70);
-    font-size: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
 }
 
 .form-line {
-    border-top: .0063rem solid rgb(161, 161, 161);
-    margin-bottom: 1.25rem;
+    border-top: .1px solid rgb(161, 161, 161);
+    margin-bottom: 20px;
 }
 
 .welcome-session {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.625rem;
+    font-size: 26px;
     font-weight: bold;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
 }
 
 .form-input {
-    border-radius: .625rem;
-    width: 28.125rem;
-    height: 3.125rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.125rem;
+    border-radius: 10px;
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .form-input-bottom {
-    border-radius: .625rem;
-    width: 28.125rem;
-    height: 3.125rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.125rem;
+    border-radius: 10px;
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .form-button {
-    width: 28.4375rem;
-    height: 3.75rem;
+    width: 455px;
+    height: 60px;
     background-image: linear-gradient(to right, rgb(255, 0, 81) , rgb(195, 0, 85));
-    border-radius: .625rem;
+    border-radius: 10px;
     color: white;
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     outline-color: white;
-    margin-bottom: .625rem;
+    margin-bottom: 10px;
     border: rgb(240, 240, 240);
     cursor: pointer;
 }
@@ -394,27 +394,27 @@
 
 .listings-index-container {
     flex-direction: column;
-    margin-top: .625rem;
+    margin-top: 10px;
 }
 
 #no-listings-found {
-    width: 44.625rem;
-    font-size: 1.625rem;
+    width: 714px;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 3.125rem;
+    padding-top: 50px;
 }
 
 #all-listings-link {
     text-decoration: underline;
     color: blue;
-    padding: 2.5rem;
+    padding: 40px;
     cursor: pointer;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.375rem;
+    font-size: 22px;
 }
 
 #map-container {
-    width: 44.625rem;
+    width: 714px;
     height: 120vh;
 }
 
@@ -425,13 +425,13 @@
 
 #show-map-container {
     width: 100%;
-    height: 50rem;
+    height: 800px;
 }
 
 #sticky-map {
     position: sticky;
     top: 8%;
-    width: 44.625rem;
+    width: 714px;
     height: 120vh;
 }
 
@@ -439,35 +439,35 @@
     position: static;
     background-color: rgb(200, 200, 200);
     height: 100%;
-    width: 48.0625rem;
+    width: 769px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 .listing-item-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 1.25rem;
-    margin: 1.5625rem 1.25rem .3125rem 2.5rem;
+    padding-bottom: 20px;
+    margin: 25px 20px 5px 40px;
     cursor: pointer;
 }
 
 #listing-item-underline {
-    border-bottom: .0625rem solid rgb(206, 206, 206);
-    margin: 0rem 1.25rem 0rem 2.8125rem;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    margin: 0px 20px 0px 45px;
 }
 
 .listing-thumbnail {
-    width: 15.625rem;
-    height: 10.9375rem;
-    border-radius: .625rem;
+    width: 250px;
+    height: 175px;
+    border-radius: 10px;
 }
 
 .listing-item-info {
     display: block;
-    width: 32.8125rem;
-    padding: .625rem;
-    margin-left: .625rem;
+    width: 525px;
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .listings-divider {
@@ -476,31 +476,31 @@
 }
 
 .listing-description {
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color:rgb(41, 41, 41);
-    padding-bottom: .9375rem;
+    padding-bottom: 15px;
 }
 
 .listing-title {
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    padding-bottom: 1.25rem;
+    padding-bottom: 20px;
 }
 
 .listing-capacities {
     color:rgb(41, 41, 41);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .ratings-and-price-container {
-    font-size: 1.25rem;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     justify-content: space-between;
-    margin-top: 1.875rem;
+    margin-top: 30px;
 }
 
 .bold {
@@ -511,7 +511,7 @@
 
 .user-header {
     position: sticky;
-    top: 0rem;
+    top: 0px;
 }
 
 .user-show-container {
@@ -521,22 +521,22 @@
 }
 
 .user-identity {
-    width: 21.875rem;
-    height: 37.5rem;
+    width: 350px;
+    height: 600px;
     background-color: rgb(255, 255, 255);
     border: solid rgb(209, 209, 209);
-    border-width: .0625rem;
-    margin-left: 9.375rem;
-    margin-top: 4.6875rem;
-    border-radius: .625rem;
-    margin-bottom: 3.125rem;
+    border-width: 1px;
+    margin-left: 150px;
+    margin-top: 75px;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 #blank_user_profile {
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 6.25rem;
-    margin: 1.875rem 7.8125rem 0rem 7.8125rem; 
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 30px 125px 0px 125px; 
 }
 
 #profile-photo-upload-container {
@@ -547,89 +547,89 @@
 
 #profile-photo-upload {
     position: absolute;
-    width: 7.5rem;
-    height: 1.875rem;
-    border-radius: .3125rem;
-    border: solid .125rem black;
-    padding-top: .3125rem;
-    margin-top: .625rem;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 2px black;
+    padding-top: 5px;
+    margin-top: 10px;
     background-color: rgb(178, 178, 178);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     cursor: pointer;
-    margin-bottom: -1.875rem;
+    margin-bottom: -30px;
 }
 
 .hello-user {
-    margin-top: .625rem;
-    font-size: 1.375rem;
+    margin-top: 10px;
+    font-size: 22px;
     text-align: center;
 }
 
 .shield-checkmark {
-    width: 1.5625rem;       
-    height: 1.875rem;
-    margin-left: 2.1875rem;
-    margin-top: 5rem;
+    width: 25px;       
+    height: 30px;
+    margin-left: 35px;
+    margin-top: 80px;
 }
 
 .user-verified {
     display: inline;
-    font-size: 1.375rem;
-    padding-left: .625rem;
+    font-size: 22px;
+    padding-left: 10px;
     position: relative;
     font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: -0.25rem;
+    top: -4px;
 }
 
 .user-identity-border {
-    margin: 3.125rem;
+    margin: 50px;
     border-bottom: solid rgb(209, 209, 209);
-    border-width: .0625rem;
+    border-width: 1px;
 }
 
 .user-confirmed {
-    margin-left: 1.875rem;
-    font-size: 2rem;
+    margin-left: 30px;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .checkmark {
-    margin: 2.1875rem;
-    font-size: 1.5rem;
+    margin: 35px;
+    font-size: 24px;
 }
 
 .user-info-container {
-    margin-left: 5rem;
-    margin-top: 4.6875rem;
-    width: 50rem;
+    margin-left: 80px;
+    margin-top: 75px;
+    width: 800px;
 }
 
 #user-info-hi {
-    margin-bottom: 6.25rem;
-    font-size: 2.625rem;
+    margin-bottom: 100px;
+    font-size: 42px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #user-listings-header {
     display: inline;
     color:rgb(0, 0, 0);
-    font-size: 1.625rem;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .user-info-border {
     border-bottom: solid rgb(209, 209, 209);
-    border-width: .0625rem;
-    margin-top: 5rem;
-    margin-bottom: 3.75rem;
+    border-width: 1px;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
 
 #user-info-about {
-    margin-bottom: 1.25rem;
-    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-size: 28px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
@@ -637,12 +637,12 @@
 #user-add-listing {
     background-color: rgb(237, 51, 101);
     color: white;
-    width: 9.375rem;
-    height: 2.5rem;
-    font-size: 1.375rem;
+    width: 150px;
+    height: 40px;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 21.875rem;
-    border-radius: .3125rem;
+    margin-left: 350px;
+    border-radius: 5px;
     border-color: rgb(130, 130, 130);
     cursor: pointer;
 }
@@ -650,50 +650,50 @@
 // new listing
 
 .new-listing-container {
-    margin-top: -1.25rem;
-    margin-left: 6.25rem;
+    margin-top: -20px;
+    margin-left: 100px;
     display: flex;
     justify-content: center;
-    width: 50rem;
+    width: 800px;
 }
 
 .new-listing-form {
-    margin-top: 6.25rem;
+    margin-top: 100px;
     border: solid rgb(180, 180, 180);
-    border-width: .0625rem;
-    border-radius: .625rem;
-    padding: 6.25rem;
-    font-size: 1.375rem;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 100px;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 25rem;
+    margin-bottom: 400px;
 }
 
 .new-listing-form > * {
     display: block;
-    margin-bottom: .3125rem;
-    width: 28.125rem;
-    height: 1.5625rem;
-    font-size: 1.125rem;
+    margin-bottom: 5px;
+    width: 450px;
+    height: 25px;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #upload-listing-photos {
     display: block;
-    margin-bottom: .3125rem;
-    width: 28.125rem;
-    height: 1.875rem;
-    font-size: 1.125rem;
+    margin-bottom: 5px;
+    width: 450px;
+    height: 30px;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .new-listing-border {
-    border-bottom: solid lightgrey .0625rem;
-    margin-bottom: .625rem;
-    height: .625rem;
+    border-bottom: solid lightgrey 1px;
+    margin-bottom: 10px;
+    height: 10px;
 }
 
 .new-listing-input {
-    border-radius: .3125rem;
+    border-radius: 5px;
 }
 
 .identity-and-new-form-container {
@@ -702,22 +702,22 @@
 }
 
 .new-listing-add-listing {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     text-align: center;
     color: rgb(233, 41, 92);
-    margin-top: -3.75rem;
-    margin-bottom: 2.5rem;
+    margin-top: -60px;
+    margin-bottom: 40px;
 }
 
 .new-listing-submit {
     background-color: rgb(233, 41, 92);
     color: white;
-    font-size: 1.625rem;
-    border-radius: .3125rem;
-    margin-top: 1.25rem;
-    height: 2.5rem;
+    font-size: 26px;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -726,177 +726,177 @@
 #show-listing-container {
     display: flex;
     justify-content: center;
-    margin-top: 1.875rem;
+    margin-top: 30px;
 
 }
 
 .show-listing-title {
-    margin-top: 1.875rem;
-    margin-bottom: .9375rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
     display: block;
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 550;
 }
 
 .show-listing-reviews-location-container {
-    margin-top: .625rem;
+    margin-top: 10px;
 }
 
 .show-listing-reviews-container {
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .show-listing-reviews {
     text-decoration: underline;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 8px;
+    margin-right: 8px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .show-listing-photos-container {
     display: block;
-    margin-top: 1.875rem;
-    width: 87.5rem;
-    height: 25rem;
+    margin-top: 30px;
+    width: 1400px;
+    height: 400px;
     display: flex;
     flex-direction: row;
 }
 
 .show-listing-photo-1 {
-    width: 43.375rem;
-    height: 24.75rem;
-    margin: .1875rem;
-    border-radius: .9375rem 0rem 0rem .9375rem;
+    width: 694px;
+    height: 396px;
+    margin: 3px;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .show-listing-right-photos-container {
-    width: 43.75rem;
-    height: 25rem;
+    width: 700px;
+    height: 400px;
 }
 
 .show-listing-right-photos {
-    width: 43.75rem;
-    height: 12.5rem;
+    width: 700px;
+    height: 200px;
 }
 
 .show-listing-right-photos-container {
-    width: 43.75rem;
-    height: 25rem;
+    width: 700px;
+    height: 400px;
     display: flex;
 }
 
 .show-listing-right-photos-1 > * {
-    height: 12.1875rem;
-    width: 21.6875rem;
-    margin: .1875rem;
-    border-radius: 0rem 0rem 0rem 0rem;
+    height: 195px;
+    width: 347px;
+    margin: 3px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .show-listing-right-photos-2 > * {
-    height: 12.1875rem;
-    width: 21.6875rem;
-    margin: .1875rem;
-    border-radius: 0rem .9375rem .9375rem 0rem;
+    height: 195px;
+    width: 347px;
+    margin: 3px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .show-listing-hosted-by {
-    margin-top: 3.75rem;
-    margin-bottom: .625rem;
-    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 32px;
     font-family: 'Montserrat', sans-serif;
 }
 
 #aircover {
     display: block;
-    width: 8.75rem;
-    height: 1.875rem;
-    padding-bottom: 1.875rem;
+    width: 140px;
+    height: 30px;
+    padding-bottom: 30px;
 }
 
 #aircover-container-underline {
-    border-bottom: .0625rem solid rgb(206, 206, 206);
+    border-bottom: 1px solid rgb(206, 206, 206);
     width: 90%;
-    margin: 1.875rem 0rem 1.875rem 0rem;
+    margin: 30px 0px 30px 0px;
 }
 
 #aircover-container {
-    width: 50rem;
-    margin: 2.5rem 0rem 2.5rem 0rem;
-    font-size: 1.625rem;
+    width: 800px;
+    margin: 40px 0px 40px 0px;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .show-listing-capacity-info > * {
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-right: .3125rem;
+    margin-right: 5px;
 }
 
 .show-listing-description-and-booking-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.625rem;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 1.875rem;
+    margin-top: 30px;
 }
 
 .show-listing-description {
-    width: 50rem;
+    width: 800px;
 }
 
 #amenities-container {
-    width: 43.75rem;
+    width: 700px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1.5625rem;
+    padding-bottom: 25px;
 }
 
 #amenities-header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 .amenity-item-container {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5rem;
+    font-size: 24px;
     display: flex;
-    margin-top: 1.875rem;
-    margin-bottom: 1.875rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .amenity-item {
-    width: 1.875rem;
-    height: 1.875rem;
-    margin-right: .9375rem;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
 }
 
 .booking-container-relative {
     position: relative;
     top: 38%;
     background-color: white;
-    border: solid .0625rem rgb(219, 219, 219);
-    width: 28.125rem;
-    height: 23.75rem;
-    border-radius: .9375rem;
-    margin-left: 9.375rem;
-    box-shadow: 0rem 0rem 1.25rem 0rem rgba(86, 86, 86, 0.2);
+    border: solid 1px rgb(219, 219, 219);
+    width: 450px;
+    height: 380px;
+    border-radius: 15px;
+    margin-left: 150px;
+    box-shadow: 0px 0px 20px 0px rgba(86, 86, 86, 0.2);
 }
 
 .booking-container-sticky {
     position: sticky;
-    margin-top: -5.625rem;
+    margin-top: -90px;
     top: 30%;
     background-color: white;
-    width: 28.125rem;
-    height: 23.75rem;
-    border-radius: .9375rem;
-    margin-left: 9.375rem;
-    margin-bottom: 3.125rem;
-    border: solid .0625rem rgb(219, 219, 219);
-    box-shadow: 0rem 0rem 1.25rem 0rem rgba(86, 86, 86, 0.2);
+    width: 450px;
+    height: 380px;
+    border-radius: 15px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    border: solid 1px rgb(219, 219, 219);
+    box-shadow: 0px 0px 20px 0px rgba(86, 86, 86, 0.2);
 }
 
 #show-listing-map-outer-container {
@@ -905,32 +905,32 @@
 }
  
 #show-listing-map {
-    height: 62.5rem;
+    height: 1000px;
     width: 88%;
-    margin-top: -3.125rem;
+    margin-top: -50px;
 }
 
 #show-listing-map-text {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
-    height: 6.25rem;
-    margin-bottom: -1.875rem;
+    height: 100px;
+    margin-bottom: -30px;
 }
 
 .booking-price-and-reviews {
     display: flex;    
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 2.5rem;
+    margin-right: 40px;
 }
 
 .booking-price-container {
-    margin: 2.5rem;
+    margin: 40px;
 }
 
 .booking-price {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: inline;
 }
@@ -939,87 +939,87 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .booking-reviews {
     text-decoration: underline;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .booking-check-in-out-guest-container {
-    height: 9.375rem;
+    height: 150px;
 }
 
 .booking-check-in-out-container {
-    height: 4.0625rem;
-    width: 23.75rem;
+    height: 65px;
+    width: 380px;
     display: flex;
-    margin: -0.625rem auto 0rem auto;
+    margin: -10px auto 0px auto;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .booking-check-in {
     margin-left: auto;
-    height: 4.0625rem;
-    width: 11.875rem;
-    border: solid rgb(164, 164, 164) .0625rem;
-    border-radius: .625rem 0rem 0rem 0rem;
+    height: 65px;
+    width: 190px;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 10px 0px 0px 0px;
 }
 
 .booking-check-out {
     margin-right: auto;
-    height: 4.0625rem;
-    width: 11.875rem;
-    border: solid rgb(164, 164, 164) .0625rem;
-    border-radius: 0rem .625rem 0rem 0rem;
+    height: 65px;
+    width: 190px;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 0px 10px 0px 0px;
 }
 
 .booking-num-guests-container {
-    height: 4.0625rem;
-    width: 23.75rem;
-    margin: 0rem auto 0rem auto;
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
 }
 
 .booking-num-guests {
-    height: 4.0625rem;
-    width: 23.75rem;
-    margin: 0rem auto 0rem auto;
-    border: solid rgb(164, 164, 164) .0625rem;
-    border-radius: 0rem 0rem .625rem .625rem;
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
+    border: solid rgb(164, 164, 164) 1px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .booking-button-container {
-    height: 4.0625rem;
-    width: 23.75rem;
-    margin: 0rem auto 0rem auto;
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
 }
 
 .booking-button-container > * {
-    height: 4.0625rem;
-    width: 23.75rem;
-    margin: 0rem auto 0rem auto;
+    height: 65px;
+    width: 380px;
+    margin: 0px auto 0px auto;
 }
 
 .booking-button {
-    margin-top: 1.875rem;
+    margin-top: 30px;
     background-color: rgb(231, 42, 89);
-    border-radius: .625rem;
+    border-radius: 10px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
 
 .booking-button-false {
-    margin-top: 1.875rem;
+    margin-top: 30px;
     background-color: rgb(99, 99, 99);
-    border-radius: .625rem;
+    border-radius: 10px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
@@ -1027,21 +1027,21 @@
 #photo-upload-preview-container {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.875rem;
+    margin-bottom: 30px;
 }
 
 .photo-upload-preview {
-    height: 3.75rem;
-    width: 5rem;
-    margin-right: .625rem;
+    height: 60px;
+    width: 80px;
+    margin-right: 10px;
 }
 
 // reviews
 
 #reviews-index-container {
-    padding-top: 3.125rem;
-    padding-bottom: 3.125rem;
-    margin-bottom: 3.125rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1049,102 +1049,102 @@
 
 .reviews-underline {
     width: 88%;
-    border-top: solid rgb(217, 217, 217) .0625rem;
-    margin: 0rem 6.25rem 0rem 6.25rem;
+    border-top: solid rgb(217, 217, 217) 1px;
+    margin: 0px 100px 0px 100px;
 }
 
 #no-reviews {
-    padding-bottom: 1.25rem;
-    font-size: 2rem;
+    padding-bottom: 20px;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .reviews-bottom-underline {
     width: 88%;
-    border-top: solid rgb(217, 217, 217) .0625rem;
-    margin: 1.875rem 6.25rem 0rem 6.25rem;
+    border-top: solid rgb(217, 217, 217) 1px;
+    margin: 30px 100px 0px 100px;
 }
 
 #reviews-ratings-container {
-    height: 6.25rem;
-    width: 85.375rem;
+    height: 100px;
+    width: 1366px;
 }
 
 #reviews-upper-container {
     display: flex;
     justify-content: flex-start;
-    max-width: 85.375rem;
+    max-width: 1366px;
 }
 
 #reviews-ratings {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
 
 .underline {
     text-decoration: underline;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: .625rem;
+    margin: 10px;
     cursor: pointer;
 }
 
 #reviews-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 1.875rem;
+    margin-top: 30px;
 
 }
 
 #reviews-container > * {
-    width: 43rem;
-    margin-left: 6.25rem;
+    width: 688px;
+    margin-left: 100px;
 }
 
 .reviews-item-container {
-    height: 12.5rem;
-    width: 43rem;
-    margin: 1.25rem 0rem 1.25rem 0rem;
+    height: 200px;
+    width: 688px;
+    margin: 20px 0px 20px 0px;
 }
 
 .profile-and-date-container {
-    height: 4.6875rem;
+    height: 75px;
     display: flex;
 }
 
 .reviewer-and-date {
-    margin: .9375rem 0rem 0rem .3125rem;
+    margin: 15px 0px 0px 5px;
 }
 
 .reviewer-and-date > * {
-    font-size: 1.375rem;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: .3125rem;
+    margin: 5px;
 }
 
 .review-text {
-    height: 7.8125rem;
-    width: 37.5rem;
-    margin-right: 3.125rem;
-    font-size: 1.5rem;
-    padding-top: .625rem;
+    height: 125px;
+    width: 600px;
+    margin-right: 50px;
+    font-size: 24px;
+    padding-top: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .review-profile-pic {
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 6.25rem;
-    margin-top: .625rem;
-    margin-left: .625rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
     object-fit: cover;
 }
 
 #review-attribute-container {
     display: flex;
     justify-content: center;
-    height: 9.375rem;
+    height: 150px;
 }
 
 #reviews-outer-container {
@@ -1154,22 +1154,22 @@
 }
 
 #review-attribute-container-left {
-    width: 43rem;
-    margin-left: 6.25rem;
+    width: 688px;
+    margin-left: 100px;
 }
 
 #review-attribute-container-right {
-    width: 43rem;
-    margin-left: 6.25rem;
+    width: 688px;
+    margin-left: 100px;
 }
 
 .review-attribute-item-container {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 1.25rem 6.25rem 1.25rem 0rem;
+    margin: 20px 100px 20px 0px;
 }
 
 .review-attribute {
@@ -1183,100 +1183,100 @@
 }
 
 #create-review-prompt {
-    padding-top: 1.875rem;
-    font-size: 3rem;
+    padding-top: 30px;
+    font-size: 48px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     color: rgb(0, 0, 0);
 }
 
 #create-review-top-underline {
-    width: 672px;
-    margin-top: 1.875rem;
-    border-top: solid rgb(217, 217, 217) .0625rem;
+    width: 42rem;
+    margin-top: 30px;
+    border-top: solid rgb(217, 217, 217) 1px;
 }
 
 
 .create-review-attribute-container {
-    margin-top: 48px;
+    margin-top: 3rem;
 }
 
 .create-review-attribute {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 32px;
     display: flex;
     justify-content: space-between;
-    margin: 48px 528px 0px 528px;
+    margin: 3rem 33rem 0rem 33rem;
 }
 
 .review-ratings {
-    height: 2.5rem;
-    width: 5rem;
-    border-radius: .9375rem;
+    height: 40px;
+    width: 80px;
+    border-radius: 15px;
     color: rgb(225, 25, 82);
-    font-size: 1.75rem;
+    font-size: 28px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     border-color: rgb(255, 255, 255);
-    margin-left: .9375rem;
+    margin-left: 15px;
     cursor: pointer;
 }
 
 #review-text-input-container {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 80px 400px 0px 416px;
+    margin: 5rem 25rem 0rem 26rem;
 }
 
 #review-text-input-container > * {
-    margin-bottom: .9375rem;
+    margin-bottom: 15px;
 }
 
 #review-lighter-text {
     color: rgb(198, 198, 198);
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 #review-text-input {
-    height: 160px;
-    width: 720px;
-    border-radius: .3125rem;
-    font-size: 1.5rem;
+    height: 10rem;
+    width: 45rem;
+    border-radius: 5px;
+    font-size: 24px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #create-review-submit {
-    width: 7.5rem;
-    height: 3.125rem;
+    width: 120px;
+    height: 50px;
     background-image: linear-gradient(to right, rgb(255, 0, 81) , rgb(195, 0, 85));
-    margin: 32px 176px 80px 0px;
+    margin: 2rem 11rem 5rem 0rem;
     border: rgb(240, 240, 240);
-    border-radius: .625rem;
+    border-radius: 10px;
     color: white;
-    font-size: 1.375rem;
+    font-size: 22px;
     font-weight: bold;
     cursor: pointer;
 }
 
 #create-review-submit-gray {
-    width: 7.5rem;
-    height: 3.125rem;
+    width: 120px;
+    height: 50px;
     background-color: rgb(196, 196, 196);
-    margin: 32px 176px 80px 0px;
+    margin: 2rem 11rem 5rem 0rem;
     border: rgb(240, 240, 240);
-    border-radius: .625rem;
+    border-radius: 10px;
     color: rgb(255, 255, 255);
-    font-size: 1.375rem;
+    font-size: 22px;
     font-weight: bold;
 }
 
 #review-back-button {
-    width: 7.5rem;
-    height: 3.125rem;
-    border-radius: .625rem;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
     border: rgb(240, 240, 240);
     color: rgb(0, 0, 0);
-    margin: 32px 0px 80px 160px;
+    margin: 2rem 0rem 5rem 10rem;
 }
 
 #submit-and-back-container {
@@ -1294,31 +1294,31 @@
 }
 
 #trips-container {
-    width: 69.0625rem;
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem;
+    width: 1105px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 #trips-headline {
-    font-size: 2.875rem;
-    margin-bottom: 48px;
+    font-size: 46px;
+    margin-bottom: 3rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .upcoming-trips {
-    font-size: 2rem;
+    font-size: 32px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 #reservation-container {
-    margin: 48px 0px 48px 0px;
-    box-shadow: 0rem 0rem 1.25rem 0rem rgba(0,0,0,.2);
-    height: 240px;
-    border-radius: .9375rem;
+    margin: 3rem 0rem 3rem 0rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.2);
+    height: 15rem;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1326,15 +1326,15 @@
 }
 
 .reservation-img-container {
-    height: 15rem;
-    width: 34.5313rem;
-    border-radius: 0rem .9375rem .9375rem 0rem;
+    height: 240px;
+    width: 552.5px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .reservation-info-container {
-    height: 15rem;
-    width: 34.5313rem;
-    border-radius: .9375rem 0rem 0rem .9375rem;
+    height: 240px;
+    width: 552.5px;
+    border-radius: 15px 0px 0px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1346,54 +1346,54 @@
 }
 
 #reservation-city-and-host > * {
-    margin: 24px 0px 0px 24px;
+    margin: 1.5rem 0rem 0rem 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .reservation-city {
-    font-size: 1.75rem;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .reservation-host {
-    font-size: 1.375rem;
+    font-size: 22px;
 }
 
 #trips-underline {
-    border-top: solid rgb(217, 217, 217) .0625rem;
+    border-top: solid rgb(217, 217, 217) 1px;
     width: 94%;
-    margin: 0px 16px 0px 16px;
-    height: .0625rem;
+    margin: 0rem 1rem 0rem 1rem;
+    height: 1px;
 }
 
 #reservation-dates-and-address {
     display: flex;
     flex-direction: row;
-    margin-left: 16px;
+    margin-left: 1rem;
 }
 
 #reservation-dates {
-    padding-top: .625rem;
+    padding-top: 10px;
     width: 30%;
-    font-size: 1.375rem;
+    font-size: 22px;
     color: rgb(60, 60, 60);
     font-family: 'Montserrat', sans-serif;
-    margin: 16px 0px 0px 8px;
+    margin: 1rem 0rem 0rem .5rem;
 }
 
 #reservation-address {
-    width: 25rem;
-    font-size: 1.375rem;
+    width: 400px;
+    font-size: 22px;
     color: rgb(60, 60, 60);
     font-family: 'Montserrat', sans-serif;
-    margin: 16px 32px 0px 0px;
-    padding-left: 32px;
+    margin: 1rem 2rem 0rem 0rem;
+    padding-left: 2rem;
 }
 
 #reservation-dates-and-address-underline {
-    border-left: solid rgb(217, 217, 217) .0625rem;
-    width: .0625rem;
-    margin: 16px 0px 16px 0px;
+    border-left: solid rgb(217, 217, 217) 1px;
+    width: 1px;
+    margin: 1rem 0rem 1rem 0rem;
 }
 
 

@@ -10,6 +10,9 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
 
+    <div class="app-only-desktop"> Sorry this App works for Desktop Only </div>
+    
+
     <script type="text/javascript">
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
       window.splash_main_pic = "<%= image_url('splash-main-pic.png') %>";
