@@ -2,16 +2,15 @@
 <html>
   <head>
     <title>LandBnB</title>
+
+    <div class="message">"We're sorry, but this app was only designed for use on larger screens. Please switch to a larger screen to continue using the app."</div>
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
-
-    <div class="app-only-desktop"> Sorry this App works for Desktop Only </div>
-    
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>  
 
     <script type="text/javascript">
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
