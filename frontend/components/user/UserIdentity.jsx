@@ -47,7 +47,7 @@ class UserIdentity extends React.Component {
     
             <div id="profile-photo-upload-container">
                 <label id="profile-photo-upload" htmlFor="file-upload" className="custom-file-upload">
-                    Add Profile Photo
+                    Add Photo
                 </label>
                 <input id="file-upload" type="file" onChange={this.handleFile} hidden/>
                 <button onClick={this.handleSubmit} ref={this.button} hidden> yeet </button>

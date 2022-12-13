@@ -45,7 +45,7 @@ class CreateReview extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.newReview(this.state);
-        this.props.history.push("/")
+        this.props.history.push(`/listing/${this.state.listing_id}`)
     }
 
 
@@ -53,7 +53,7 @@ class CreateReview extends React.Component {
     render() {
 
         let submit = "create-review-submit";
-        if (this.state.body.length > 250) {
+        if (this.state.body.length < 1 || this.state.body.length > 220) {
             submit = "create-review-submit-gray";
         }
 

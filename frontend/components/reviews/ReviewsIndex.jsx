@@ -1,93 +1,88 @@
 import React from 'react';
 import ReviewsItem from './ReviewItem';
+import ReviewAttributeItem from './ReviewAttributeItem';
 
-const ReviewsIndex = (props) => {
+class ReviewsIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.findAttributeRating = this.findAttributeRating.bind(this);
+    }
 
-    // if (props.users.length > 0) {
-        // debugger
-    // }
+    findAttributeRating(attribute) {
+        let totalAttributeRating = 0;
+        this.props.reviews.map((review) => {
+            totalAttributeRating += review[attribute]
+        })
+        const averageRoundedRating = Math.round(totalAttributeRating / this.props.reviews.length * 10) / 10;
+        return averageRoundedRating
+    }
 
-    // let users;
-    // if (!!props.users) {
-    //     users = props.users.filter(user => user.id == [props.review.guest_id])
-    // }
+    render() {        
+        const reviewAttributesDisplay = ["Cleanliness", "Communication", "Check-In", "Accuracy", "Location", "Value"];
+        const reviewAttributesKeys = ["cleanliness", "communication", "check_in", "accuracy", "location", "value"];
+        let attributeRatings = [];
+        let overallRating;
+        if (this.props.reviews.length > 0) {
+            overallRating = this.findAttributeRating('rating')
+            reviewAttributesKeys.map((attributeKey) => {
+                attributeRatings.push(this.findAttributeRating(attributeKey))
+            })
+        }
 
-    const reviewsText = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip"
-    ];
-    
-    return (
-        <div id="reviews-outer-container"> 
-        <div id="reviews-index-container"> 
-            <div id="reviews-ratings-container">
-                <p id="reviews-ratings">&#9733; 4.8 <span>&#183;</span> 4 reviews </p>
-                <p className="underline" onClick={() => props.history.push(`/listing/${props.listing.id}/review/new`)}>Write a review</p>
-            </div>
+        return (
+            <div id="reviews-outer-container"> 
+            <div id="reviews-index-container"> 
+                <div id="reviews-ratings-container">
+                    {overallRating ? 
+                        <p id="reviews-ratings">&#9733; {overallRating} <span>&#183;</span> {this.props.reviews.length} reviews </p> 
+                    :
+                        null
+                    }
+                    <p className="underline" onClick={() => this.props.history.push(`/listing/${this.props.listing.id}/review/new`)}>Write a review</p>
+                </div>
 
-            <div id='review-attribute-container'>
+                <div id='review-attribute-container'>
                     <div id='review-attribute-container-left'>
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Cleanliness</p> <span> 4.9 &#9733;</span>
-                        </div>
-
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Communication </p> <span> 4.9 &#9733;</span>
-                        </div>
-
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Check-in </p> <span> 4.9 &#9733;</span>
-                        </div>
-                        
+                        {reviewAttributesDisplay.slice(0, 3).map((attribute, idx) => 
+                            (<ReviewAttributeItem key={idx} attribute={attribute} attributeRating={attributeRatings[idx]}/>)       
+                        )}
                     </div>
-
                     <div id='review-attribute-container-right'>
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Accuracy </p> <span> 4.9 &#9733;</span>
-                        </div>
-                            
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Location </p> <span> 4.9 &#9733;</span>
-                        </div>
-
-                        <div className="review-attribute-item-container">
-                            <p className='review-attribute'> Value </p> <span> 4.9 &#9733;</span> 
-                        </div>                       
+                        {reviewAttributesDisplay.slice(3).map((attribute, idx) => 
+                            (<ReviewAttributeItem key={idx} attribute={attribute} attributeRating={attributeRatings[idx]}/>)    
+                        )}
                     </div>
-            </div>
-
-            
-
-            <div id="reviews-container">
-                <div id="reviews-container-left">
-                    {props.reviews.map((review, idx) => {    
-                        return (
-                            idx % 2 == 0 ?
-                                <ReviewsItem user={props.users[review.guest_id]} review={review} key={idx}/>
-                            :
-                                null
-                        )
-                    })}
+                </div>                
+    
+                <div id="reviews-container">
+                    <div id="reviews-container-left">
+                        {this.props.reviews.map((review, idx) => {    
+                            return (
+                                idx % 2 == 0 ?
+                                    <ReviewsItem user={this.props.users[review.guest_id]} review={review} key={idx}/>
+                                :
+                                    null
+                            )
+                        })}
+                    </div>
+                    <div id="reviews-container-right">
+                        {this.props.reviews.map((review, idx) => {    
+                            return (
+                                idx % 2 == 0 ?
+                                    null
+                                :
+                                    <ReviewsItem user={this.props.users[review.guest_id]} review={review} key={idx}/>
+                            )
+                        })}
+                    </div>
                 </div>
-                <div id="reviews-container-right">
-                    {props.reviews.map((review, idx) => {    
-                        return (
-                            idx % 2 == 0 ?
-                                null
-                            :
-                                <ReviewsItem user={props.users[review.guest_id]} review={review} key={idx}/>
-                        )
-                    })}
-                </div>
+                
+    
+                <div className="reviews-bottom-underline"></div>
             </div>
-            
-
-            <div className="reviews-bottom-underline"></div>
-        </div>
-        </div>
-    )
+            </div> 
+        )
+    }
 }
 
 export default ReviewsIndex;
