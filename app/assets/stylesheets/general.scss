@@ -82,6 +82,7 @@
 
 .search {
     display: flex;
+    width: 775px;
 }
 
 .search > * {
@@ -299,20 +300,25 @@
     left: 0;
     background: rgba(55, 55, 55, 0.5);
     z-index: 999;
+    display: flex;
+    justify-content: center;
 }
 
 .modal {
     color: black;
     position: absolute;
     background-color: rgb(255, 255, 255);
-    width: 36%;
-    left: 33%;
+    // width: 36%;
+    // left: 33%;
     top: 16%;
     border-radius: 15px;
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #session-form-container{
+    width: 500px;
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 1.5rem;
@@ -328,13 +334,15 @@
 }
 
 .x-button {
+    position: absolute;
+    left: 10px;
     color: rgb(70, 70, 70);
     font-size: 24px;
     cursor: pointer;
 }
 
 .form-line {
-    border-top: .1px solid rgb(161, 161, 161);
+    border-top: 1px solid rgb(161, 161, 161);
     margin-bottom: 20px;
 }
 

@@ -11,6 +11,7 @@ class ListingsIndex extends React.Component {
         super(props);
         this.state = {listings: [], fullyLoaded: "no"};
         this.findAvailableListings = this.findAvailableListings.bind(this);
+        this.initialCase = this.initialCase.bind(this);
     }
 
     componentDidMount() {
@@ -28,7 +29,7 @@ class ListingsIndex extends React.Component {
                 // filter by city and num_guests
                 let listings = [...this.props.listings];
                 listings = listings.filter(
-                    listing => listing.city.includes(parsed.city)).filter(
+                    listing => listing.city.includes(this.initialCase(parsed.city))).filter(
                         listing => listing.max_num_guests >= parsed.max_num_guests
                     );
 
@@ -48,6 +49,17 @@ class ListingsIndex extends React.Component {
         } else if (this.state.fullyLoaded == "no") {
             this.setState({fullyLoaded: "yes"});
         }
+    }
+
+    initialCase(string) {
+        const wordsArray = string.split(" ");
+        const initialCasedWordsArray = [];
+        wordsArray.map(word => {
+            let newWord = word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()
+            initialCasedWordsArray.push(newWord);
+        })
+        const initialCasedString = initialCasedWordsArray.join(" ");
+        return initialCasedString
     }
 
     findAvailableListings(listings, bookings, check_in_date, check_out_date) {

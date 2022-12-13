@@ -46,9 +46,11 @@ class LoginForm extends React.Component {
    return (
     <> 
       <div className="x-button" onClick={() => this.props.closeModal()}>&#10006;</div>
-      <h1 className="form-name">{this.props.formType}</h1>
-      <hr className="form-line" ></hr>
+      
+      
       <form id="session-form-container" onSubmit={this.handleSubmit}>
+        <h1 className="form-name">{this.props.formType}</h1>
+        <div className="form-line" ></div>
         <h1 className="welcome-session"> Welcome to Landbnb </h1>
           <input className="form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email"/>
           <input className="form-input-bottom" type="password" value={this.state.password} onChange={this.update('password')} placeholder="password"/>
