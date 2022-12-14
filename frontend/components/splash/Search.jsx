@@ -35,8 +35,6 @@ class Search extends React.Component {
             }
         }
 
-        
-
         return (
             <form id="search" className="search" onSubmit={this.handleSubmit}>
                 <input type="text" className="left-edge-search" placeholder="City" name="city" onChange={this.handleChange}/>

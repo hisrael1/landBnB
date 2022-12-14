@@ -80,6 +80,38 @@ class NewListingForm extends React.Component {
                 <img src={preview} className="photo-upload-preview"/>
             </div>) : null
 
+        let submitType = 'new-listing-submit';
+        if (this.state.title.length < 1 || this.state.title.length > 40) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.description.length < 1 || this.state.description.length > 400) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.address.length < 1 || this.state.address.length > 60) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.city.length < 1 || this.state.city.length > 40) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.state.length < 1 || this.state.state.length > 40) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.zipcode.length != 5) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.num_beds.length != 1) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.num_baths.length != 1) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.max_num_guests.length != 1) {
+            submitType = 'grey-listing-submit'
+        }
+        if (this.state.price_per_night.length < 1) {
+            submitType = 'grey-listing-submit'
+        }               
+
         return (
             <div className="new-listing-container">
                 <form className="new-listing-form">
@@ -112,7 +144,12 @@ class NewListingForm extends React.Component {
                     </div>
                     
                     <div className="new-listing-border"></div>
-                    <input onClick={this.handleSubmit} className='new-listing-submit' type="submit"/>
+                    {submitType == 'new-listing-submit' ? 
+                        <input onClick={this.handleSubmit} className={submitType} type="submit"/>
+                        :
+                        <button type="button" className={submitType}>Submit</button>
+                    }
+                    
                 </form>
             </div>
         )

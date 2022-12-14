@@ -133,6 +133,71 @@
 # listing5.photos.attach(io: File.open('app/assets/images/brooklyn4.jpg'), filename: 'brooklyn4.jpg')
 # listing5.photos.attach(io: File.open('app/assets/images/brooklyn5.jpg'), filename: 'brooklyn5.jpg')
 
+listing6 = Listing.create({
+    title: "Downtown Nashville Apartment",
+    description: "Unwind in this beautiful downtown Nashville suite! This complex is located walking distance from many local bars, restaurants, and attractions. The complex offers amenities including a heated saltwater pool, a lounge with panoramic views of the city, and a fully equipped gym!",
+    host_id: 1,
+    address: "124 Church St",
+    city: "Nashville",
+    state: "Tennessee",
+    zipcode: 37201,
+    num_beds: 1,
+    num_baths: 1,
+    max_num_guests: 2,
+    price_per_night: 232,
+    lat: 36.164780,
+    lng: -86.776630
+})
+
+listing6.photos.attach(io: File.open('app/assets/images/nashville1.jpg'), filename: 'nashville1.jpg')
+listing6.photos.attach(io: File.open('app/assets/images/nashville2.jpg'), filename: 'nashville2.jpg')
+listing6.photos.attach(io: File.open('app/assets/images/nashville3.jpg'), filename: 'nashville3.jpg')
+listing6.photos.attach(io: File.open('app/assets/images/nashville4.jpg'), filename: 'nashville4.jpg')
+listing6.photos.attach(io: File.open('app/assets/images/nashville5.webp'), filename: 'nashville5.webp')
+
+listing7 = Listing.create({
+    title: "Scranton Apartment - Great Value!",
+    description: "We gladly welcome you to this cozy apartment which will immediately feel like home away from home. Equipped with fast WIFI, kitchen essentials, Smart TV’s, & laundry on site. It is located in Downtown Scranton with plenty of local restaurants and smaller attractions to visit in Historic Steamtown!",
+    host_id: 15,
+    address: "309 Linden St",
+    city: "Scranton",
+    state: "Pennsylvania",
+    zipcode: 18503,
+    num_beds: 2,
+    num_baths: 1,
+    max_num_guests: 3,
+    price_per_night: 140,
+    lat: 41.410540,
+    lng: -75.664530
+})
+
+listing7.photos.attach(io: File.open('app/assets/images/scranton1.jpg'), filename: 'scranton1.jpg')
+listing7.photos.attach(io: File.open('app/assets/images/scranton2.jpg'), filename: 'scranton2.jpg')
+listing7.photos.attach(io: File.open('app/assets/images/scranton3.jpg'), filename: 'scranton3.jpg')
+listing7.photos.attach(io: File.open('app/assets/images/scranton4.jpg'), filename: 'scranton4.jpg')
+listing7.photos.attach(io: File.open('app/assets/images/scranton5.jpeg'), filename: 'scranton5.jpeg')
+
+listing8 = Listing.create({
+    title: "Gorgeous Mansion - Richmond",
+    description: "This listing is truly one of a kind in Richmond! Whether you're looking for a place for your wedding party, hosting a family gathering, or just taking a trip with a group, this home has everything you could need. 5 large bedrooms, as well as an upstairs living room/game room. Loads of space downstairs for everyone to interact as well!",
+    host_id: 15,
+    address: "48 Bicknell Rd",
+    city: "Richmond",
+    state: "Virginia",
+    zipcode: 23235,
+    num_beds: 5,
+    num_baths: 4,
+    max_num_guests: 8,
+    price_per_night: 410,
+    lat: 37.5390313,
+    lng: -77.5525034
+})
+
+listing8.photos.attach(io: File.open('app/assets/images/richmond1.jpg'), filename: 'richmond1.jpg')
+listing8.photos.attach(io: File.open('app/assets/images/richmond2.webp'), filename: 'richmond2.webp')
+listing8.photos.attach(io: File.open('app/assets/images/richmond3.jpg'), filename: 'richmond3.jpg')
+listing8.photos.attach(io: File.open('app/assets/images/richmond4.jpg'), filename: 'richmond4.jpg')
+listing8.photos.attach(io: File.open('app/assets/images/richmond5.webp'), filename: 'richmond5.webp')
 
 # Local seeds
 
@@ -225,41 +290,41 @@
 # Review.create({listing_id: 13, guest_id: 44, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
 # Local User seeds
-user2 = User.create({email: "dgray@binghamton.edu", first_name: "David", last_name: "Gray", password: "password"})
-user2.photo.attach(io: File.open('app/assets/images/david_headshot.jpg'), filename: 'david_headshot.jpg')
+# user2 = User.create({email: "dgray@binghamton.edu", first_name: "David", last_name: "Gray", password: "password"})
+# user2.photo.attach(io: File.open('app/assets/images/david_headshot.jpg'), filename: 'david_headshot.jpg')
 
-user3 = User.create({email: "harrisonisrael23@gmail.com", first_name: "Harrison", last_name: "Israel", password: "password"})
-user3.photo.attach(io: File.open('app/assets/images/myself_headshot.jpg'), filename: 'myself_headshot.jpg')
+# user3 = User.create({email: "harrisonisrael23@gmail.com", first_name: "Harrison", last_name: "Israel", password: "password"})
+# user3.photo.attach(io: File.open('app/assets/images/myself_headshot.jpg'), filename: 'myself_headshot.jpg')
 
-user4 = User.create({email: "sisrael12@binghamton.edu", first_name: "Sam", last_name: "Israel", password: "password"})
-user4.photo.attach(io: File.open('app/assets/images/sam_headshot.PNG'), filename: 'sam_headshot.PNG')
+# user4 = User.create({email: "sisrael12@binghamton.edu", first_name: "Sam", last_name: "Israel", password: "password"})
+# user4.photo.attach(io: File.open('app/assets/images/sam_headshot.PNG'), filename: 'sam_headshot.PNG')
 
-user5 = User.create({email: "mlambo@binghamton.edu", first_name: "Michael", last_name: "Lambert", password: "password"})
-user5.photo.attach(io: File.open('app/assets/images/lambert_headshot.jpg'), filename: 'lambert_headshot.jpg')
+# user5 = User.create({email: "mlambo@binghamton.edu", first_name: "Michael", last_name: "Lambert", password: "password"})
+# user5.photo.attach(io: File.open('app/assets/images/lambert_headshot.jpg'), filename: 'lambert_headshot.jpg')
 
 # Heroku seeds
 # Review.destroy_all
-Review.create({listing_id: 13, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 13, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 13, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 13, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 13, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
-Review.create({listing_id: 14, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 14, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 14, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 14, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 14, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 14, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 14, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 14, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
-Review.create({listing_id: 15, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 15, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 15, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 15, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 15, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 15, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 15, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 15, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
-Review.create({listing_id: 16, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 16, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 16, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 16, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 16, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 16, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 16, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 16, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
 
-Review.create({listing_id: 17, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 17, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 17, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
-Review.create({listing_id: 17, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 17, guest_id: 2, rating: 4.0, body: "I had a fantastic stay here. The living space was very spacious and the location was great as well. I would stay here again under the condition that the price doesn't go up.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 17, guest_id: 5, rating: 4.0, body: "I had an upsetting time. The place was dirty and not as advertised. I like that it was close to a bunch of interesting things but the actual amenities were not up to par.", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 17, guest_id: 3, rating: 4.0, body: "I enjoyed my time here very much. The views were beautiful, the place was good value. I wouldn't think twice to book again!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
+# Review.create({listing_id: 17, guest_id: 4, rating: 4.0, body: "What a place! I've stayed in many LandBnb listings before, but this one takes the cake. Wow!", cleanliness: 4.0, communication: 5.0, check_in: 5.0, accuracy: 4.0, value: 5.0, location: 3.0})
