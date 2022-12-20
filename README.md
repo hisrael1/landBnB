@@ -1,35 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-# MVP's
-
-- Login page with User Auth
-- Demo page
-- Pushed to github
-- Create listings
-- Review Listings
-- Book stays
-- Search by location
+# Welcome to Landbnb
+Check out live link [Here](https://hisrael1.github.io/CoinLook/) 
+## Introduction
+Landbnb is a basic full-stack clone of airbnb. Features include login, signup, and user auth, as well as functionality for Listings, Bookings, and Reviews.
+## Technologies
+Languages: Javascript, Ruby, HTML, and CSS
+Frontend: React-Redux
+Database: PostgreSQL
+Hosting: Heroku
+Asset Storage: AWS Simple Cloud Storage (S3)
+APIs: Google Maps
