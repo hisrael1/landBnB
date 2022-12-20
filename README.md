@@ -1,5 +1,5 @@
 # Welcome to Landbnb
-Check out live link [Here](https://hisrael1.github.io/CoinLook/) 
+Check out live link [Here](https://landbnb-us.herokuapp.com/#/) 
 ## Introduction
 Landbnb is a basic full-stack clone of airbnb. Features include login, signup, and user auth, as well as functionality for Listings, Bookings, and Reviews.
 ## Technologies
